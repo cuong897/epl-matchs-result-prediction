@@ -1,0 +1,32 @@
+{
+  "pdf_sha256": "af61f3da538cd5a7423eebabc9198f91d121b494f7351b0d6e2a27e4ad9ee8e6",
+  "source_docx_sha256": "106d43480ab73a4a8d49cf56b4a3b41be49d5d3f888b4e851a175e5e80220d34",
+  "pages": 11,
+  "size_bytes": 417510,
+  "export_method": "Microsoft Word ExportAsFixedFormat; exact copy of verified QA export",
+  "all_pages_visually_reviewed": true,
+  "reviewed_page_numbers": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11
+  ],
+  "all_pages_have_extractable_text": true,
+  "replacement_characters": 0,
+  "checks": [
+    "Vietnamese text displays correctly",
+    "tables and figures remain readable",
+    "equations render with indices and bounds",
+    "page numbering complete",
+    "no clipping or overlap",
+    "no empty pages"
+  ],
+  "model_results_unchanged": true
+}

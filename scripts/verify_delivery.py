@@ -35,19 +35,27 @@ def main():
     title=styles.find("w:style[@w:styleId='Title']",ns)
     if title is None or title.find('.//w:pBdr',ns) is not None:raise ValueError('Title contains an unwanted border')
     if len(document.findall('.//m:oMath',ns))!=3:raise ValueError('Expected three editable math equations')
+    pdf_path=ROOT/'reports/delivery/academic_report.vi.pdf'
+    pdf_qa=json.loads((ROOT/'reports/delivery/pdf_qa.json').read_text())
+    if (sha(pdf_path)!=pdf_qa['pdf_sha256'] or sha(doc_path)!=pdf_qa['source_docx_sha256']
+            or pdf_qa['pages']!=11 or not pdf_qa['all_pages_visually_reviewed']):
+        raise ValueError('PDF changed after visual QA or differs from the verified Word source')
     outputs=['demo/index.html','notebooks/results_reproduction.ipynb','reports/delivery/academic_report.vi.docx',
-             'reports/delivery/academic_report.vi.md','docs/reproducibility.vi.md','docs/presentation-guide.vi.md']
+             'reports/delivery/academic_report.vi.pdf','reports/delivery/academic_report.vi.md',
+             'docs/reproducibility.vi.md','docs/presentation-guide.vi.md']
     manifest_path=ROOT/'reports/delivery/delivery_manifest.json'
     manifest=json.loads(manifest_path.read_text())
     # Refresh hashes after notebook execution and final report layout QA.
     manifest['outputs']={relative:sha(ROOT/relative) for relative in outputs}
     manifest['notebook_execution']='10 code cells completed without errors'
     manifest['docx_visual_qa']='all 11 pages rendered and reviewed'
+    manifest['pdf_visual_qa']='all 11 pages rendered and reviewed; exported from verified Word source'
     manifest_path.write_text(json.dumps(manifest,indent=2)+'\n',encoding='utf-8')
     verification={'read_only_delivery':True,'matches':len(data['matches']),'probability_records':len(data['predictions']),
                   'executed_notebook_cells':10,'notebook_errors':0,'demo_desktop_and_mobile_passed':True,
                   'demo_external_requests':0,'report_pages':11,'editable_math_equations':3,
                   'report_all_pages_visually_reviewed':True,'original_scoring_code_unchanged':True,
+                  'pdf_pages':pdf_qa['pages'],'pdf_all_pages_visually_reviewed':True,
                   'all_original_locked_files_present':not missing,'missing_original_locked_files':missing,
                   'present_original_locked_files_unchanged':True,'no_model_fit_or_test_tuning':True,
                   'delivery_manifest_sha256':sha(manifest_path)}

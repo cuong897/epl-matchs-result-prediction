@@ -10,10 +10,12 @@
     "demo/index.html": "2e49494038e751d6667103c157b69bbe1dbcffd6b4095bd728b01fd4cfa9f7d6",
     "notebooks/results_reproduction.ipynb": "18e86933636e07de6fddfbe295578b70f85b1025ee1b254a6e72066a261b32a5",
     "reports/delivery/academic_report.vi.docx": "106d43480ab73a4a8d49cf56b4a3b41be49d5d3f888b4e851a175e5e80220d34",
+    "reports/delivery/academic_report.vi.pdf": "af61f3da538cd5a7423eebabc9198f91d121b494f7351b0d6e2a27e4ad9ee8e6",
     "reports/delivery/academic_report.vi.md": "a9b2ad25caf3104e99a72edbbb88da8ff0bdc9695f576d561b891f1de2ab8e5e",
     "docs/reproducibility.vi.md": "d6643a4634771c77848005b575435041b7de1d9cff40f3a264cbc270e1b7e83e",
     "docs/presentation-guide.vi.md": "9ddc088d74ca65713c9257e14d4eebd5ce8578f6d499a902db42eef1cd893b97"
   },
   "notebook_execution": "10 code cells completed without errors",
-  "docx_visual_qa": "all 11 pages rendered and reviewed"
+  "docx_visual_qa": "all 11 pages rendered and reviewed",
+  "pdf_visual_qa": "all 11 pages rendered and reviewed; exported from verified Word source"
 }

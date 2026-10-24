@@ -10,9 +10,11 @@
   "editable_math_equations": 3,
   "report_all_pages_visually_reviewed": true,
   "original_scoring_code_unchanged": true,
+  "pdf_pages": 11,
+  "pdf_all_pages_visually_reviewed": true,
   "all_original_locked_files_present": true,
   "missing_original_locked_files": [],
   "present_original_locked_files_unchanged": true,
   "no_model_fit_or_test_tuning": true,
-  "delivery_manifest_sha256": "57dcd753846714b016649be31d7b9cd4c4333b5c20726f72ddeecd48df63d3ea"
+  "delivery_manifest_sha256": "982b5dfafed1ecdff16355305c01387d7788da655b1da468b96f2bbc767424cf"
 }
