@@ -1,5 +1,5 @@
 {
-  "status": "AP_usage_development_complete_test_not_evaluated",
+  "status": "APF_development_complete_feature_exploration_closed_test_not_evaluated",
   "research_date_local": "2026-10-24",
   "timezone": "Asia/Saigon",
   "data_budget": "free_only",
@@ -255,14 +255,38 @@
       ],
       "fit_split": "train_common_2019_2023",
       "device": "cpu"
+    },
+    {
+      "name": "logistic__A_plus_P_plus_F",
+      "run": "APF_dev_v1",
+      "feature_count": 60,
+      "fit_split": "train_common_2019_2023",
+      "device": "cpu",
+      "selected_candidate": 0
+    },
+    {
+      "name": "random_forest__A_plus_P_plus_F",
+      "run": "APF_dev_v1",
+      "feature_count": 60,
+      "fit_split": "train_common_2019_2023",
+      "device": "cpu",
+      "selected_candidate": 1
+    },
+    {
+      "name": "xgboost__A_plus_P_plus_F",
+      "run": "APF_dev_v1",
+      "feature_count": 60,
+      "fit_split": "train_common_2019_2023",
+      "device": "cpu",
+      "selected_candidate": 0
     }
   ],
   "experimental_results": {
-    "latest_run": "AP_dev_v1",
-    "report": "reports/AP_dev_v1/report.vi.md",
-    "machine_readable": "reports/AP_dev_v1/results.json",
-    "artifact_verification": "reports/AP_dev_v1/artifact_verification.json",
-    "previous_A_full_run": "reports/A_trees_v1/results.json",
+    "latest_run": "APF_dev_v1",
+    "report": "reports/APF_dev_v1/report.vi.md",
+    "machine_readable": "reports/APF_dev_v1/results.json",
+    "artifact_verification": "reports/APF_dev_v1/artifact_verification.json",
+    "frozen_comparator_run": "reports/AP_dev_v1/results.json",
     "evaluation_split": "validation",
     "test_metrics_computed": false,
     "posthoc_calibration_fitted": false
@@ -297,6 +321,13 @@
       "used_for_hyperparameter_selection": false,
       "registration": "P definitions and model config committed before paired training; earlier A_full validation already observed",
       "status_after_run": "observed development set; final test not evaluated"
+    },
+    {
+      "run": "APF_dev_v1",
+      "usage": "limited registered F extension versus frozen AP/A comparators; paired uncertainty and descriptive F permutation",
+      "used_for_hyperparameter_selection": false,
+      "registration": "F definitions and model config committed before fitting; previous AP validation observed",
+      "status_after_run": "feature exploration closed; final test not evaluated"
     }
   ],
   "version_control_policy": {
@@ -360,7 +391,7 @@
       "market_value",
       "age"
     ],
-    "next_step": "register limited individual performance proxy experiment before any additional model scoring; preserve test lock"
+    "next_step": "feature exploration closed; prepare calibration and final locked evaluation"
   },
   "P_usage_experiment": {
     "run": "AP_dev_v1",
@@ -381,5 +412,36 @@
     "test_evaluated": false,
     "announced_XI_claim": false,
     "interpretation": "no clear Log Loss improvement from this personnel usage proxy on development validation"
+  },
+  "feature_exploration": {
+    "status": "closed",
+    "decision_document": "docs/development_decisions.vi.md",
+    "frozen_feature_versions": [
+      "team_A_v1_day_batched",
+      "P_usage_v1_day_batched",
+      "F_performance_v1_day_batched"
+    ],
+    "no_post_validation_feature_window_or_grid_expansion": true,
+    "calibration_fitted": false,
+    "final_test_manifest_registered": false,
+    "next_step": "register calibration method and final comparison list before any test scoring"
+  },
+  "F_performance_experiment": {
+    "run": "APF_dev_v1",
+    "feature_config": "research/player_performance_config.json",
+    "model_config": "research/APF_development_config.json",
+    "report": "reports/APF_dev_v1/report.vi.md",
+    "feature_report": "reports/player_performance/feature_build.json",
+    "artifact_verification": "reports/APF_dev_v1/artifact_verification.json",
+    "feature_count": 60,
+    "training_rows": 1520,
+    "validation_rows": 380,
+    "frozen_comparator_run": "AP_dev_v1",
+    "unit_tests_passed": 73,
+    "F_real_data_temporal_checks_passed": 5,
+    "primary_comparison": "APF minus AP within each algorithm",
+    "test_evaluated": false,
+    "announced_XI_claim": false,
+    "interpretation": "no clear performance feature benefit; LR point loss worse, RF/XGB small reductions with intervals including zero"
   }
 }

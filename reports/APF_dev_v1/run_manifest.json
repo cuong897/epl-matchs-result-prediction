@@ -1,0 +1,313 @@
+{
+  "run_id": "APF_dev_v1",
+  "started_at_utc": "2026-10-24T10:28:58.277832+00:00",
+  "config": {
+    "run_id": "APF_dev_v1",
+    "registration_scope": "before F model fitting; prior AP validation observed; limited one performance version with no post-result feature/window/grid expansion",
+    "new_arm": "A_plus_P_plus_F",
+    "families": [
+      "logistic",
+      "random_forest",
+      "xgboost"
+    ],
+    "frozen_comparator_run": "AP_dev_v1",
+    "comparator_arms": [
+      "A_common",
+      "A_plus_P"
+    ],
+    "primary_comparison": "A_plus_P_plus_F minus A_plus_P within each family",
+    "secondary_comparison": "A_plus_P_plus_F minus A_common within each family",
+    "selection_metric": "mean_walk_forward_log_loss",
+    "walk_forward_validation_seasons": [
+      "2020-21",
+      "2021-22",
+      "2022-23"
+    ],
+    "expected_fold_training_rows": [
+      380,
+      760,
+      1140
+    ],
+    "first_training_season": "2019-20",
+    "final_validation_season": "2023-24",
+    "expected_training_rows": 1520,
+    "expected_validation_rows": 380,
+    "candidate_lists": "reuse exact frozen AP_dev_v1 candidates and underlying settings; four per family",
+    "candidate_budget_per_family": 4,
+    "posthoc_calibration_fit": false,
+    "test_evaluation_enabled": false,
+    "device": "cpu",
+    "n_jobs_trees": 2,
+    "random_seed": 42,
+    "paired_bootstrap_replicates": 2000,
+    "paired_bootstrap_block_weeks": [
+      1,
+      2,
+      4
+    ],
+    "group_permutation_repeats": 10,
+    "group_permutation_scope": "all eight F columns jointly within validation month",
+    "reliability_bins_per_class": 5,
+    "after_this_version": "close exploratory feature expansion and prepare calibration/final test protocol; preserve negative results"
+  },
+  "candidates": {
+    "logistic": [
+      {
+        "C": 0.01
+      },
+      {
+        "C": 0.1
+      },
+      {
+        "C": 1.0
+      },
+      {
+        "C": 10.0
+      }
+    ],
+    "random_forest": [
+      {
+        "max_depth": 4,
+        "min_samples_leaf": 10
+      },
+      {
+        "max_depth": 4,
+        "min_samples_leaf": 30
+      },
+      {
+        "max_depth": 8,
+        "min_samples_leaf": 10
+      },
+      {
+        "max_depth": 8,
+        "min_samples_leaf": 30
+      }
+    ],
+    "xgboost": [
+      {
+        "max_depth": 2,
+        "n_estimators": 100
+      },
+      {
+        "max_depth": 2,
+        "n_estimators": 250
+      },
+      {
+        "max_depth": 3,
+        "n_estimators": 100
+      },
+      {
+        "max_depth": 3,
+        "n_estimators": 250
+      }
+    ]
+  },
+  "feature_columns": {
+    "A_common": [
+      "home_form5_ppg",
+      "home_form5_gf",
+      "home_form5_ga",
+      "home_form10_ppg",
+      "home_form10_gf",
+      "home_form10_ga",
+      "home_history_n10",
+      "home_venue5_ppg",
+      "home_venue_n5",
+      "home_season_matches",
+      "home_season_points",
+      "home_season_ppg",
+      "home_season_gd_per_game",
+      "home_days_since_last_pl",
+      "home_newly_promoted",
+      "home_prior_season_membership_known",
+      "home_elo",
+      "home_missing_history",
+      "away_form5_ppg",
+      "away_form5_gf",
+      "away_form5_ga",
+      "away_form10_ppg",
+      "away_form10_gf",
+      "away_form10_ga",
+      "away_history_n10",
+      "away_venue5_ppg",
+      "away_venue_n5",
+      "away_season_matches",
+      "away_season_points",
+      "away_season_ppg",
+      "away_season_gd_per_game",
+      "away_days_since_last_pl",
+      "away_newly_promoted",
+      "away_prior_season_membership_known",
+      "away_elo",
+      "away_missing_history",
+      "elo_diff",
+      "rest_days_diff",
+      "h2h_home_ppg5",
+      "h2h_n5"
+    ],
+    "A_plus_P": [
+      "home_form5_ppg",
+      "home_form5_gf",
+      "home_form5_ga",
+      "home_form10_ppg",
+      "home_form10_gf",
+      "home_form10_ga",
+      "home_history_n10",
+      "home_venue5_ppg",
+      "home_venue_n5",
+      "home_season_matches",
+      "home_season_points",
+      "home_season_ppg",
+      "home_season_gd_per_game",
+      "home_days_since_last_pl",
+      "home_newly_promoted",
+      "home_prior_season_membership_known",
+      "home_elo",
+      "home_missing_history",
+      "away_form5_ppg",
+      "away_form5_gf",
+      "away_form5_ga",
+      "away_form10_ppg",
+      "away_form10_gf",
+      "away_form10_ga",
+      "away_history_n10",
+      "away_venue5_ppg",
+      "away_venue_n5",
+      "away_season_matches",
+      "away_season_points",
+      "away_season_ppg",
+      "away_season_gd_per_game",
+      "away_days_since_last_pl",
+      "away_newly_promoted",
+      "away_prior_season_membership_known",
+      "away_elo",
+      "away_missing_history",
+      "elo_diff",
+      "rest_days_diff",
+      "h2h_home_ppg5",
+      "h2h_n5",
+      "home_p_history_n5",
+      "home_p_participants_n5",
+      "home_p_minutes_hhi5",
+      "home_p_top11_minutes_share5",
+      "home_p_last_returning_minutes_share5",
+      "home_p_mean_minutes_overlap5",
+      "away_p_history_n5",
+      "away_p_participants_n5",
+      "away_p_minutes_hhi5",
+      "away_p_top11_minutes_share5",
+      "away_p_last_returning_minutes_share5",
+      "away_p_mean_minutes_overlap5"
+    ],
+    "A_plus_P_plus_F": [
+      "home_form5_ppg",
+      "home_form5_gf",
+      "home_form5_ga",
+      "home_form10_ppg",
+      "home_form10_gf",
+      "home_form10_ga",
+      "home_history_n10",
+      "home_venue5_ppg",
+      "home_venue_n5",
+      "home_season_matches",
+      "home_season_points",
+      "home_season_ppg",
+      "home_season_gd_per_game",
+      "home_days_since_last_pl",
+      "home_newly_promoted",
+      "home_prior_season_membership_known",
+      "home_elo",
+      "home_missing_history",
+      "away_form5_ppg",
+      "away_form5_gf",
+      "away_form5_ga",
+      "away_form10_ppg",
+      "away_form10_gf",
+      "away_form10_ga",
+      "away_history_n10",
+      "away_venue5_ppg",
+      "away_venue_n5",
+      "away_season_matches",
+      "away_season_points",
+      "away_season_ppg",
+      "away_season_gd_per_game",
+      "away_days_since_last_pl",
+      "away_newly_promoted",
+      "away_prior_season_membership_known",
+      "away_elo",
+      "away_missing_history",
+      "elo_diff",
+      "rest_days_diff",
+      "h2h_home_ppg5",
+      "h2h_n5",
+      "home_p_history_n5",
+      "home_p_participants_n5",
+      "home_p_minutes_hhi5",
+      "home_p_top11_minutes_share5",
+      "home_p_last_returning_minutes_share5",
+      "home_p_mean_minutes_overlap5",
+      "away_p_history_n5",
+      "away_p_participants_n5",
+      "away_p_minutes_hhi5",
+      "away_p_top11_minutes_share5",
+      "away_p_last_returning_minutes_share5",
+      "away_p_mean_minutes_overlap5",
+      "home_f_recent_group_goal90_s180_5",
+      "home_f_recent_group_assist90_s180_5",
+      "home_f_contribution_hhi5",
+      "home_f_recent_group_contribution_share5",
+      "away_f_recent_group_goal90_s180_5",
+      "away_f_recent_group_assist90_s180_5",
+      "away_f_contribution_hhi5",
+      "away_f_recent_group_contribution_share5"
+    ]
+  },
+  "input_sha256": {
+    "research\\APF_development_config.json": "230a131f0df1d167d753775b20dda6b4bf54325cb3b88ca2eeb13d0c33ed8fd9",
+    "research\\player_performance_config.json": "5bb354b6685b3fec05e67bd29e35a0b50b4b634c7ab317f9be4ae131ff8cbc4a",
+    "research\\feature_columns_F.json": "3aa6374e048a6afce41a29fe079e2eb58d883a675ca337a20d1dbb88bec575f1",
+    "reports\\player_performance\\feature_build.json": "e726e3e61bd866892f945abf8aaae630002b317854971cb61e3ba1901ec9a078",
+    "reports\\AP_dev_v1\\run_manifest.json": "4b0973723bb776cf3595e438ad1c468a80157a236696eefd174f0c243130919d",
+    "reports\\AP_dev_v1\\results.json": "0f303ecdd17a8ed83483e6901ae7e88337515713a072ff89d5ec237ac5712665",
+    "reports\\AP_dev_v1\\common_cohort.csv": "b823ca174a5c5d6dea31634fac8375088b389f5748652f2878e435afa363ed94",
+    "reports\\AP_dev_v1\\validation_predictions.csv": "102e1840457e3abcbfaa4d443d980750ed4abb880abbbdf87153d8a934f32579",
+    "research\\model_A_development_config.json": "2de20ebc2bed0d64e4a569b786ffb320e579dc867dd3c97829aee56bf45504f6",
+    "research\\model_A_tree_config.json": "004f6256d9769cd74574d4acbe64ae00be326d33f9460e5b9ab573755162b1cb"
+  },
+  "frozen_AP_input_sha256": {
+    "research\\AP_development_config.json": "a188f8433a07d4d5e1c7e89f1a942f41a5fc9ce243ba02cccf10e04265b8f75e",
+    "research\\model_A_development_config.json": "2de20ebc2bed0d64e4a569b786ffb320e579dc867dd3c97829aee56bf45504f6",
+    "research\\model_A_tree_config.json": "004f6256d9769cd74574d4acbe64ae00be326d33f9460e5b9ab573755162b1cb",
+    "research\\feature_columns_A.json": "ca7a1b4e296a7351e9343e1ee273290b65dbd5017645f04349a48d54dbf7d0de",
+    "research\\feature_columns_P.json": "55cd174b09c5252d5fc55b199cef75a621da04d5d158a135018fa486f67e265a",
+    "reports\\player_proxy\\feature_build.json": "9017a2ca75268d489d1329e1b11ea619fe3fe648d0c720bce3230961ecee976f",
+    "data\\curated\\matches.csv": "17b34cdec679bb3496ce4d6143773d89f14987069bfd8432e7a413815ccb1b51",
+    "data\\curated\\match_outcomes.csv": "d909637d3408c7e9022f0c56ebea53c7fce5c132f3b981a42845d571a27c4e2c",
+    "data\\curated\\features_A_train.csv": "58e8cb61259351d141c3d1172dd6858f568117a80eb8d31892eb59a5448342df",
+    "data\\curated\\features_A_validation.csv": "7226327c644036648dfaff37f649c04f4d7b57263fbe7ac8fbe8246cc187e43d",
+    "data\\curated\\features_P_train.csv": "305a961efc571c8d2c96695340cf45391d6a30b60339783aa3396c171ee8a44b",
+    "data\\curated\\features_P_validation.csv": "331010f205ae4abe95853119dc1172a2f3c7fbce4df563d14692bc80ecd78d7b"
+  },
+  "F_input_output_sha256": {
+    "data\\curated\\player_match_stats_P_development.csv": "abb7adc6e2e892c79b3818b7f88d162cbce88dec390fc4fb409db0d37ed52c71",
+    "data\\curated\\matches.csv": "17b34cdec679bb3496ce4d6143773d89f14987069bfd8432e7a413815ccb1b51",
+    "research\\player_performance_config.json": "5bb354b6685b3fec05e67bd29e35a0b50b4b634c7ab317f9be4ae131ff8cbc4a",
+    "data\\curated\\features_F_train.csv": "0573f8333baf3b19b67fdc3b939f5c9a4b89095eec745cad2c77314d74cadab8",
+    "data\\curated\\features_F_validation.csv": "eb689851c4e9a5b27e3030c5eb1fee2bb9a67f68de3a2509397907e4daf72e9d"
+  },
+  "code_sha256": {
+    "train_APF.py": "83c35bc81aa2cbee80ef77bed1577dbc6f4925131ba085f8b7500846de10cab2",
+    "apf_modeling.py": "9f9648155a7512dfd0f0b6c1fded454e81715d1e54a4956611bb576332147264",
+    "modeling.py": "8f6438bc9a9dd36cf755bdc5993025a4468850016ff596dbf6652262e3a9cd3d",
+    "tree_modeling.py": "b42a79618931735620c16b26a8d0e6069ccc8af98dc32b3ceb94620d9a14beca",
+    "player_proxy_features.py": "868dea86885ac4790a67ffb7d2f9d3dfda0eec2b9e5dd1d1d28b9655aaadcc21",
+    "player_performance_features.py": "e2db4b2ee0b21e7c26d6dd44af86741d7a9bfe5a6fcc160ea0146d6d05c08ecf"
+  },
+  "runtime": {
+    "scikit-learn": "1.9.1",
+    "xgboost": "3.4.1",
+    "numpy": "2.4.6",
+    "pandas": "3.0.5",
+    "joblib": "1.6.0"
+  }
+}

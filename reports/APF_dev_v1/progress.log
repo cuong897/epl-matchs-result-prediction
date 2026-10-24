@@ -1,0 +1,33 @@
+Device: local CPU; trees n_jobs=2; A and AP comparators frozen from AP_dev_v1.
+Walk-forward 2020-21: logistic/A_plus_P_plus_F, 4 candidates (380 -> 380) complete
+Walk-forward 2020-21: random_forest/A_plus_P_plus_F, 4 candidates (380 -> 380) complete
+Walk-forward 2020-21: xgboost/A_plus_P_plus_F, 4 candidates (380 -> 380) complete
+Walk-forward 2021-22: logistic/A_plus_P_plus_F, 4 candidates (760 -> 380) complete
+Walk-forward 2021-22: random_forest/A_plus_P_plus_F, 4 candidates (760 -> 380) complete
+Walk-forward 2021-22: xgboost/A_plus_P_plus_F, 4 candidates (760 -> 380) complete
+Walk-forward 2022-23: logistic/A_plus_P_plus_F, 4 candidates (1140 -> 380) complete
+Walk-forward 2022-23: random_forest/A_plus_P_plus_F, 4 candidates (1140 -> 380) complete
+Walk-forward 2022-23: xgboost/A_plus_P_plus_F, 4 candidates (1140 -> 380) complete
+Final logistic__A_plus_P_plus_F: candidate 0, validation scored
+Final random_forest__A_plus_P_plus_F: candidate 1, validation scored
+Final xgboost__A_plus_P_plus_F: candidate 0, validation scored
+{
+  "logistic__A_plus_P_plus_F": {
+    "log_loss": 0.9534734438642162,
+    "brier_sum": 0.5610715905613163,
+    "accuracy": 0.5684210526315789,
+    "macro_f1": 0.4246435141152469
+  },
+  "random_forest__A_plus_P_plus_F": {
+    "log_loss": 0.9397953376875741,
+    "brier_sum": 0.5544288109501108,
+    "accuracy": 0.5631578947368421,
+    "macro_f1": 0.41563771237138075
+  },
+  "xgboost__A_plus_P_plus_F": {
+    "log_loss": 0.9446820316622893,
+    "brier_sum": 0.5565443519318248,
+    "accuracy": 0.5605263157894737,
+    "macro_f1": 0.41241597112564854
+  }
+}

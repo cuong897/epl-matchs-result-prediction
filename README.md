@@ -1,6 +1,6 @@
 # Premier League — dự đoán xác suất H/D/A
 
-Trạng thái ngày 24/10/2026: **đã hoàn thành Model A và so sánh A_common với A+P**, trong đó P gồm 12 đặc trưng lịch sử sử dụng cầu thủ. Đã đánh giá validation 2023–2024; chưa dự đoán hoặc tính metric test 2024–2025.
+Trạng thái ngày 24/10/2026: **đã hoàn thành development A_common, A+P và A+P+F**, gồm 40 biến đội, 12 biến sử dụng cầu thủ và 8 biến performance. Đã đánh giá validation 2023–2024; chưa dự đoán hoặc tính metric test 2024–2025. Kết thúc mở rộng feature thăm dò, chuyển sang chuẩn bị calibration và test cuối.
 
 - Ngân sách dữ liệu: chỉ nguồn miễn phí.
 - Mục tiêu: dự đoán từng trận tại khoảng 60 phút trước giờ bóng lăn.
@@ -21,10 +21,16 @@ Trạng thái ngày 24/10/2026: **đã hoàn thành Model A và so sánh A_commo
 - [Định nghĩa và giới hạn 12 đặc trưng P](docs/player_proxy_dictionary.vi.md).
 - [Kết quả so sánh A_common với A+P](reports/AP_dev_v1/report.vi.md).
 - [Log huấn luyện A/P](reports/AP_dev_v1/progress.log).
+- [Định nghĩa tám biến performance F](docs/player_performance_dictionary.vi.md).
+- [Kết quả A+P+F và đối chứng giữ nguyên](reports/APF_dev_v1/report.vi.md).
+- [Log huấn luyện A+P+F](reports/APF_dev_v1/progress.log).
+- [Quyết định kết thúc exploration và bước trước test](docs/development_decisions.vi.md).
 
 Đã audit dữ liệu cầu thủ 2016–2024 và chuẩn hóa 128.543 dòng/1.900 trận từ 2019–2024. Phát hiện và loại 59 placeholder trận hoãn; đánh dấu starts/xG/xA không dùng được ở 136 trận đầu mùa 2022–2023. Đã tạo P và fit lại A_common/A+P trên cùng 1.520 trận training, cùng 380 trận validation. B/C vẫn có điều kiện; FPL starts chưa phải announced XI tại T−60.
 
-Thêm P chưa cải thiện Log Loss rõ ràng: Logistic +0,002024; RF +0,001476; XGBoost −0,000579 (A+P trừ A_common). Cả chín khoảng bootstrap 95% theo block 1/2/4 tuần đều chứa 0. XGBoost tăng Accuracy từ 56,58% lên 58,16%, nhưng chưa đủ kết luận P cải thiện xác suất. Bước tiếp theo là một nhánh hiệu suất cá nhân có phạm vi giới hạn, đăng ký riêng trước khi đo; giữ test khóa.
+Thêm P chưa cải thiện Log Loss rõ ràng: Logistic +0,002024; RF +0,001476; XGBoost −0,000579 (A+P trừ A_common). Cả chín khoảng bootstrap 95% theo block 1/2/4 tuần đều chứa 0. XGBoost tăng Accuracy từ 56,58% lên 58,16%, nhưng chưa đủ kết luận P cải thiện xác suất.
+
+Nhánh performance F cũng chưa cải thiện rõ: so với A+P, Logistic +0,008985; RF −0,000744; XGBoost −0,000146 Log Loss. Mức cải thiện của hai mô hình cây nhỏ và mọi khoảng chứa 0; Logistic kém hơn trên ước lượng điểm, mức chắc chắn nhạy với block bootstrap. Giữ cả kết quả không cải thiện và dừng mở rộng feature sau phiên bản đã đăng ký này. Calibration chưa fit; test tiếp tục khóa.
 
 Validation A_full: Elo có Log Loss 0,9285; Random Forest 0,9299; XGBoost 0,9388; Logistic A 0,9417; tần suất lịch sử 1,0541. RF/XGBoost đạt Accuracy 57,89% nhưng chưa vượt Elo về Log Loss; recall lớp hòa vẫn bằng 0. Đây là kết quả development trên phạm vi training khác với A_common, chưa phải kết luận cuối của đề tài.
 
@@ -73,6 +79,16 @@ python scripts/report_AP.py
 
 Nhánh A/P chỉ nạp feature training/validation, không tạo P cho test. Runner từ chối ghi đè AP_dev_v1 đã tồn tại. Báo cáo có thể dựng lại bằng report_AP.py mà không fit lại; log tiến trình được lưu trong thư mục run. Cả hai nhánh có cùng ba fold, bốn ứng viên mỗi thuật toán, tổng 72 lượt fit CV; chọn tham số riêng cho mỗi nhánh bằng training CV.
 
+## Chạy nhánh performance F
+
+```powershell
+python scripts/build_player_performance.py
+python -u scripts/train_APF.py
+python scripts/report_APF.py
+```
+
+Runner chỉ fit nhánh A+P+F, với 36 lượt CV và ba fit cuối; tái sử dụng đối chứng đã khóa từ AP_dev_v1 sau khi kiểm tra checksum/cohort/nhãn/metric. Không ghi đè run có sẵn. F có năm kiểm tra thời gian trên dữ liệu thật; bundle, estimator riêng và XGBoost native đều tái tạo đúng dự đoán. Dùng CPU local, không dùng GPU.
+
 ## Tải mẫu
 
 ```powershell
@@ -98,6 +114,8 @@ Downloader đọc catalog cố định (pilot_sources, team_sources hoặc playe
 - `test_player_proxy.py`: thêm 12 kiểm thử tính tay và thời gian; tổng hiện tại 61 unit tests đã đạt.
 - `player_proxy_features.py` và `build_player_proxy.py`: snapshot theo ngày, reset đầu mùa, lineage và bốn kiểm tra invariance trên dữ liệu thật.
 - `train_AP.py` và `report_AP.py`: so sánh cùng cohort, lưu manifest trước fit, kiểm chứng mô hình nạp lại và báo cáo cả kết quả không cải thiện.
+- `test_player_performance.py` và `test_apf_comparators.py`: thêm 12 kiểm thử performance và đối chứng cố định; tổng hiện tại 73 unit tests đã đạt.
+- `player_performance_features.py`, `build_player_performance.py`, `train_APF.py`, `report_APF.py`: nhánh performance F, năm kiểm tra dữ liệu thật, so sánh A+P+F với A+P/A_common và kiểm chứng artifact.
 - `train_model_A_trees.py`: lưu manifest trước fit, chọn cấu hình bằng CV training, đánh giá validation và permutation importance.
 - `report_model_A_trees.py`: xác minh mô hình đã lưu và XGBoost native, so sánh cùng cohort, dựng báo cáo và biểu đồ.
 - `modeling.py` và `train_model_A.py`: baseline xác suất và Logistic Regression; chọn C qua ba fold trong training, fit preprocessing riêng từng fold.
