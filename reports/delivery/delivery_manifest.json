@@ -1,0 +1,13 @@
+{
+  "purpose": "read-only delivery, not a new experiment",
+  "final_lock_sha256": "f3eb57b5b33cacc7669fb6488531ab554690148a52cde521b52a1466e070d314",
+  "inputs": {
+    "reports\\final_test_v1\\results.json": "464a351f475ab47d6994ea79a05c883c8fb03b9f2df1c397b30d14434a2ab0df",
+    "reports\\final_test_v1\\test_predictions_scored.csv": "5a1cf485541d3c5e4398d94e6cf6033da24801605ebaea88d920cc856cc65cba",
+    "reports\\delivery\\match_catalog.csv": "e76755949d9f18f0aeab926c6ffdfdb4389de6364ccc7e337521af29ac1e5cb6"
+  },
+  "outputs": {
+    "demo/index.html": "2e49494038e751d6667103c157b69bbe1dbcffd6b4095bd728b01fd4cfa9f7d6",
+    "notebooks/results_reproduction.ipynb": "1f00b087b14b0af83e8cc9beebaa4a80788aaed8e659fb4d9c958292591b5784"
+  }
+}

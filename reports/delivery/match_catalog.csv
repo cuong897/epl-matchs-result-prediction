@@ -1,0 +1,381 @@
+match_id,match_date,home_team,away_team,home_goals,away_goals,result
+epl_3b0830adf0b4c8192eaf,2024-08-16,Man United,Fulham,1,0,H
+epl_0dc3982fd4703f1fc16d,2024-08-17,Ipswich,Liverpool,0,2,A
+epl_1d91e5723d8ed7847b56,2024-08-17,Everton,Brighton,0,3,A
+epl_22abb85103392abfd88e,2024-08-17,Newcastle,Southampton,1,0,H
+epl_7eeb193c2878729595af,2024-08-17,West Ham,Aston Villa,1,2,A
+epl_82834d9d76cadd3bd136,2024-08-17,Arsenal,Wolves,2,0,H
+epl_ffc1b5c48f35ba299f83,2024-08-17,Nott'm Forest,Bournemouth,1,1,D
+epl_2f6040e95a0441910636,2024-08-18,Brentford,Crystal Palace,2,1,H
+epl_d4b3bf3de3a3090c0d18,2024-08-18,Chelsea,Man City,0,2,A
+epl_1a29ddf0e471da86ce3c,2024-08-19,Leicester,Tottenham,1,1,D
+epl_1a52723dfcee137ffbf8,2024-08-24,Brighton,Man United,2,1,H
+epl_5f109786d36365b81f5c,2024-08-24,Southampton,Nott'm Forest,0,1,A
+epl_63c55db453611675a265,2024-08-24,Fulham,Leicester,2,1,H
+epl_677ccb8df521b2cb51f8,2024-08-24,Tottenham,Everton,4,0,H
+epl_780789b88bee58ef1d30,2024-08-24,Crystal Palace,West Ham,0,2,A
+epl_d730ac5318f52a0f4c2f,2024-08-24,Man City,Ipswich,4,1,H
+epl_ef579b9a86f59be1c9bb,2024-08-24,Aston Villa,Arsenal,0,2,A
+epl_8128ebf3b02bcb35d06a,2024-08-25,Wolves,Chelsea,2,6,A
+epl_b83eef7003a951748269,2024-08-25,Liverpool,Brentford,2,0,H
+epl_c8351238994d48c495ea,2024-08-25,Bournemouth,Newcastle,1,1,D
+epl_214e6ad6d844f3e677a3,2024-08-31,Nott'm Forest,Wolves,1,1,D
+epl_3592455f09f6bb774d85,2024-08-31,Ipswich,Fulham,1,1,D
+epl_4cc9f687e0ad31f71483,2024-08-31,Everton,Bournemouth,2,3,A
+epl_5cf214cc8e3f94d97b42,2024-08-31,Leicester,Aston Villa,1,2,A
+epl_743cbebe808016ce9b34,2024-08-31,Brentford,Southampton,3,1,H
+epl_95ef8c864b98f2291f9c,2024-08-31,Arsenal,Brighton,1,1,D
+epl_a17fe99acc671a9eb123,2024-08-31,West Ham,Man City,1,3,A
+epl_0ae1c50deb9ae4836dea,2024-09-01,Chelsea,Crystal Palace,1,1,D
+epl_328147f32e2f9998fe3c,2024-09-01,Man United,Liverpool,0,3,A
+epl_aab7e5535500a36401f6,2024-09-01,Newcastle,Tottenham,2,1,H
+epl_0f106b6d59b7f168eef0,2024-09-14,Liverpool,Nott'm Forest,0,1,A
+epl_16acdd58549e893a9dc3,2024-09-14,Brighton,Ipswich,0,0,D
+epl_1cac8b4863eff2aff12b,2024-09-14,Fulham,West Ham,1,1,D
+epl_871e4311d2714209e891,2024-09-14,Man City,Brentford,2,1,H
+epl_8fd805da992bb1b8246a,2024-09-14,Aston Villa,Everton,3,2,H
+epl_c5f9ec3abde680d90321,2024-09-14,Southampton,Man United,0,3,A
+epl_e7079760e43f898b2bc5,2024-09-14,Bournemouth,Chelsea,0,1,A
+epl_fd5192ba75328888f215,2024-09-14,Crystal Palace,Leicester,2,2,D
+epl_304d2199c4038e9dfbae,2024-09-15,Tottenham,Arsenal,0,1,A
+epl_a3e9eb67d383d1027c1c,2024-09-15,Wolves,Newcastle,1,2,A
+epl_00961904aa9e3171979e,2024-09-21,Aston Villa,Wolves,3,1,H
+epl_1e7312f1f3f85764ab69,2024-09-21,Tottenham,Brentford,3,1,H
+epl_89f6fb8564006bf1d19d,2024-09-21,Fulham,Newcastle,3,1,H
+epl_9e51992cbcdc076c74a4,2024-09-21,Southampton,Ipswich,1,1,D
+epl_c0029aabce3d2bf28db7,2024-09-21,Leicester,Everton,1,1,D
+epl_ccfdeaa47ea3ef493f44,2024-09-21,Crystal Palace,Man United,0,0,D
+epl_d321b246f3e9d8fe5d6a,2024-09-21,Liverpool,Bournemouth,3,0,H
+epl_d72302ce58acaaeb967c,2024-09-21,West Ham,Chelsea,0,3,A
+epl_04d837c82bd0b2405ae2,2024-09-22,Man City,Arsenal,2,2,D
+epl_b0b50713e163e0b7a04b,2024-09-22,Brighton,Nott'm Forest,2,2,D
+epl_00b671a7a7ba6f76c4fd,2024-09-28,Chelsea,Brighton,4,2,H
+epl_48f5bb8a4fadf6f112aa,2024-09-28,Wolves,Liverpool,1,2,A
+epl_5747603b0b99d58a43b6,2024-09-28,Everton,Crystal Palace,2,1,H
+epl_8f30f65bf12ede37090d,2024-09-28,Brentford,West Ham,1,1,D
+epl_98193a48b5551cf9f60b,2024-09-28,Newcastle,Man City,1,1,D
+epl_a9304a7da45d0e5ccaea,2024-09-28,Nott'm Forest,Fulham,0,1,A
+epl_dced4e782f85787d3e9c,2024-09-28,Arsenal,Leicester,4,2,H
+epl_07466af27e68eaa972d6,2024-09-29,Man United,Tottenham,0,3,A
+epl_c5ad485130269fc3ba4f,2024-09-29,Ipswich,Aston Villa,2,2,D
+epl_4097eb40fac52afe9b19,2024-09-30,Bournemouth,Southampton,3,1,H
+epl_156d62f1b4288332c77a,2024-10-05,Arsenal,Southampton,3,1,H
+epl_541966ad13faaf3bb6b2,2024-10-05,Leicester,Bournemouth,1,0,H
+epl_5ba885df9dfb3357725d,2024-10-05,West Ham,Ipswich,4,1,H
+epl_68c5d746280aa9be526f,2024-10-05,Brentford,Wolves,5,3,H
+epl_6e62aa2acd61eb332ce2,2024-10-05,Everton,Newcastle,0,0,D
+epl_85fc66901ff262f4cea5,2024-10-05,Crystal Palace,Liverpool,0,1,A
+epl_a7a0e284afff9656175b,2024-10-05,Man City,Fulham,3,2,H
+epl_10c61bfffda75dfd53f6,2024-10-06,Chelsea,Nott'm Forest,1,1,D
+epl_190b198e972af3f8d6c0,2024-10-06,Brighton,Tottenham,3,2,H
+epl_a02a61eda642a49d533a,2024-10-06,Aston Villa,Man United,0,0,D
+epl_1ea3530b9817d5640f2d,2024-10-19,Tottenham,West Ham,4,1,H
+epl_2d82226cd396923a5a0e,2024-10-19,Man United,Brentford,2,1,H
+epl_370ab271477ac49af1f8,2024-10-19,Southampton,Leicester,2,3,A
+epl_496b4c1817f13165b6cb,2024-10-19,Fulham,Aston Villa,1,3,A
+epl_62c5fff7d7c3792a8b6c,2024-10-19,Bournemouth,Arsenal,2,0,H
+epl_dcba1c603438a0298871,2024-10-19,Newcastle,Brighton,0,1,A
+epl_f7365d748e1f88a1440d,2024-10-19,Ipswich,Everton,0,2,A
+epl_12871143f3b13d8ad575,2024-10-20,Liverpool,Chelsea,2,1,H
+epl_8f1609e7867700244e8b,2024-10-20,Wolves,Man City,1,2,A
+epl_48d649f042ff769587ce,2024-10-21,Nott'm Forest,Crystal Palace,1,0,H
+epl_5734acaf6e43c8e8c739,2024-10-25,Leicester,Nott'm Forest,1,3,A
+epl_1307e1908aad88f3a4f0,2024-10-26,Everton,Fulham,1,1,D
+epl_1491f9622d9a5b65551e,2024-10-26,Brentford,Ipswich,4,3,H
+epl_1eb0cfb3ff38913109f1,2024-10-26,Aston Villa,Bournemouth,1,1,D
+epl_5e336ab9ed7b2e8e262f,2024-10-26,Man City,Southampton,1,0,H
+epl_658f876f652b07e0d6be,2024-10-26,Brighton,Wolves,2,2,D
+epl_33402763e76f6e7736fc,2024-10-27,Arsenal,Liverpool,2,2,D
+epl_720bb5616bb5486b2059,2024-10-27,West Ham,Man United,2,1,H
+epl_a672ea36f5524a9a8d20,2024-10-27,Chelsea,Newcastle,2,1,H
+epl_bc00010157d82a85fb24,2024-10-27,Crystal Palace,Tottenham,1,0,H
+epl_0c74ce9a718d83bf36ff,2024-11-02,Wolves,Crystal Palace,2,2,D
+epl_1fd3eef9eaa7525f831e,2024-11-02,Bournemouth,Man City,2,1,H
+epl_22e3f8751c1a9c70214e,2024-11-02,Newcastle,Arsenal,1,0,H
+epl_49e59fb5c9e176965b4e,2024-11-02,Nott'm Forest,West Ham,3,0,H
+epl_83729ef0a8f7d85c0dc4,2024-11-02,Southampton,Everton,1,0,H
+epl_b4d8134a02080db9d051,2024-11-02,Liverpool,Brighton,2,1,H
+epl_b89c6e695cef687987ad,2024-11-02,Ipswich,Leicester,1,1,D
+epl_1c61ca9ff8caadff4a2a,2024-11-03,Man United,Chelsea,1,1,D
+epl_1ef91635850b14b77c2b,2024-11-03,Tottenham,Aston Villa,4,1,H
+epl_904fff30b83591e6484d,2024-11-04,Fulham,Brentford,2,1,H
+epl_03c573835ba4ec7c16e6,2024-11-09,West Ham,Everton,0,0,D
+epl_15233be834e1a0adec3a,2024-11-09,Liverpool,Aston Villa,2,0,H
+epl_aa13da00303c851f0fa0,2024-11-09,Brentford,Bournemouth,3,2,H
+epl_b6451540a73588a6e5a0,2024-11-09,Crystal Palace,Fulham,0,2,A
+epl_d903a4dce555ab9ddcea,2024-11-09,Wolves,Southampton,2,0,H
+epl_dc546052cf9f7dee0bab,2024-11-09,Brighton,Man City,2,1,H
+epl_2fbd3d2b9c26760c5557,2024-11-10,Tottenham,Ipswich,1,2,A
+epl_580ca29f44a67218cd9a,2024-11-10,Chelsea,Arsenal,1,1,D
+epl_9aab7d9c0b08911aa2e0,2024-11-10,Nott'm Forest,Newcastle,1,3,A
+epl_ec6b9847beeddaee9f99,2024-11-10,Man United,Leicester,3,0,H
+epl_1f4ab866c80088ad16e4,2024-11-23,Man City,Tottenham,0,4,A
+epl_230d0f21091d77d77b25,2024-11-23,Leicester,Chelsea,1,2,A
+epl_645a44628314d105c028,2024-11-23,Aston Villa,Crystal Palace,2,2,D
+epl_a8a638af678e6e4bd0fc,2024-11-23,Everton,Brentford,0,0,D
+epl_c88c81d4405e33b81030,2024-11-23,Arsenal,Nott'm Forest,3,0,H
+epl_d39ce311da95ab65357e,2024-11-23,Fulham,Wolves,1,4,A
+epl_f320f1558c4b9d70e0dc,2024-11-23,Bournemouth,Brighton,1,2,A
+epl_05cc861e8011f34e0096,2024-11-24,Ipswich,Man United,1,1,D
+epl_cb4640020065dbbc1479,2024-11-24,Southampton,Liverpool,2,3,A
+epl_44c8bef71147ce91ffdb,2024-11-25,Newcastle,West Ham,0,2,A
+epl_68de3bb1bb4cec162361,2024-11-29,Brighton,Southampton,1,1,D
+epl_092d672c4a70411ba9bb,2024-11-30,Brentford,Leicester,4,1,H
+epl_326de348f728294d12de,2024-11-30,Crystal Palace,Newcastle,1,1,D
+epl_5daa3b8a9c712dab1fcc,2024-11-30,Nott'm Forest,Ipswich,1,0,H
+epl_77e4ffcbc7c4c173ffb5,2024-11-30,West Ham,Arsenal,2,5,A
+epl_dc79f1ba5442d29b39cb,2024-11-30,Wolves,Bournemouth,2,4,A
+epl_2880d300d72559dbf0c7,2024-12-01,Chelsea,Aston Villa,3,0,H
+epl_51277b4db1f6ee779c5f,2024-12-01,Tottenham,Fulham,1,1,D
+epl_580da3c26845e0ee100f,2024-12-01,Man United,Everton,4,0,H
+epl_f32836c3630b6d4fa48f,2024-12-01,Liverpool,Man City,2,0,H
+epl_2d470ea889a9a881c1d1,2024-12-03,Leicester,West Ham,3,1,H
+epl_c173e9ae5b24f0f12937,2024-12-03,Ipswich,Crystal Palace,0,1,A
+epl_37468c31f79b4337cbca,2024-12-04,Arsenal,Man United,2,0,H
+epl_52851ac07e4534faae53,2024-12-04,Everton,Wolves,4,0,H
+epl_675bdede8cb519c9286e,2024-12-04,Southampton,Chelsea,1,5,A
+epl_9be796c40ef29b5e3b86,2024-12-04,Newcastle,Liverpool,3,3,D
+epl_c017b42dba120635ef3a,2024-12-04,Aston Villa,Brentford,3,1,H
+epl_e2e7b666f3e15c63b394,2024-12-04,Man City,Nott'm Forest,3,0,H
+epl_6bd090b9fbf8e34ad86e,2024-12-05,Fulham,Brighton,3,1,H
+epl_e8933b424d93db30c1c8,2024-12-05,Bournemouth,Tottenham,1,0,H
+epl_0e28f2081e42ce82f43d,2024-12-07,Crystal Palace,Man City,2,2,D
+epl_6c324a5b01dab3268222,2024-12-07,Brentford,Newcastle,4,2,H
+epl_88c972c6435ac4586d08,2024-12-07,Man United,Nott'm Forest,2,3,A
+epl_8f76f90c5587605ca5ff,2024-12-07,Aston Villa,Southampton,1,0,H
+epl_58ca9a30e80f131500dc,2024-12-08,Fulham,Arsenal,1,1,D
+epl_b86e2281f2115adc8d68,2024-12-08,Ipswich,Bournemouth,1,2,A
+epl_bac48c3817807720a0a5,2024-12-08,Tottenham,Chelsea,3,4,A
+epl_eace9f78e6e569189fb6,2024-12-08,Leicester,Brighton,2,2,D
+epl_d73897130f50fef4563e,2024-12-09,West Ham,Wolves,2,1,H
+epl_189dba1695afc5c28bfd,2024-12-14,Arsenal,Everton,0,0,D
+epl_295decfb3b4431afacc7,2024-12-14,Liverpool,Fulham,2,2,D
+epl_6126f4efd28b52e6b02b,2024-12-14,Nott'm Forest,Aston Villa,2,1,H
+epl_8d83ccf5bb4a3baf4704,2024-12-14,Wolves,Ipswich,1,2,A
+epl_f619fcf33053625e01e9,2024-12-14,Newcastle,Leicester,4,0,H
+epl_6cfb060f35466cbe7ed7,2024-12-15,Man City,Man United,1,2,A
+epl_7d29be90411d639ecaad,2024-12-15,Chelsea,Brentford,2,1,H
+epl_a20b2a17e3ac1c60fec0,2024-12-15,Southampton,Tottenham,0,5,A
+epl_ea6880fa1bfb43e76ef2,2024-12-15,Brighton,Crystal Palace,1,3,A
+epl_20acc661907ab46caea8,2024-12-16,Bournemouth,West Ham,1,1,D
+epl_2192d845d4226a8d977a,2024-12-21,Crystal Palace,Arsenal,1,5,A
+epl_51e6b8f830c3bb722305,2024-12-21,Brentford,Nott'm Forest,0,2,A
+epl_702ecef4af578670c9a8,2024-12-21,Aston Villa,Man City,2,1,H
+epl_768c18847b8ab57d1be5,2024-12-21,Ipswich,Newcastle,0,4,A
+epl_aea0f4c6b8218aa933c8,2024-12-21,West Ham,Brighton,1,1,D
+epl_070de06739b31fb3f25a,2024-12-22,Leicester,Wolves,0,3,A
+epl_0b4b7f4385c22117fbc8,2024-12-22,Tottenham,Liverpool,3,6,A
+epl_5e9e73afbaf0b94f7e8c,2024-12-22,Everton,Chelsea,0,0,D
+epl_b76cfda675cfb475c140,2024-12-22,Man United,Bournemouth,0,3,A
+epl_d297cc3ad0b58720225e,2024-12-22,Fulham,Southampton,0,0,D
+epl_212d486697b649215ace,2024-12-26,Nott'm Forest,Tottenham,1,0,H
+epl_30d2e04324e095ab964c,2024-12-26,Wolves,Man United,2,0,H
+epl_56963f3fc25d119290b4,2024-12-26,Newcastle,Aston Villa,3,0,H
+epl_58ad7433181c3128207f,2024-12-26,Chelsea,Fulham,1,2,A
+epl_63c6a148caa4754cc0a2,2024-12-26,Southampton,West Ham,0,1,A
+epl_81534ff02d21755829f0,2024-12-26,Man City,Everton,1,1,D
+epl_873b9f4622d712d0698e,2024-12-26,Liverpool,Leicester,3,1,H
+epl_be23671a408a9b5ae8d9,2024-12-26,Bournemouth,Crystal Palace,0,0,D
+epl_0c4a0b80535cb71db0cb,2024-12-27,Arsenal,Ipswich,1,0,H
+epl_b41c1d5c1bd086cbd03c,2024-12-27,Brighton,Brentford,0,0,D
+epl_01bb39d56edfb7571b40,2024-12-29,Crystal Palace,Southampton,2,1,H
+epl_28356f1f3ec87220ab3b,2024-12-29,Leicester,Man City,0,2,A
+epl_ad7c1ddaf9d729710230,2024-12-29,Fulham,Bournemouth,2,2,D
+epl_baa1e30d84f404152a2d,2024-12-29,Everton,Nott'm Forest,0,2,A
+epl_d972757caae7109754e6,2024-12-29,Tottenham,Wolves,2,2,D
+epl_f0e2a1b7c614c2e79667,2024-12-29,West Ham,Liverpool,0,5,A
+epl_5f806562557f460ca3ee,2024-12-30,Aston Villa,Brighton,2,2,D
+epl_d6a63df93b785b2dee13,2024-12-30,Man United,Newcastle,0,2,A
+epl_e0822225c7e8616815d6,2024-12-30,Ipswich,Chelsea,2,0,H
+epl_0a8b9089c93f183153bc,2025-01-01,Brentford,Arsenal,1,3,A
+epl_20e5825a03144b9cd4da,2025-01-04,Southampton,Brentford,0,5,A
+epl_57aaeac400e7314883f7,2025-01-04,Crystal Palace,Chelsea,1,1,D
+epl_748ab8d8ac80bcac1de1,2025-01-04,Brighton,Arsenal,1,1,D
+epl_8b0763598df1a156e138,2025-01-04,Tottenham,Newcastle,1,2,A
+epl_b1b93651126458f0545a,2025-01-04,Aston Villa,Leicester,2,1,H
+epl_ce85bec0dc5a2140f8aa,2025-01-04,Bournemouth,Everton,1,0,H
+epl_f8fa15a8a8000ed658b2,2025-01-04,Man City,West Ham,4,1,H
+epl_0a050fee0e8d2b2f0d42,2025-01-05,Liverpool,Man United,2,2,D
+epl_d8fb9497efeff6a8d92c,2025-01-05,Fulham,Ipswich,2,2,D
+epl_e9453641f1515fc4d851,2025-01-06,Wolves,Nott'm Forest,0,3,A
+epl_2da3ea40989c25e25335,2025-01-14,Chelsea,Bournemouth,2,2,D
+epl_70d6398a7b3f7bdaa367,2025-01-14,Brentford,Man City,2,2,D
+epl_8c392ce68aa2c116a5a9,2025-01-14,West Ham,Fulham,3,2,H
+epl_b0a8f2e96bdce3fc8f97,2025-01-14,Nott'm Forest,Liverpool,1,1,D
+epl_118d13effe803e5895f1,2025-01-15,Arsenal,Tottenham,2,1,H
+epl_25068e84e4e2890cbcde,2025-01-15,Newcastle,Wolves,3,0,H
+epl_d5b186d09519f57c7671,2025-01-15,Everton,Aston Villa,0,1,A
+epl_f6486e43a3eb6e0c1968,2025-01-15,Leicester,Crystal Palace,0,2,A
+epl_39dc2421a4386d926742,2025-01-16,Man United,Southampton,3,1,H
+epl_3bd19d4031f966099d17,2025-01-16,Ipswich,Brighton,0,2,A
+epl_1a63ace41a0c01fb63b6,2025-01-18,Brentford,Liverpool,0,2,A
+epl_1f597b767acb045dc578,2025-01-18,Arsenal,Aston Villa,2,2,D
+epl_4612f6b927320d73ff95,2025-01-18,West Ham,Crystal Palace,0,2,A
+epl_c597d29fc397b2294172,2025-01-18,Newcastle,Bournemouth,1,4,A
+epl_e1f7b5af9d172f2622f9,2025-01-18,Leicester,Fulham,0,2,A
+epl_211c3e14574864c05166,2025-01-19,Nott'm Forest,Southampton,3,2,H
+epl_4fc0e2942c35251cdd05,2025-01-19,Ipswich,Man City,0,6,A
+epl_57ab62dbd2d9ddbfb670,2025-01-19,Everton,Tottenham,3,2,H
+epl_bd9fa4c59e0fe2881962,2025-01-19,Man United,Brighton,1,3,A
+epl_07f80dfb47b18f8fd66a,2025-01-20,Chelsea,Wolves,3,1,H
+epl_1398868e55f2f0c35aba,2025-01-25,Southampton,Newcastle,1,3,A
+epl_276bba051d2f66ee1cba,2025-01-25,Bournemouth,Nott'm Forest,5,0,H
+epl_2df52eea5e8472af5542,2025-01-25,Liverpool,Ipswich,4,1,H
+epl_56cdc2bcfbc51d427142,2025-01-25,Wolves,Arsenal,0,1,A
+epl_6ce74215df6b0e07bac4,2025-01-25,Brighton,Everton,0,1,A
+epl_c746b7bf226edfe1784e,2025-01-25,Man City,Chelsea,3,1,H
+epl_15ed207e6b2f0a91b809,2025-01-26,Tottenham,Leicester,1,2,A
+epl_33fe4278cf2a61772125,2025-01-26,Aston Villa,West Ham,1,1,D
+epl_87f154a3977e7742b155,2025-01-26,Fulham,Man United,0,1,A
+epl_f5baeffd55bb816fccd2,2025-01-26,Crystal Palace,Brentford,1,2,A
+epl_43c74da0de7ad23acbc7,2025-02-01,Nott'm Forest,Brighton,7,0,H
+epl_61e8178bc9b3d68c62fd,2025-02-01,Ipswich,Southampton,1,2,A
+epl_988668fbd2cb4247406a,2025-02-01,Newcastle,Fulham,1,2,A
+epl_b78aee1027438b8a74e9,2025-02-01,Wolves,Aston Villa,2,0,H
+epl_c50d4bbd7602492914ce,2025-02-01,Bournemouth,Liverpool,0,2,A
+epl_c8a8741c551acd4f4fac,2025-02-01,Everton,Leicester,4,0,H
+epl_0ac375c23d2f7aa96ce5,2025-02-02,Brentford,Tottenham,0,2,A
+epl_3954c5d36729b105d1ab,2025-02-02,Man United,Crystal Palace,0,2,A
+epl_8920dc80240934d55007,2025-02-02,Arsenal,Man City,5,1,H
+epl_490b91802d2203394967,2025-02-03,Chelsea,West Ham,2,1,H
+epl_f25d4ec2b12dc722fe27,2025-02-12,Everton,Liverpool,2,2,D
+epl_65a3dfe7efcf1ff5c79d,2025-02-14,Brighton,Chelsea,3,0,H
+epl_12e357509bb961ec6acf,2025-02-15,Southampton,Bournemouth,1,3,A
+epl_13d69633aba0c3809ab2,2025-02-15,Man City,Newcastle,4,0,H
+epl_3a0d6c6c59fb68a32778,2025-02-15,West Ham,Brentford,0,1,A
+epl_539f668b019189e1d2db,2025-02-15,Aston Villa,Ipswich,1,1,D
+epl_bc33da6927541d377df9,2025-02-15,Crystal Palace,Everton,1,2,A
+epl_ddf10cb4893673aaf5d0,2025-02-15,Leicester,Arsenal,0,2,A
+epl_ff8a311d4267375806c6,2025-02-15,Fulham,Nott'm Forest,2,1,H
+epl_93a656b41ad3c06eaec5,2025-02-16,Liverpool,Wolves,2,1,H
+epl_d0839cd9a3bfa54ef418,2025-02-16,Tottenham,Man United,1,0,H
+epl_311b3bb575b6522c9240,2025-02-19,Aston Villa,Liverpool,2,2,D
+epl_6e6a30842d5ef82376db,2025-02-21,Leicester,Brentford,0,4,A
+epl_25339a1817807d2e3d73,2025-02-22,Everton,Man United,2,2,D
+epl_29c47fb350534c301dc7,2025-02-22,Aston Villa,Chelsea,2,1,H
+epl_7a209394507a47f2339a,2025-02-22,Ipswich,Tottenham,1,4,A
+epl_8f40f2798899f77d8203,2025-02-22,Fulham,Crystal Palace,0,2,A
+epl_c5bc8294d00ae8a62882,2025-02-22,Southampton,Brighton,0,4,A
+epl_d9c471d1851fa03a098a,2025-02-22,Arsenal,West Ham,0,1,A
+epl_dea04fafe2206d43490f,2025-02-22,Bournemouth,Wolves,0,1,A
+epl_1d4f7efbbb2e87e60de8,2025-02-23,Newcastle,Nott'm Forest,4,3,H
+epl_ddbfae45439a2776e049,2025-02-23,Man City,Liverpool,0,2,A
+epl_0a357d81a30207406f99,2025-02-25,Wolves,Fulham,1,2,A
+epl_7db649df08a9f3941d19,2025-02-25,Chelsea,Southampton,4,0,H
+epl_896ec0aa142ded07c5a3,2025-02-25,Brighton,Bournemouth,2,1,H
+epl_d9c9e567e7dd45d096e4,2025-02-25,Crystal Palace,Aston Villa,4,1,H
+epl_1dc1eea026608ba35b94,2025-02-26,Brentford,Everton,1,1,D
+epl_3980cafff2f123884815,2025-02-26,Tottenham,Man City,0,1,A
+epl_9c00d8bc1c56ca1815a6,2025-02-26,Liverpool,Newcastle,2,0,H
+epl_ac912942057b38a09d26,2025-02-26,Nott'm Forest,Arsenal,0,0,D
+epl_f91fa84cf1a2e53edc81,2025-02-26,Man United,Ipswich,3,2,H
+epl_77715968db2aa1456696,2025-02-27,West Ham,Leicester,2,0,H
+epl_0d68a98155034e25dcba,2025-03-08,Brentford,Aston Villa,0,1,A
+epl_116c9c91f62b5b535522,2025-03-08,Liverpool,Southampton,3,1,H
+epl_17aa23d232272717d5d3,2025-03-08,Nott'm Forest,Man City,1,0,H
+epl_3eaa1b2503b3c9985ca0,2025-03-08,Wolves,Everton,1,1,D
+epl_40ed17f12e9a5e1af6b6,2025-03-08,Crystal Palace,Ipswich,1,0,H
+epl_4fb8d4b4b01da2c7680e,2025-03-08,Brighton,Fulham,2,1,H
+epl_88c1ba96314dae73be56,2025-03-09,Tottenham,Bournemouth,2,2,D
+epl_a5637f7339c13944f6c6,2025-03-09,Man United,Arsenal,1,1,D
+epl_e640f3b05c432c233bfc,2025-03-09,Chelsea,Leicester,1,0,H
+epl_c8ea5d971aea5926b2e9,2025-03-10,West Ham,Newcastle,0,1,A
+epl_1b25f4af39bc0652da84,2025-03-15,Everton,West Ham,1,1,D
+epl_30ec6749e5eba037c0b9,2025-03-15,Man City,Brighton,2,2,D
+epl_975f9ba0c4be4455eb57,2025-03-15,Southampton,Wolves,1,2,A
+epl_c3e06c284dfe97e42712,2025-03-15,Bournemouth,Brentford,1,2,A
+epl_e3530a53bfd1bafc5a84,2025-03-15,Ipswich,Nott'm Forest,2,4,A
+epl_89e30511aeef0835dafe,2025-03-16,Leicester,Man United,0,3,A
+epl_e173728a55a590b79139,2025-03-16,Arsenal,Chelsea,1,0,H
+epl_ecea5e9dcfe8e9c43816,2025-03-16,Fulham,Tottenham,2,0,H
+epl_13851bf1c4110ae4e0ef,2025-04-01,Nott'm Forest,Man United,1,0,H
+epl_1ecd4e700a3602ba018d,2025-04-01,Arsenal,Fulham,2,1,H
+epl_a7be357344cbf9a0b3c0,2025-04-01,Wolves,West Ham,1,0,H
+epl_05a348170d387eda835c,2025-04-02,Liverpool,Everton,1,0,H
+epl_51c7a4be8692c807ad47,2025-04-02,Southampton,Crystal Palace,1,1,D
+epl_744d5bf09262e79b5255,2025-04-02,Newcastle,Brentford,2,1,H
+epl_9263f0931b1a776f02fb,2025-04-02,Man City,Leicester,2,0,H
+epl_9620fa4a2434a416ad8a,2025-04-02,Bournemouth,Ipswich,1,2,A
+epl_f29e9cd28acbf20622c4,2025-04-02,Brighton,Aston Villa,0,3,A
+epl_4e0bff75eb168342da46,2025-04-03,Chelsea,Tottenham,1,0,H
+epl_26677b2ea9b5851637f6,2025-04-05,Ipswich,Wolves,1,2,A
+epl_5b6df28c5a54df2bd94a,2025-04-05,West Ham,Bournemouth,2,2,D
+epl_a5c6bc537fe1c13449fc,2025-04-05,Crystal Palace,Brighton,2,1,H
+epl_b541aee8cd6feb18a6e9,2025-04-05,Aston Villa,Nott'm Forest,2,1,H
+epl_f5b95f6dac0360b8c9c9,2025-04-05,Everton,Arsenal,1,1,D
+epl_7479fb69122656de4e8e,2025-04-06,Tottenham,Southampton,3,1,H
+epl_91b4979ef46db96b9206,2025-04-06,Fulham,Liverpool,3,2,H
+epl_af8487fc6fddaafd5665,2025-04-06,Man United,Man City,0,0,D
+epl_f7c3aed66dc2d0c37779,2025-04-06,Brentford,Chelsea,0,0,D
+epl_fb95084053c6775e713a,2025-04-07,Leicester,Newcastle,0,3,A
+epl_1770a3cabfeb2fb435c1,2025-04-12,Southampton,Aston Villa,0,3,A
+epl_2bfcc9d6a6ef4758fc3e,2025-04-12,Brighton,Leicester,2,2,D
+epl_7014a76c4a0d031917eb,2025-04-12,Nott'm Forest,Everton,0,1,A
+epl_70f966d212497a2c7f1c,2025-04-12,Arsenal,Brentford,1,1,D
+epl_a109cfc6995a2bfcc6c2,2025-04-12,Man City,Crystal Palace,5,2,H
+epl_1aa6234a93ca1c1904c4,2025-04-13,Chelsea,Ipswich,2,2,D
+epl_2d99268ac4284100565c,2025-04-13,Newcastle,Man United,4,1,H
+epl_51a2c1d2d46a4ff6b89a,2025-04-13,Wolves,Tottenham,4,2,H
+epl_d9878c22b49afa3a2d37,2025-04-13,Liverpool,West Ham,2,1,H
+epl_358376df6401efe55158,2025-04-14,Bournemouth,Fulham,1,0,H
+epl_e36b9c17002c891b9d58,2025-04-16,Newcastle,Crystal Palace,5,0,H
+epl_169a4f4828d85337a226,2025-04-19,Crystal Palace,Bournemouth,0,0,D
+epl_2476bf9d2de328cc3f6c,2025-04-19,Aston Villa,Newcastle,4,1,H
+epl_3939ef60f74521d8a9f9,2025-04-19,West Ham,Southampton,1,1,D
+epl_555ebd327f60355e1be7,2025-04-19,Everton,Man City,0,2,A
+epl_ef2111ae2392330dfc58,2025-04-19,Brentford,Brighton,4,2,H
+epl_15880994277b0a26b163,2025-04-20,Man United,Wolves,0,1,A
+epl_1a90729b693804dd4ce3,2025-04-20,Leicester,Liverpool,0,1,A
+epl_2f04a308c3aad438da43,2025-04-20,Fulham,Chelsea,1,2,A
+epl_a98dcc1502cfd258a485,2025-04-20,Ipswich,Arsenal,0,4,A
+epl_d616e7275e9f75e9466d,2025-04-21,Tottenham,Nott'm Forest,1,2,A
+epl_13be698dd85d9583c41c,2025-04-22,Man City,Aston Villa,2,1,H
+epl_6568b90fe2636409b38a,2025-04-23,Arsenal,Crystal Palace,2,2,D
+epl_07e7a8ab39350aa274ed,2025-04-26,Chelsea,Everton,1,0,H
+epl_489b60abbe2852a1302a,2025-04-26,Brighton,West Ham,3,2,H
+epl_9e6c1a37d4aa5a797343,2025-04-26,Wolves,Leicester,3,0,H
+epl_e151e84fc42c8a76ca7d,2025-04-26,Newcastle,Ipswich,3,0,H
+epl_f76f8afd0c09a616517f,2025-04-26,Southampton,Fulham,1,2,A
+epl_86a78f5162e410ee8f23,2025-04-27,Liverpool,Tottenham,5,1,H
+epl_ad4373da0143fe09d3ba,2025-04-27,Bournemouth,Man United,1,1,D
+epl_74dd84d6aa814b4edb05,2025-05-01,Nott'm Forest,Brentford,0,2,A
+epl_08f4de763660973d069d,2025-05-02,Man City,Wolves,1,0,H
+epl_5f2219b3869f3cfa3648,2025-05-03,Aston Villa,Fulham,1,0,H
+epl_6909ec83506223b333d7,2025-05-03,Leicester,Southampton,2,0,H
+epl_b6ced246dec352c771ff,2025-05-03,Everton,Ipswich,2,2,D
+epl_fd445eb13ef396deac65,2025-05-03,Arsenal,Bournemouth,1,2,A
+epl_4a9f8c0a41676b109279,2025-05-04,West Ham,Tottenham,1,1,D
+epl_7817d869306b26a7d715,2025-05-04,Brighton,Newcastle,1,1,D
+epl_86ba8491cd6de8e2fb9c,2025-05-04,Brentford,Man United,4,3,H
+epl_b4b16ca31f053cec5006,2025-05-04,Chelsea,Liverpool,3,1,H
+epl_c5ce604e9952a6c8b4b6,2025-05-05,Crystal Palace,Nott'm Forest,1,1,D
+epl_475f9d329acc1d1768b7,2025-05-10,Southampton,Man City,0,0,D
+epl_65e41d8966ddbfbe9d7e,2025-05-10,Wolves,Brighton,0,2,A
+epl_c24eb59e48b084852003,2025-05-10,Bournemouth,Aston Villa,0,1,A
+epl_e418f717f629ad41482a,2025-05-10,Fulham,Everton,1,3,A
+epl_edabbab1872e0337921e,2025-05-10,Ipswich,Brentford,0,1,A
+epl_16db4cd295079afa9d44,2025-05-11,Liverpool,Arsenal,2,2,D
+epl_50ba966b966322408c51,2025-05-11,Nott'm Forest,Leicester,2,2,D
+epl_516fe26ed3323dc6d5c9,2025-05-11,Newcastle,Chelsea,2,0,H
+epl_5e5172ff7076ae654692,2025-05-11,Man United,West Ham,0,2,A
+epl_bedcfa47d524cf8a732a,2025-05-11,Tottenham,Crystal Palace,0,2,A
+epl_512c0fe968c0d6c474e1,2025-05-16,Chelsea,Man United,1,0,H
+epl_5f0e1f129616eb0a0f69,2025-05-16,Aston Villa,Tottenham,2,0,H
+epl_50e47c4f89862e37793c,2025-05-18,Brentford,Fulham,2,3,A
+epl_808e5d09a72e5237aa4c,2025-05-18,Leicester,Ipswich,2,0,H
+epl_843b10fb9a56dbf7c49b,2025-05-18,West Ham,Nott'm Forest,1,2,A
+epl_8ffaa8a2859e8a5c6668,2025-05-18,Arsenal,Newcastle,1,0,H
+epl_de10fe1dd5798d096a56,2025-05-18,Everton,Southampton,2,0,H
+epl_cccf2b7356114398513d,2025-05-19,Brighton,Liverpool,3,2,H
+epl_f35fdf75e93cb37003e7,2025-05-20,Crystal Palace,Wolves,4,2,H
+epl_fb60f2e6e1514af98002,2025-05-20,Man City,Bournemouth,3,1,H
+epl_07d8515b4dfe536ccb3f,2025-05-25,Ipswich,West Ham,1,3,A
+epl_14c1e41920c4e8f7e415,2025-05-25,Newcastle,Everton,0,1,A
+epl_5206d8c95a3392eac11d,2025-05-25,Man United,Aston Villa,2,0,H
+epl_76cc3a0f7bbf100b3b0b,2025-05-25,Fulham,Man City,0,2,A
+epl_79b1ced0e624b24b417d,2025-05-25,Southampton,Arsenal,1,2,A
+epl_97dda760ec3d9d3a9ca7,2025-05-25,Wolves,Brentford,1,1,D
+epl_c57044ba40d098c1f6f5,2025-05-25,Bournemouth,Leicester,2,0,H
+epl_e4d37818585c929d8af6,2025-05-25,Nott'm Forest,Chelsea,0,1,A
+epl_f7c7f27a6d3ac3775eea,2025-05-25,Liverpool,Crystal Palace,1,1,D
+epl_fb510503aeee57d165a0,2025-05-25,Tottenham,Brighton,1,4,A

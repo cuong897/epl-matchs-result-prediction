@@ -1,0 +1,12 @@
+{
+  "browser": "Microsoft Edge headless",
+  "matches": 380,
+  "registered_models": 16,
+  "team_filter": 38,
+  "outcomes_hidden_and_reveal_works": true,
+  "empty_state_and_reset_passed": true,
+  "raw_and_temperature_display_passed": true,
+  "mobile_has_no_horizontal_overflow": true,
+  "javascript_errors": [],
+  "external_network_requests": []
+}
