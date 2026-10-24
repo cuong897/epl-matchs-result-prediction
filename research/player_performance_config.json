@@ -1,0 +1,22 @@
+{
+  "feature_version": "F_performance_v1_day_batched",
+  "registration_scope": "before F feature build or model scoring; earlier A and P validation observed",
+  "history_team_matches": 5,
+  "rate_shrinkage_minutes": 180,
+  "rate_prior_goals_and_assists_per90": 0,
+  "weights": "positive minutes in the most recent prior team match, normalized within that side",
+  "performance_history": "same team's previous five matches in current season; no cross-club or cross-season identity inference",
+  "features_per_side": ["f_recent_group_goal90_s180_5", "f_recent_group_assist90_s180_5", "f_contribution_hhi5", "f_recent_group_contribution_share5"],
+  "formula_rates": "sum over last prior match participants of w_i * 90 * G_i/(M_i+180), and analogous A_i; M/G/A summed in prior window",
+  "formula_hhi": "sum_i ((G_i+A_i)/sum_j(G_j+A_j))^2; missing when total contribution=0",
+  "formula_group_share": "sum of G_i+A_i in window for positive-minute participants in last prior match / all window G+A; missing if denominator=0",
+  "calendar_timezone": "Europe/London",
+  "eligible_history": "strictly prior local calendar days, via P_usage_v1 lineage",
+  "used_player_columns": ["season", "match_id", "player_season_id", "historic_team_name", "match_date", "minutes", "available_at_assumed_utc", "goals_scored", "assists"],
+  "missing_policy": "all four missing without history; rates may be zero with history; contribution ratios missing if no contribution",
+  "train_seasons": ["2019-20", "2020-21", "2021-22", "2022-23"],
+  "validation_seasons": ["2023-24"],
+  "test_feature_generation_enabled": false,
+  "announced_XI_claim": false,
+  "excluded": ["current_match_inputs", "current_roster", "starts", "xG", "xA", "injuries", "FPL_value", "market_value", "age"]
+}

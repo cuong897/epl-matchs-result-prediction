@@ -1,0 +1,40 @@
+{
+  "feature_version": "F_performance_v1_day_batched",
+  "feature_count": 8,
+  "rows": 1900,
+  "train_rows": 1520,
+  "validation_rows": 380,
+  "tests": {
+    "prefix_invariance": true,
+    "future_performance_does_not_change_training": true,
+    "current_performance_does_not_change_own_features": true,
+    "input_order_invariance": true,
+    "lineage_within_cutoff": true
+  },
+  "missing_by_feature": {
+    "home_f_recent_group_goal90_s180_5": 50,
+    "home_f_recent_group_assist90_s180_5": 50,
+    "home_f_contribution_hhi5": 73,
+    "home_f_recent_group_contribution_share5": 73,
+    "away_f_recent_group_goal90_s180_5": 50,
+    "away_f_recent_group_assist90_s180_5": 50,
+    "away_f_contribution_hhi5": 76,
+    "away_f_recent_group_contribution_share5": 76
+  },
+  "output_sha256": {
+    "data\\curated\\features_F_train.csv": "0573f8333baf3b19b67fdc3b939f5c9a4b89095eec745cad2c77314d74cadab8",
+    "data\\curated\\features_F_validation.csv": "eb689851c4e9a5b27e3030c5eb1fee2bb9a67f68de3a2509397907e4daf72e9d"
+  },
+  "input_sha256": {
+    "data\\curated\\player_match_stats_P_development.csv": "abb7adc6e2e892c79b3818b7f88d162cbce88dec390fc4fb409db0d37ed52c71",
+    "data\\curated\\matches.csv": "17b34cdec679bb3496ce4d6143773d89f14987069bfd8432e7a413815ccb1b51",
+    "research\\player_performance_config.json": "5bb354b6685b3fec05e67bd29e35a0b50b4b634c7ab317f9be4ae131ff8cbc4a"
+  },
+  "code_sha256": {
+    "player_proxy_features.py": "868dea86885ac4790a67ffb7d2f9d3dfda0eec2b9e5dd1d1d28b9655aaadcc21",
+    "player_performance_features.py": "e2db4b2ee0b21e7c26d6dd44af86741d7a9bfe5a6fcc160ea0146d6d05c08ecf",
+    "build_player_performance.py": "2b15d5f62367f9936587b5eb72d57679f92a09fa039d7f4da4d79f2de07680ce"
+  },
+  "test_features_generated": false,
+  "models_trained": false
+}
