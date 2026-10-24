@@ -1,0 +1,40 @@
+{
+  "test_matches": 380,
+  "excluded_manager_rows": 322,
+  "test_player_rows": 27283,
+  "checks": {
+    "A_rebuild_matches_export": true,
+    "P_prefix_invariance": true,
+    "F_prefix_invariance": true,
+    "future_test_performance_does_not_change_prior_features": true,
+    "lineage_within_cutoff": true
+  },
+  "input_sha256": {
+    "data/raw/fpl/2024-25.csv": "5bbbcba6353b4c72ad273adcc8e3aa451946a826564679788f45b1cb3325b84e",
+    "data/raw/fpl/2024-25-fixtures.csv": "ce696e187569ca7c45da2562811d3c38f525b58e65575531be37bebd0769ee28",
+    "data/raw/fpl/2024-25-teams.csv": "d10a6db8feca6db9e44a3ba50b15168396667ea387fee9235d6b211c7f598c3b",
+    "data\\curated\\matches.csv": "17b34cdec679bb3496ce4d6143773d89f14987069bfd8432e7a413815ccb1b51",
+    "data\\curated\\match_outcomes.csv": "d909637d3408c7e9022f0c56ebea53c7fce5c132f3b981a42845d571a27c4e2c",
+    "data\\curated\\features_A_test.csv": "1fa3c4f0048603bd4e394f336e56dfe2dbd91a14eb0d8337000c58ac7b517c8c",
+    "research\\team_feature_config.json": "b0ba7671317ae9380486b7e27858bd74dfe20376ee24fb2f486fcad7b0e7a725",
+    "research\\player_proxy_config.json": "a58923efe5f97098ed6eb6948bdeddd9bba906ea6e8136489e565899bea82d18",
+    "research\\player_performance_config.json": "5bb354b6685b3fec05e67bd29e35a0b50b4b634c7ab317f9be4ae131ff8cbc4a"
+  },
+  "output_sha256": {
+    "data\\curated\\features_P_test.csv": "df8ac4580a77b7f1c42b4c240693ede91b56cc218369e819d88323ade12da177",
+    "data\\curated\\features_F_test.csv": "0263b8425a37b1e9d459d1ec000d605f0371a72b01a98b40564e85d52fea6e77",
+    "data\\curated\\feature_lineage_PF_test.csv": "ded29605cf87e81597ba79db14789de5a592a3948340b18f15dcbb1d34ea8b96"
+  },
+  "code_sha256": {
+    "prepare_final_features.py": "2036f392018ade5cfcc64f6609116b9d2b30e94b5b2da20face3738c5bfab768",
+    "audit_player_history.py": "845d610459d9d1613af60d0502c92947a66a7b4699126fc2b5c9bcfd1dd65091",
+    "player_proxy_features.py": "868dea86885ac4790a67ffb7d2f9d3dfda0eec2b9e5dd1d1d28b9655aaadcc21",
+    "player_performance_features.py": "e2db4b2ee0b21e7c26d6dd44af86741d7a9bfe5a6fcc160ea0146d6d05c08ecf",
+    "team_features.py": "1197f24c2ff18ecb9a86921b2671b08c77becb7d9f7f2fa1016d7be28b5a0731"
+  },
+  "models_fitted": 0,
+  "test_predictions_generated": false,
+  "test_metrics_computed": false,
+  "availability_status": "reconstructed_assumption",
+  "player_state_reset_for_test_season": true
+}

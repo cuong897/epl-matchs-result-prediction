@@ -1,0 +1,10 @@
+{
+  "config_sha256": "e27f25569469590e3f48e20647c0d0866805f8c46e2042966a1496e055bc14b7",
+  "registry_sha256": "765b7e1d0132eec22b2b9c583b6d2192d73270afd6b0ed85334a061a3c8e7291",
+  "started_at_utc": "2026-10-24T10:36:35.200966+00:00",
+  "code_sha256": {
+    "temperature_calibration.py": "f35d011c54d79008c1481cd1789f20e5f850df39ec2d2ce84bbf3647a6ca7dc6",
+    "fit_final_calibration.py": "ccc747d85748ba85ea80eab968d9bfd0d1216c6a63d37c03a762d807162a5ec0",
+    "final_models.py": "c8efa56cf5e3c20cc4555658c7b3724da8e24b19788630961398d0a2222053e4"
+  }
+}

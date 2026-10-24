@@ -1,0 +1,156 @@
+{
+  "full__elo": {
+    "temperature": 0.8668344900383698,
+    "inverse_temperature": 1.1536227636209258,
+    "fit_rows": 380,
+    "raw_log_loss": 0.9284820926515411,
+    "calibrated_fit_log_loss": 0.925887785077943,
+    "at_bound": false,
+    "optimizer_success": true,
+    "epsilon": 1e-15,
+    "fit_scope": "validation_2023_24_in_sample_diagnostic"
+  },
+  "full__logistic": {
+    "temperature": 0.9247525984159669,
+    "inverse_temperature": 1.081370305650318,
+    "fit_rows": 380,
+    "raw_log_loss": 0.9416621252553987,
+    "calibrated_fit_log_loss": 0.9409202532606863,
+    "at_bound": false,
+    "optimizer_success": true,
+    "epsilon": 1e-15,
+    "fit_scope": "validation_2023_24_in_sample_diagnostic"
+  },
+  "full__random_forest": {
+    "temperature": 0.9002154051352326,
+    "inverse_temperature": 1.110845242478135,
+    "fit_rows": 380,
+    "raw_log_loss": 0.9298564742369078,
+    "calibrated_fit_log_loss": 0.9284138960848761,
+    "at_bound": false,
+    "optimizer_success": true,
+    "epsilon": 1e-15,
+    "fit_scope": "validation_2023_24_in_sample_diagnostic"
+  },
+  "full__xgboost": {
+    "temperature": 0.8223192783042679,
+    "inverse_temperature": 1.2160726695622819,
+    "fit_rows": 380,
+    "raw_log_loss": 0.9388183118962005,
+    "calibrated_fit_log_loss": 0.9342282284691404,
+    "at_bound": false,
+    "optimizer_success": true,
+    "epsilon": 1e-15,
+    "fit_scope": "validation_2023_24_in_sample_diagnostic"
+  },
+  "common__elo": {
+    "temperature": 0.8382800431588372,
+    "inverse_temperature": 1.1929187723851373,
+    "fit_rows": 380,
+    "raw_log_loss": 0.9313329798915866,
+    "calibrated_fit_log_loss": 0.9274681698802412,
+    "at_bound": false,
+    "optimizer_success": true,
+    "epsilon": 1e-15,
+    "fit_scope": "validation_2023_24_in_sample_diagnostic"
+  },
+  "common__logistic__A_common": {
+    "temperature": 0.8846641869230236,
+    "inverse_temperature": 1.1303724224195502,
+    "fit_rows": 380,
+    "raw_log_loss": 0.9424640743292029,
+    "calibrated_fit_log_loss": 0.9406792538823221,
+    "at_bound": false,
+    "optimizer_success": true,
+    "epsilon": 1e-15,
+    "fit_scope": "validation_2023_24_in_sample_diagnostic"
+  },
+  "common__logistic__A_plus_P": {
+    "temperature": 0.9033697315023423,
+    "inverse_temperature": 1.1069664669159962,
+    "fit_rows": 380,
+    "raw_log_loss": 0.9444883370594105,
+    "calibrated_fit_log_loss": 0.9432677646362184,
+    "at_bound": false,
+    "optimizer_success": true,
+    "epsilon": 1e-15,
+    "fit_scope": "validation_2023_24_in_sample_diagnostic"
+  },
+  "common__logistic__A_plus_P_plus_F": {
+    "temperature": 0.9664494075025524,
+    "inverse_temperature": 1.0347153117762753,
+    "fit_rows": 380,
+    "raw_log_loss": 0.9534734438642163,
+    "calibrated_fit_log_loss": 0.9533365901484409,
+    "at_bound": false,
+    "optimizer_success": true,
+    "epsilon": 1e-15,
+    "fit_scope": "validation_2023_24_in_sample_diagnostic"
+  },
+  "common__random_forest__A_common": {
+    "temperature": 0.8635867935190674,
+    "inverse_temperature": 1.1579612003155542,
+    "fit_rows": 380,
+    "raw_log_loss": 0.9390625793907089,
+    "calibrated_fit_log_loss": 0.9364369787199394,
+    "at_bound": false,
+    "optimizer_success": true,
+    "epsilon": 1e-15,
+    "fit_scope": "validation_2023_24_in_sample_diagnostic"
+  },
+  "common__random_forest__A_plus_P": {
+    "temperature": 0.8662779848569837,
+    "inverse_temperature": 1.1543638618094316,
+    "fit_rows": 380,
+    "raw_log_loss": 0.940539022574797,
+    "calibrated_fit_log_loss": 0.9380346735427763,
+    "at_bound": false,
+    "optimizer_success": true,
+    "epsilon": 1e-15,
+    "fit_scope": "validation_2023_24_in_sample_diagnostic"
+  },
+  "common__random_forest__A_plus_P_plus_F": {
+    "temperature": 0.8809758098790551,
+    "inverse_temperature": 1.1351049470215138,
+    "fit_rows": 380,
+    "raw_log_loss": 0.9397953376875741,
+    "calibrated_fit_log_loss": 0.9378247991766373,
+    "at_bound": false,
+    "optimizer_success": true,
+    "epsilon": 1e-15,
+    "fit_scope": "validation_2023_24_in_sample_diagnostic"
+  },
+  "common__xgboost__A_common": {
+    "temperature": 0.7918446594036547,
+    "inverse_temperature": 1.2628739590832234,
+    "fit_rows": 380,
+    "raw_log_loss": 0.9454074908317415,
+    "calibrated_fit_log_loss": 0.9391657219405981,
+    "at_bound": false,
+    "optimizer_success": true,
+    "epsilon": 1e-15,
+    "fit_scope": "validation_2023_24_in_sample_diagnostic"
+  },
+  "common__xgboost__A_plus_P": {
+    "temperature": 0.7942947174646955,
+    "inverse_temperature": 1.2589785353123006,
+    "fit_rows": 380,
+    "raw_log_loss": 0.9448283395338115,
+    "calibrated_fit_log_loss": 0.9387097383928372,
+    "at_bound": false,
+    "optimizer_success": true,
+    "epsilon": 1e-15,
+    "fit_scope": "validation_2023_24_in_sample_diagnostic"
+  },
+  "common__xgboost__A_plus_P_plus_F": {
+    "temperature": 0.8074516372122141,
+    "inverse_temperature": 1.238464266977739,
+    "fit_rows": 380,
+    "raw_log_loss": 0.9446820316622893,
+    "calibrated_fit_log_loss": 0.9393627748967037,
+    "at_bound": false,
+    "optimizer_success": true,
+    "epsilon": 1e-15,
+    "fit_scope": "validation_2023_24_in_sample_diagnostic"
+  }
+}
