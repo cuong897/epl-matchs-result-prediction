@@ -1,0 +1,17 @@
+{
+  "feature_version": "P_usage_v1_day_batched",
+  "registration_scope": "registered before P feature build or model evaluation; A-only validation already observed",
+  "history_team_matches": 5,
+  "calendar_timezone": "Europe/London",
+  "eligible_history": "strictly before current local calendar day",
+  "player_identity": "season-scoped IDs; reset state every season",
+  "membership_policy": "recorded positive minutes for that team in previous team matches; no current roster assumption",
+  "missing_policy": "history_n5=0; other features missing with no history; continuity missing with fewer than two matches",
+  "features_per_side": ["p_history_n5", "p_participants_n5", "p_minutes_hhi5", "p_top11_minutes_share5", "p_last_returning_minutes_share5", "p_mean_minutes_overlap5"],
+  "used_player_columns": ["season", "match_id", "player_season_id", "historic_team_name", "match_date", "minutes", "available_at_assumed_utc"],
+  "excluded": ["current_match_participation", "current_match_starts", "goals_scored", "assists", "xG", "xA", "FPL_value", "injuries", "market_value", "age", "current_roster"],
+  "train_seasons": ["2019-20", "2020-21", "2021-22", "2022-23"],
+  "validation_seasons": ["2023-24"],
+  "test_feature_generation_enabled": false,
+  "announced_XI_claim": false
+}

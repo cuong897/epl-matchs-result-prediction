@@ -1,0 +1,43 @@
+{
+  "feature_version": "P_usage_v1_day_batched",
+  "feature_count": 12,
+  "rows": 1900,
+  "train_rows": 1520,
+  "validation_rows": 380,
+  "tests": {
+    "prefix_invariance": true,
+    "future_minutes_do_not_change_training": true,
+    "input_order_invariance": true,
+    "lineage_within_cutoff": true
+  },
+  "missing_by_feature": {
+    "home_p_history_n5": 0,
+    "home_p_participants_n5": 50,
+    "home_p_minutes_hhi5": 50,
+    "home_p_top11_minutes_share5": 50,
+    "home_p_last_returning_minutes_share5": 100,
+    "home_p_mean_minutes_overlap5": 100,
+    "away_p_history_n5": 0,
+    "away_p_participants_n5": 50,
+    "away_p_minutes_hhi5": 50,
+    "away_p_top11_minutes_share5": 50,
+    "away_p_last_returning_minutes_share5": 100,
+    "away_p_mean_minutes_overlap5": 100
+  },
+  "zero_history_team_sides": 100,
+  "output_sha256": {
+    "data\\curated\\features_P_train.csv": "305a961efc571c8d2c96695340cf45391d6a30b60339783aa3396c171ee8a44b",
+    "data\\curated\\features_P_validation.csv": "331010f205ae4abe95853119dc1172a2f3c7fbce4df563d14692bc80ecd78d7b"
+  },
+  "input_sha256": {
+    "data\\curated\\player_match_stats_P_development.csv": "abb7adc6e2e892c79b3818b7f88d162cbce88dec390fc4fb409db0d37ed52c71",
+    "data\\curated\\matches.csv": "17b34cdec679bb3496ce4d6143773d89f14987069bfd8432e7a413815ccb1b51",
+    "research\\player_proxy_config.json": "a58923efe5f97098ed6eb6948bdeddd9bba906ea6e8136489e565899bea82d18"
+  },
+  "code_sha256": {
+    "player_proxy_features.py": "868dea86885ac4790a67ffb7d2f9d3dfda0eec2b9e5dd1d1d28b9655aaadcc21",
+    "build_player_proxy.py": "1ffebf16d13798b01ef1869c827a067f6a04d87a4b794f1cfe250ca826614915"
+  },
+  "test_features_generated": false,
+  "models_trained": false
+}
