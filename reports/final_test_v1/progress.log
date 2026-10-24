@@ -1,0 +1,117 @@
+Predicted frozen full__elo; test labels not used for prediction
+Predicted frozen full__logistic; test labels not used for prediction
+Predicted frozen full__random_forest; test labels not used for prediction
+Predicted frozen full__xgboost; test labels not used for prediction
+Predicted frozen full__frequency; test labels not used for prediction
+Predicted frozen common__elo; test labels not used for prediction
+Predicted frozen common__frequency; test labels not used for prediction
+Predicted frozen common__logistic__A_common; test labels not used for prediction
+Predicted frozen common__logistic__A_plus_P; test labels not used for prediction
+Predicted frozen common__logistic__A_plus_P_plus_F; test labels not used for prediction
+Predicted frozen common__random_forest__A_common; test labels not used for prediction
+Predicted frozen common__random_forest__A_plus_P; test labels not used for prediction
+Predicted frozen common__random_forest__A_plus_P_plus_F; test labels not used for prediction
+Predicted frozen common__xgboost__A_common; test labels not used for prediction
+Predicted frozen common__xgboost__A_plus_P; test labels not used for prediction
+Predicted frozen common__xgboost__A_plus_P_plus_F; test labels not used for prediction
+Locked final scoring complete. No estimator/calibrator fit or post-test tuning.
+{
+  "primary_reference_raw": {
+    "n": 380,
+    "accuracy": 0.5473684210526316,
+    "macro_f1": 0.4109577896680121,
+    "per_class": {
+      "H": {
+        "precision": 0.5303643724696356,
+        "recall": 0.8451612903225807,
+        "f1": 0.6517412935323383,
+        "support": 155
+      },
+      "D": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 93
+      },
+      "A": {
+        "precision": 0.5789473684210527,
+        "recall": 0.5833333333333334,
+        "f1": 0.5811320754716981,
+        "support": 132
+      }
+    },
+    "confusion_matrix_rows_true_cols_pred_HDA": [
+      [
+        131,
+        0,
+        24
+      ],
+      [
+        61,
+        0,
+        32
+      ],
+      [
+        55,
+        0,
+        77
+      ]
+    ],
+    "predicted_label_counts": {
+      "H": 247,
+      "D": 0,
+      "A": 133
+    },
+    "log_loss": 0.9814116812937715,
+    "brier_sum": 0.5865396499862564
+  },
+  "primary_reference_temperature": {
+    "n": 380,
+    "accuracy": 0.5473684210526316,
+    "macro_f1": 0.4109577896680121,
+    "per_class": {
+      "H": {
+        "precision": 0.5303643724696356,
+        "recall": 0.8451612903225807,
+        "f1": 0.6517412935323383,
+        "support": 155
+      },
+      "D": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 93
+      },
+      "A": {
+        "precision": 0.5789473684210527,
+        "recall": 0.5833333333333334,
+        "f1": 0.5811320754716981,
+        "support": 132
+      }
+    },
+    "confusion_matrix_rows_true_cols_pred_HDA": [
+      [
+        131,
+        0,
+        24
+      ],
+      [
+        61,
+        0,
+        32
+      ],
+      [
+        55,
+        0,
+        77
+      ]
+    ],
+    "predicted_label_counts": {
+      "H": 247,
+      "D": 0,
+      "A": 133
+    },
+    "log_loss": 0.9860599408621843,
+    "brier_sum": 0.5899280143403973
+  }
+}

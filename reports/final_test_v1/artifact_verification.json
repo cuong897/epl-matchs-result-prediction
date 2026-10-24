@@ -1,0 +1,8 @@
+{
+  "lock_models_calibrators_features_and_code_unchanged": true,
+  "all_30_outputs_have_same_380_matches": true,
+  "all_saved_probabilities_reproduced": true,
+  "all_metrics_class_metrics_confusion_matrices_reproduced": true,
+  "maximum_probability_reload_error": 3.3306690738754696e-16,
+  "estimator_or_calibrator_refit": false
+}

@@ -1,5 +1,5 @@
 {
-  "status": "APF_development_complete_feature_exploration_closed_test_not_evaluated",
+  "status": "final_test_complete_academic_report_notebook_demo_next",
   "research_date_local": "2026-10-24",
   "timezone": "Asia/Saigon",
   "data_budget": "free_only",
@@ -55,8 +55,9 @@
     "retraining_within_test_season": false,
     "freeze_features_parameters_and_calibration_before_test_metrics": true,
     "all_planned_models_evaluated_in_one_final_test_round": true,
-    "test_labels_read_for_structural_integrity_only": true,
-    "test_model_metrics_computed": false
+    "test_labels_read_for_structural_integrity_only": false,
+    "test_model_metrics_computed": true,
+    "test_labels_used_for_scoring_after_lock": true
   },
   "experiments": {
     "A_full": "team features on all eligible team-data matches",
@@ -99,7 +100,8 @@
     "calibrator_fit_period": "2023-24",
     "post_calibration_scores_on_calibrator_fit_period": "in_sample_diagnostics_only",
     "calibrated_out_of_sample_evaluation": "locked_final_test_2024_25",
-    "current_status": "not fitted; candidate policy retained for later frozen model comparison"
+    "current_status": "14 validation-fitted temperatures evaluated on locked test; test log loss worse than raw for all 14 estimators",
+    "method": "temperature on log probabilities, T in [0.5,5], one scalar per estimator"
   },
   "paired_uncertainty_analysis_proposal": {
     "method": "moving_block_bootstrap_by_calendar_time",
@@ -282,14 +284,14 @@
     }
   ],
   "experimental_results": {
-    "latest_run": "APF_dev_v1",
-    "report": "reports/APF_dev_v1/report.vi.md",
-    "machine_readable": "reports/APF_dev_v1/results.json",
-    "artifact_verification": "reports/APF_dev_v1/artifact_verification.json",
-    "frozen_comparator_run": "reports/AP_dev_v1/results.json",
-    "evaluation_split": "validation",
-    "test_metrics_computed": false,
-    "posthoc_calibration_fitted": false
+    "latest_run": "final_test_v1",
+    "report": "reports/final_test_v1/report.vi.md",
+    "machine_readable": "reports/final_test_v1/results.json",
+    "artifact_verification": "reports/final_test_v1/artifact_verification.json",
+    "evaluation_split": "test",
+    "test_metrics_computed": true,
+    "posthoc_calibration_fitted": true,
+    "raw_and_temperature_both_reported": true
   },
   "implemented_team_feature_policy": {
     "version": "team_A_v1_day_batched",
@@ -328,6 +330,12 @@
       "used_for_hyperparameter_selection": false,
       "registration": "F definitions and model config committed before fitting; previous AP validation observed",
       "status_after_run": "feature exploration closed; final test not evaluated"
+    },
+    {
+      "run": "final_calibration",
+      "usage": "fit one temperature per frozen estimator using 2023-24 only",
+      "post_fit_validation_scores": "in_sample_diagnostics",
+      "test_labels_used_for_fit": false
     }
   ],
   "version_control_policy": {
@@ -422,9 +430,9 @@
       "F_performance_v1_day_batched"
     ],
     "no_post_validation_feature_window_or_grid_expansion": true,
-    "calibration_fitted": false,
-    "final_test_manifest_registered": false,
-    "next_step": "register calibration method and final comparison list before any test scoring"
+    "calibration_fitted": true,
+    "final_test_manifest_registered": true,
+    "next_step": "academic report and reproducibility notebook/demo; no post-test tuning"
   },
   "F_performance_experiment": {
     "run": "APF_dev_v1",
@@ -443,5 +451,30 @@
     "test_evaluated": false,
     "announced_XI_claim": false,
     "interpretation": "no clear performance feature benefit; LR point loss worse, RF/XGB small reductions with intervals including zero"
+  },
+  "final_evaluation": {
+    "run": "final_test_v1",
+    "config": "research/final_evaluation_config.json",
+    "registry": "research/final_model_registry.json",
+    "lock": "research/final_lock.json",
+    "report": "reports/final_test_v1/report.vi.md",
+    "interpretation": "reports/final_test_v1/findings.vi.md",
+    "artifact_verification": "reports/final_test_v1/artifact_verification.json",
+    "completed_at_utc": "2026-10-24T10:40:55.548720+00:00",
+    "test_matches": 380,
+    "probability_outputs": 30,
+    "unit_tests_passed": 81,
+    "no_estimator_or_calibrator_refit_in_test": true,
+    "no_post_test_tuning": true,
+    "primary_reference_chosen_before_test": "full__elo",
+    "primary_reference_test_raw_metrics": {
+      "accuracy": 0.5473684210526316,
+      "macro_f1": 0.4109577896680121,
+      "log_loss": 0.9814116812937715,
+      "brier_sum": 0.5865396499862564
+    },
+    "calibration_worse_log_loss_estimators": 14,
+    "primary_feature_contrasts_with_Bonferroni_style_block2_interval_excluding_zero": 0,
+    "research_limit": "proxy player features only, announced XI / market value hypothesis not established"
   }
 }
