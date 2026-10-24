@@ -25,7 +25,7 @@ def sha256(path: Path) -> str:
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--provider', choices=['football_data_co_uk', 'vaastav_fpl'])
-    parser.add_argument('--catalog', choices=['pilot_sources', 'team_sources'], default='pilot_sources')
+    parser.add_argument('--catalog', choices=['pilot_sources', 'team_sources', 'player_sources'], default='pilot_sources')
     args = parser.parse_args()
     specs = json.loads((ROOT / 'research' / f'{args.catalog}.json').read_text(encoding='utf-8'))
     records = json.loads(MANIFEST.read_text(encoding='utf-8')) if MANIFEST.exists() else {}
@@ -42,6 +42,9 @@ def main() -> int:
             if expected is None or expected != sha256(path):
                 raise ValueError(f"Unverified or changed cache: {spec['id']}")
             print(f"CACHED {spec['id']}")
+            continue
+        if records.get(spec['id'], {}).get('status') == 'unavailable' and spec.get('optional'):
+            print(f"UNAVAILABLE_CACHED {spec['id']}")
             continue
         if spec['provider'] in blocked_providers:
             print(f"SKIPPED {spec['id']}: provider failed earlier in this run")
@@ -67,10 +70,14 @@ def main() -> int:
             temp.replace(path)
             print(f"DOWNLOADED {spec['id']} {len(raw)} bytes")
         except (OSError, ValueError, urllib.error.URLError) as exc:
-            record.update(status='failed', error=str(exc))
-            failed = True
-            blocked_providers.add(spec['provider'])
-            print(f"FAILED {spec['id']}: {exc}")
+            if isinstance(exc, urllib.error.HTTPError) and exc.code == 404 and spec.get('optional'):
+                record.update(status='unavailable', http_status=404, error=str(exc))
+                print(f"UNAVAILABLE {spec['id']}: HTTP 404")
+            else:
+                record.update(status='failed', error=str(exc))
+                failed = True
+                blocked_providers.add(spec['provider'])
+                print(f"FAILED {spec['id']}: {exc}")
             if temp.exists():
                 temp.unlink()
         records[spec['id']] = record

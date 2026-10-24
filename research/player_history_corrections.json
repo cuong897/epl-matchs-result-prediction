@@ -1,0 +1,13 @@
+[
+  {
+    "season": "2019-20",
+    "fixture": 275,
+    "obsolete_kickoff": "2020-03-11T19:30:00Z",
+    "completed_kickoff": "2020-06-17T19:15:00Z",
+    "action": "exclude_unplayed_placeholder_rows_only",
+    "required_minutes": 0,
+    "required_scores": "both_missing",
+    "required_replacement": "same player-fixture at completed kickoff",
+    "evidence": ["https://www.premierleague.com/en/news/1643922", "https://www.premierleague.com/en/news/1676717"]
+  }
+]

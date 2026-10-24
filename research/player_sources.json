@@ -1,0 +1,212 @@
+[
+  {
+    "id": "fpl_player_matches_2016_17",
+    "provider": "vaastav_fpl",
+    "season": "2016-17",
+    "kind": "player_matches",
+    "url": "https://raw.githubusercontent.com/vaastav/Fantasy-Premier-League/master/data/2016-17/gws/merged_gw.csv",
+    "path": "data/raw/fpl/2016-17.csv",
+    "optional": true,
+    "availability": "candidate path; must verify by download and schema audit"
+  },
+  {
+    "id": "fpl_fixtures_2016_17",
+    "provider": "vaastav_fpl",
+    "season": "2016-17",
+    "kind": "fixtures",
+    "url": "https://raw.githubusercontent.com/vaastav/Fantasy-Premier-League/master/data/2016-17/fixtures.csv",
+    "path": "data/raw/fpl/2016-17-fixtures.csv",
+    "optional": true,
+    "availability": "candidate path; must verify by download and schema audit"
+  },
+  {
+    "id": "fpl_teams_2016_17",
+    "provider": "vaastav_fpl",
+    "season": "2016-17",
+    "kind": "teams",
+    "url": "https://raw.githubusercontent.com/vaastav/Fantasy-Premier-League/master/data/2016-17/teams.csv",
+    "path": "data/raw/fpl/2016-17-teams.csv",
+    "optional": true,
+    "availability": "candidate path; must verify by download and schema audit"
+  },
+  {
+    "id": "fpl_player_matches_2017_18",
+    "provider": "vaastav_fpl",
+    "season": "2017-18",
+    "kind": "player_matches",
+    "url": "https://raw.githubusercontent.com/vaastav/Fantasy-Premier-League/master/data/2017-18/gws/merged_gw.csv",
+    "path": "data/raw/fpl/2017-18.csv",
+    "optional": true,
+    "availability": "candidate path; must verify by download and schema audit"
+  },
+  {
+    "id": "fpl_fixtures_2017_18",
+    "provider": "vaastav_fpl",
+    "season": "2017-18",
+    "kind": "fixtures",
+    "url": "https://raw.githubusercontent.com/vaastav/Fantasy-Premier-League/master/data/2017-18/fixtures.csv",
+    "path": "data/raw/fpl/2017-18-fixtures.csv",
+    "optional": true,
+    "availability": "candidate path; must verify by download and schema audit"
+  },
+  {
+    "id": "fpl_teams_2017_18",
+    "provider": "vaastav_fpl",
+    "season": "2017-18",
+    "kind": "teams",
+    "url": "https://raw.githubusercontent.com/vaastav/Fantasy-Premier-League/master/data/2017-18/teams.csv",
+    "path": "data/raw/fpl/2017-18-teams.csv",
+    "optional": true,
+    "availability": "candidate path; must verify by download and schema audit"
+  },
+  {
+    "id": "fpl_player_matches_2018_19",
+    "provider": "vaastav_fpl",
+    "season": "2018-19",
+    "kind": "player_matches",
+    "url": "https://raw.githubusercontent.com/vaastav/Fantasy-Premier-League/master/data/2018-19/gws/merged_gw.csv",
+    "path": "data/raw/fpl/2018-19.csv",
+    "optional": true,
+    "availability": "candidate path; must verify by download and schema audit"
+  },
+  {
+    "id": "fpl_fixtures_2018_19",
+    "provider": "vaastav_fpl",
+    "season": "2018-19",
+    "kind": "fixtures",
+    "url": "https://raw.githubusercontent.com/vaastav/Fantasy-Premier-League/master/data/2018-19/fixtures.csv",
+    "path": "data/raw/fpl/2018-19-fixtures.csv",
+    "optional": true,
+    "availability": "candidate path; must verify by download and schema audit"
+  },
+  {
+    "id": "fpl_teams_2018_19",
+    "provider": "vaastav_fpl",
+    "season": "2018-19",
+    "kind": "teams",
+    "url": "https://raw.githubusercontent.com/vaastav/Fantasy-Premier-League/master/data/2018-19/teams.csv",
+    "path": "data/raw/fpl/2018-19-teams.csv",
+    "optional": true,
+    "availability": "candidate path; must verify by download and schema audit"
+  },
+  {
+    "id": "fpl_player_matches_2019_20",
+    "provider": "vaastav_fpl",
+    "season": "2019-20",
+    "kind": "player_matches",
+    "url": "https://raw.githubusercontent.com/vaastav/Fantasy-Premier-League/master/data/2019-20/gws/merged_gw.csv",
+    "path": "data/raw/fpl/2019-20.csv",
+    "optional": true,
+    "availability": "candidate path; must verify by download and schema audit"
+  },
+  {
+    "id": "fpl_fixtures_2019_20",
+    "provider": "vaastav_fpl",
+    "season": "2019-20",
+    "kind": "fixtures",
+    "url": "https://raw.githubusercontent.com/vaastav/Fantasy-Premier-League/master/data/2019-20/fixtures.csv",
+    "path": "data/raw/fpl/2019-20-fixtures.csv",
+    "optional": true,
+    "availability": "candidate path; must verify by download and schema audit"
+  },
+  {
+    "id": "fpl_teams_2019_20",
+    "provider": "vaastav_fpl",
+    "season": "2019-20",
+    "kind": "teams",
+    "url": "https://raw.githubusercontent.com/vaastav/Fantasy-Premier-League/master/data/2019-20/teams.csv",
+    "path": "data/raw/fpl/2019-20-teams.csv",
+    "optional": true,
+    "availability": "candidate path; must verify by download and schema audit"
+  },
+  {
+    "id": "fpl_player_matches_2020_21",
+    "provider": "vaastav_fpl",
+    "season": "2020-21",
+    "kind": "player_matches",
+    "url": "https://raw.githubusercontent.com/vaastav/Fantasy-Premier-League/master/data/2020-21/gws/merged_gw.csv",
+    "path": "data/raw/fpl/2020-21.csv",
+    "optional": true,
+    "availability": "candidate path; must verify by download and schema audit"
+  },
+  {
+    "id": "fpl_fixtures_2020_21",
+    "provider": "vaastav_fpl",
+    "season": "2020-21",
+    "kind": "fixtures",
+    "url": "https://raw.githubusercontent.com/vaastav/Fantasy-Premier-League/master/data/2020-21/fixtures.csv",
+    "path": "data/raw/fpl/2020-21-fixtures.csv",
+    "optional": true,
+    "availability": "candidate path; must verify by download and schema audit"
+  },
+  {
+    "id": "fpl_teams_2020_21",
+    "provider": "vaastav_fpl",
+    "season": "2020-21",
+    "kind": "teams",
+    "url": "https://raw.githubusercontent.com/vaastav/Fantasy-Premier-League/master/data/2020-21/teams.csv",
+    "path": "data/raw/fpl/2020-21-teams.csv",
+    "optional": true,
+    "availability": "candidate path; must verify by download and schema audit"
+  },
+  {
+    "id": "fpl_player_matches_2021_22",
+    "provider": "vaastav_fpl",
+    "season": "2021-22",
+    "kind": "player_matches",
+    "url": "https://raw.githubusercontent.com/vaastav/Fantasy-Premier-League/master/data/2021-22/gws/merged_gw.csv",
+    "path": "data/raw/fpl/2021-22.csv",
+    "optional": true,
+    "availability": "candidate path; must verify by download and schema audit"
+  },
+  {
+    "id": "fpl_fixtures_2021_22",
+    "provider": "vaastav_fpl",
+    "season": "2021-22",
+    "kind": "fixtures",
+    "url": "https://raw.githubusercontent.com/vaastav/Fantasy-Premier-League/master/data/2021-22/fixtures.csv",
+    "path": "data/raw/fpl/2021-22-fixtures.csv",
+    "optional": true,
+    "availability": "candidate path; must verify by download and schema audit"
+  },
+  {
+    "id": "fpl_teams_2021_22",
+    "provider": "vaastav_fpl",
+    "season": "2021-22",
+    "kind": "teams",
+    "url": "https://raw.githubusercontent.com/vaastav/Fantasy-Premier-League/master/data/2021-22/teams.csv",
+    "path": "data/raw/fpl/2021-22-teams.csv",
+    "optional": true,
+    "availability": "candidate path; must verify by download and schema audit"
+  },
+  {
+    "id": "fpl_player_matches_2022_23",
+    "provider": "vaastav_fpl",
+    "season": "2022-23",
+    "kind": "player_matches",
+    "url": "https://raw.githubusercontent.com/vaastav/Fantasy-Premier-League/master/data/2022-23/gws/merged_gw.csv",
+    "path": "data/raw/fpl/2022-23.csv",
+    "optional": true,
+    "availability": "candidate path; must verify by download and schema audit"
+  },
+  {
+    "id": "fpl_fixtures_2022_23",
+    "provider": "vaastav_fpl",
+    "season": "2022-23",
+    "kind": "fixtures",
+    "url": "https://raw.githubusercontent.com/vaastav/Fantasy-Premier-League/master/data/2022-23/fixtures.csv",
+    "path": "data/raw/fpl/2022-23-fixtures.csv",
+    "optional": true,
+    "availability": "candidate path; must verify by download and schema audit"
+  },
+  {
+    "id": "fpl_teams_2022_23",
+    "provider": "vaastav_fpl",
+    "season": "2022-23",
+    "kind": "teams",
+    "url": "https://raw.githubusercontent.com/vaastav/Fantasy-Premier-League/master/data/2022-23/teams.csv",
+    "path": "data/raw/fpl/2022-23-teams.csv",
+    "optional": true,
+    "availability": "candidate path; must verify by download and schema audit"
+  }
+]
