@@ -1,0 +1,266 @@
+{
+  "audited_at_utc": "2026-10-23T18:05:24.368163+00:00",
+  "runtime": {
+    "python": "3.13.5",
+    "pandas": "3.0.5"
+  },
+  "scope": "structural_audit_only; no model or label-distribution analysis",
+  "matches": [
+    {
+      "season": "2015-16",
+      "rows": 380,
+      "columns": 65,
+      "teams": 20,
+      "matches_per_team_min": 38,
+      "matches_per_team_max": 38,
+      "home_away_19_each": true,
+      "missing_core": {
+        "Date": 0,
+        "HomeTeam": 0,
+        "AwayTeam": 0,
+        "FTHG": 0,
+        "FTAG": 0,
+        "FTR": 0
+      },
+      "invalid_dates": 0,
+      "outside_season_dates": 0,
+      "duplicate_match_keys": 0,
+      "duplicate_ordered_team_pairs": 0,
+      "self_matches": 0,
+      "non_E0_rows": 0,
+      "invalid_goals": 0,
+      "result_goal_inconsistencies": 0,
+      "valid_clock_times": 0,
+      "date_min": "2015-08-08",
+      "date_max": "2016-05-17",
+      "core_pass": true,
+      "optional_stats_missing": {
+        "HS": 0,
+        "AS": 0,
+        "HST": 0,
+        "AST": 0,
+        "HC": 0,
+        "AC": 0,
+        "HY": 0,
+        "AY": 0,
+        "HR": 0,
+        "AR": 0
+      },
+      "available_at_evidence": "unknown; retrospective reconstruction required"
+    },
+    {
+      "season": "2023-24",
+      "rows": 380,
+      "columns": 106,
+      "teams": 20,
+      "matches_per_team_min": 38,
+      "matches_per_team_max": 38,
+      "home_away_19_each": true,
+      "missing_core": {
+        "Date": 0,
+        "HomeTeam": 0,
+        "AwayTeam": 0,
+        "FTHG": 0,
+        "FTAG": 0,
+        "FTR": 0
+      },
+      "invalid_dates": 0,
+      "outside_season_dates": 0,
+      "duplicate_match_keys": 0,
+      "duplicate_ordered_team_pairs": 0,
+      "self_matches": 0,
+      "non_E0_rows": 0,
+      "invalid_goals": 0,
+      "result_goal_inconsistencies": 0,
+      "valid_clock_times": 380,
+      "date_min": "2023-08-11",
+      "date_max": "2024-05-19",
+      "core_pass": true,
+      "optional_stats_missing": {
+        "HS": 0,
+        "AS": 0,
+        "HST": 0,
+        "AST": 0,
+        "HC": 0,
+        "AC": 0,
+        "HY": 0,
+        "AY": 0,
+        "HR": 0,
+        "AR": 0
+      },
+      "available_at_evidence": "unknown; retrospective reconstruction required"
+    },
+    {
+      "season": "2024-25",
+      "rows": 380,
+      "columns": 120,
+      "teams": 20,
+      "matches_per_team_min": 38,
+      "matches_per_team_max": 38,
+      "home_away_19_each": true,
+      "missing_core": {
+        "Date": 0,
+        "HomeTeam": 0,
+        "AwayTeam": 0,
+        "FTHG": 0,
+        "FTAG": 0,
+        "FTR": 0
+      },
+      "invalid_dates": 0,
+      "outside_season_dates": 0,
+      "duplicate_match_keys": 0,
+      "duplicate_ordered_team_pairs": 0,
+      "self_matches": 0,
+      "non_E0_rows": 0,
+      "invalid_goals": 0,
+      "result_goal_inconsistencies": 0,
+      "valid_clock_times": 380,
+      "date_min": "2024-08-16",
+      "date_max": "2025-05-25",
+      "core_pass": true,
+      "optional_stats_missing": {
+        "HS": 0,
+        "AS": 0,
+        "HST": 0,
+        "AST": 0,
+        "HC": 0,
+        "AC": 0,
+        "HY": 0,
+        "AY": 0,
+        "HR": 0,
+        "AR": 0
+      },
+      "available_at_evidence": "unknown; retrospective reconstruction required"
+    }
+  ],
+  "players": [
+    {
+      "season": "2023-24",
+      "raw_rows": 29725,
+      "player_rows": 29725,
+      "excluded_manager_rows": 0,
+      "unique_season_player_ids": 865,
+      "fixtures_with_player_rows": 380,
+      "missing_fields": {
+        "element": 0,
+        "fixture": 0,
+        "minutes": 0,
+        "goals_scored": 0,
+        "assists": 0,
+        "starts": 0,
+        "expected_goals": 0,
+        "expected_assists": 0,
+        "value": 0
+      },
+      "duplicate_player_fixture_rows": 0,
+      "unmapped_fixture_rows": 0,
+      "opponent_id_mismatches": 0,
+      "kickoff_mismatches_vs_fixture_file": 0,
+      "team_name_mismatches_vs_fixture_side": 0,
+      "active_player_team_name_mismatches": 0,
+      "invalid_nonnegative_stats": {
+        "minutes": 0,
+        "goals_scored": 0,
+        "assists": 0,
+        "expected_goals": 0,
+        "expected_assists": 0
+      },
+      "invalid_starts_flags": 0,
+      "minutes_above_90": 0,
+      "player_rows_minutes_zero": 18341,
+      "fixture_sides_with_11_recorded_starters": 760,
+      "fixtures_with_22_recorded_starters": 380,
+      "starter_count_histogram": {
+        "11": 760
+      },
+      "announced_XI_at_cutoff_verified": false,
+      "market_value_available": false,
+      "birth_date_available": false,
+      "lineup_semantics": "starts is post-match actual participation; exclude current-match starts from T-60 input",
+      "performance_semantics": "historical match stats can be lagged only after availability policy; not pre-match current-row features"
+    },
+    {
+      "season": "2024-25",
+      "raw_rows": 27605,
+      "player_rows": 27283,
+      "excluded_manager_rows": 322,
+      "unique_season_player_ids": 784,
+      "fixtures_with_player_rows": 380,
+      "missing_fields": {
+        "element": 0,
+        "fixture": 0,
+        "minutes": 0,
+        "goals_scored": 0,
+        "assists": 0,
+        "starts": 0,
+        "expected_goals": 0,
+        "expected_assists": 0,
+        "value": 0
+      },
+      "duplicate_player_fixture_rows": 0,
+      "unmapped_fixture_rows": 0,
+      "opponent_id_mismatches": 0,
+      "kickoff_mismatches_vs_fixture_file": 0,
+      "team_name_mismatches_vs_fixture_side": 0,
+      "active_player_team_name_mismatches": 0,
+      "invalid_nonnegative_stats": {
+        "minutes": 0,
+        "goals_scored": 0,
+        "assists": 0,
+        "expected_goals": 0,
+        "expected_assists": 0
+      },
+      "invalid_starts_flags": 0,
+      "minutes_above_90": 0,
+      "player_rows_minutes_zero": 15717,
+      "fixture_sides_with_11_recorded_starters": 760,
+      "fixtures_with_22_recorded_starters": 380,
+      "starter_count_histogram": {
+        "11": 760
+      },
+      "announced_XI_at_cutoff_verified": false,
+      "market_value_available": false,
+      "birth_date_available": false,
+      "lineup_semantics": "starts is post-match actual participation; exclude current-match starts from T-60 input",
+      "performance_semantics": "historical match stats can be lagged only after availability policy; not pre-match current-row features"
+    }
+  ],
+  "cross_source": [
+    {
+      "season": "2023-24",
+      "matched": 380,
+      "fd_only": 0,
+      "fpl_only": 0,
+      "clock_mismatches_assuming_FD_London": 1,
+      "time_conflict_details": [
+        {
+          "date": "2023-08-12",
+          "home": "Arsenal",
+          "away": "Nott'm Forest",
+          "fd_kickoff_utc_assuming_London": "2023-08-12 11:30:00+00:00",
+          "fpl_recorded_kickoff_utc": "2023-08-12 12:00:00+00:00"
+        }
+      ],
+      "FD_timezone_assumption": "Europe/London; consistency check, not independent historical publication proof",
+      "final_score_inconsistencies_between_sources": 0
+    },
+    {
+      "season": "2024-25",
+      "matched": 380,
+      "fd_only": 0,
+      "fpl_only": 0,
+      "clock_mismatches_assuming_FD_London": 1,
+      "time_conflict_details": [
+        {
+          "date": "2024-10-19",
+          "home": "Ipswich",
+          "away": "Everton",
+          "fd_kickoff_utc_assuming_London": "2024-10-19 14:00:00+00:00",
+          "fpl_recorded_kickoff_utc": "2024-10-19 14:15:00+00:00"
+        }
+      ],
+      "FD_timezone_assumption": "Europe/London; consistency check, not independent historical publication proof",
+      "final_score_inconsistencies_between_sources": 0
+    }
+  ]
+}

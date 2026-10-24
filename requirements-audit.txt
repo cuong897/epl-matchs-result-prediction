@@ -1,0 +1,4 @@
+# Tested runtime: Python 3.13.5. No model packages required for this phase.
+pandas==3.0.5
+numpy==2.4.6
+tzdata==2026.3

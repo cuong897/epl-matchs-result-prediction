@@ -1,0 +1,209 @@
+{
+  "status": "A_baseline_LR_development_complete_test_not_evaluated",
+  "research_date_local": "2026-10-24",
+  "timezone": "Asia/Saigon",
+  "data_budget": "free_only",
+  "study_type": "retrospective_temporal_backtest",
+  "prediction_horizon_minutes": 60,
+  "cutoff_clock": "scheduled_kickoff_as_known_at_prediction_minus_60_minutes",
+  "final_archived_schedule_without_version_is": "reconstructed_assumption",
+  "label_order": [
+    "H",
+    "D",
+    "A"
+  ],
+  "primary_metric": "multiclass_log_loss",
+  "secondary_metrics": [
+    "multiclass_brier_sum_0_to_2",
+    "accuracy",
+    "macro_f1",
+    "per_class_precision_recall",
+    "confusion_matrix",
+    "classwise_reliability"
+  ],
+  "proposed_splits": {
+    "train_seasons": [
+      "2015-16",
+      "2016-17",
+      "2017-18",
+      "2018-19",
+      "2019-20",
+      "2020-21",
+      "2021-22",
+      "2022-23"
+    ],
+    "validation_seasons": [
+      "2023-24"
+    ],
+    "test_seasons": [
+      "2024-25"
+    ],
+    "expected_match_counts_not_audited": {
+      "train": 3040,
+      "validation": 380,
+      "test": 380
+    },
+    "warmup_seasons_candidate": [
+      "2013-14",
+      "2014-15"
+    ]
+  },
+  "test_policy": {
+    "model_fit_uses_test_labels": false,
+    "feature_state_may_use_completed_prior_test_matches": true,
+    "same_time_matches_updated_after_prediction_batch": true,
+    "retraining_within_test_season": false,
+    "freeze_features_parameters_and_calibration_before_test_metrics": true,
+    "all_planned_models_evaluated_in_one_final_test_round": true,
+    "test_labels_read_for_structural_integrity_only": true,
+    "test_model_metrics_computed": false
+  },
+  "experiments": {
+    "A_full": "team features on all eligible team-data matches",
+    "A_B_C_common": "identical train/validation/test matches and tuning budgets for each feature group within each algorithm",
+    "B1": "A plus verified announced starting XI, age, historical experience and continuity",
+    "B2": "B1 plus point-in-time historical market values, only if evidence and coverage pass",
+    "C": "eligible B variant plus lagged individual player performance aggregated over its XI",
+    "P_proxy": "separate fallback: historical player or expected-lineup proxies; does not establish official-XI hypothesis"
+  },
+  "candidate_algorithms": [
+    "multinomial_logistic_regression",
+    "random_forest",
+    "one_of_xgboost_or_lightgbm"
+  ],
+  "probability_baselines": [
+    "smoothed_historical_class_frequencies",
+    "elo_with_trained_three_way_probability_mapping"
+  ],
+  "classification_baselines": [
+    "always_home_win"
+  ],
+  "proposed_coverage_gates": {
+    "mandatory_fields_complete_on_every_included_row": true,
+    "lineup_count_and_coverage_gates_apply_only_to": [
+      "B1",
+      "B2",
+      "C",
+      "their_A_common_comparator"
+    ],
+    "A_full_and_P_proxy_require_current_announced_XI": false,
+    "starter_count_per_team_per_included_match": 11,
+    "minimum_candidate_lineup_match_coverage_each_season": 0.95,
+    "report_coverage_by_team_and_season": true,
+    "coverage_threshold_is_design_choice_not_measured_fact": true,
+    "unknown_lineup_publication_time_passes_strict_T_minus_60": false
+  },
+  "calibration_policy": {
+    "hyperparameter_selection": "temporal_folds_within_training_seasons",
+    "validation_2023_24_metrics_before_calibration": "out_of_sample_for_locked_base_estimator",
+    "calibrator_fit_period": "2023-24",
+    "post_calibration_scores_on_calibrator_fit_period": "in_sample_diagnostics_only",
+    "calibrated_out_of_sample_evaluation": "locked_final_test_2024_25",
+    "current_status": "not fitted; candidate policy retained for later frozen model comparison"
+  },
+  "paired_uncertainty_analysis_proposal": {
+    "method": "moving_block_bootstrap_by_calendar_time",
+    "replicates": 2000,
+    "block_weeks": 2,
+    "sensitivity_block_weeks": [
+      1,
+      4
+    ],
+    "random_seed": 42,
+    "shared_resample_indices_across_models": true
+  },
+  "availability_policy": {
+    "store_event_published_available_retrieved_times_separately": true,
+    "availability_status": [
+      "verified",
+      "reconstructed_assumption",
+      "unknown"
+    ],
+    "unknown_is_never_silently_relabelled_verified": true,
+    "date_only_results": "exclude same-calendar-day results from cross-team state; preserve unknown kickoff time",
+    "date_only_valuations": "exclude same-day updates; backward as-of only; still requires publication/version caveat",
+    "future_interpolation_or_backward_fill": false
+  },
+  "source_decisions": {
+    "football_data_co_uk": "primary_candidate_for_small_academic_MVP_with_light_download_and_cached_raw_files",
+    "fbref": "excluded_as_default_training_source_due_current_data_and_use_restrictions",
+    "transfermarkt_dcaribou": "conditional_extension_rights_coverage_and_point_in_time_unresolved",
+    "vaastav_fpl": "conditional_player_proxy_candidate_upstream_rights_and_schema_audit_required",
+    "football_data_org": "free_fixture_crosscheck_candidate_not_assumed_free_historical_lineups",
+    "statsbomb_open": "optional_method_prototype_selected_seasons_not_2024_25_primary_source"
+  },
+  "observed_dataset_coverage": {
+    "audit_report": "reports/pilot_audit.json",
+    "team_seasons_audited": [
+      "2013-14",
+      "2014-15",
+      "2015-16",
+      "2016-17",
+      "2017-18",
+      "2018-19",
+      "2019-20",
+      "2020-21",
+      "2021-22",
+      "2022-23",
+      "2023-24",
+      "2024-25"
+    ],
+    "matches_per_audited_team_season": 380,
+    "player_seasons_audited": [
+      "2023-24",
+      "2024-25"
+    ],
+    "matched_fixtures_per_player_season": 380,
+    "recorded_actual_XI_complete_fixtures_per_player_season": 380,
+    "announced_XI_at_cutoff_verified": false,
+    "raw_files": 18,
+    "full_training_history_audited": true,
+    "team_rows_including_warmup": 4560,
+    "team_feature_count": 40,
+    "team_build_report": "reports/team_dataset_build.json"
+  },
+  "trained_models": [
+    {
+      "name": "elo_threeway",
+      "run": "A_dev_v1",
+      "features": [
+        "elo_diff"
+      ],
+      "fit_split": "train"
+    },
+    {
+      "name": "logistic_A",
+      "run": "A_dev_v1",
+      "feature_count": 40,
+      "selected_C": 0.01,
+      "fit_split": "train"
+    }
+  ],
+  "experimental_results": {
+    "run": "A_dev_v1",
+    "report": "reports/model_A_development/report.vi.md",
+    "machine_readable": "reports/model_A_development/results.json",
+    "artifact_verification": "reports/model_A_development/artifact_verification.json",
+    "evaluation_split": "validation",
+    "test_metrics_computed": false,
+    "posthoc_calibration_fitted": false
+  },
+  "implemented_team_feature_policy": {
+    "version": "team_A_v1_day_batched",
+    "config": "research/team_feature_config.json",
+    "calendar_batch": "Europe/London local dates",
+    "eligible_history": "strictly before current local date",
+    "result_availability": "assumed next local midnight; publication unverified",
+    "preprocessing_fitted": true,
+    "tests": "35 unit tests, 4 real-data feature integration checks, 4 artifact verification groups passed",
+    "preprocessing_fit_scope": "training portion of each temporal fold; final estimators on train 2015-16 through 2022-23 only"
+  },
+  "validation_usage_log": [
+    {
+      "run": "A_dev_v1",
+      "usage": "evaluate locked baselines and Logistic A, reliability, paired uncertainty, descriptive importance",
+      "used_for_C_selection": false,
+      "status_after_run": "observed development set; not an untouched final test"
+    }
+  ]
+}

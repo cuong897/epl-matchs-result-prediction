@@ -1,0 +1,11 @@
+[
+  {"id":"fd_2015_16","provider":"football_data_co_uk","season":"2015-16","kind":"matches","url":"https://www.football-data.co.uk/mmz4281/1516/E0.csv","path":"data/raw/football_data/2015-16.csv"},
+  {"id":"fd_2023_24","provider":"football_data_co_uk","season":"2023-24","kind":"matches","url":"https://www.football-data.co.uk/mmz4281/2324/E0.csv","path":"data/raw/football_data/2023-24.csv"},
+  {"id":"fd_2024_25","provider":"football_data_co_uk","season":"2024-25","kind":"matches","url":"https://www.football-data.co.uk/mmz4281/2425/E0.csv","path":"data/raw/football_data/2024-25.csv"},
+  {"id":"fpl_2023_24","provider":"vaastav_fpl","season":"2023-24","kind":"player_matches","url":"https://raw.githubusercontent.com/vaastav/Fantasy-Premier-League/master/data/2023-24/gws/merged_gw.csv","path":"data/raw/fpl/2023-24.csv"},
+  {"id":"fpl_2024_25","provider":"vaastav_fpl","season":"2024-25","kind":"player_matches","url":"https://raw.githubusercontent.com/vaastav/Fantasy-Premier-League/master/data/2024-25/gws/merged_gw.csv","path":"data/raw/fpl/2024-25.csv"},
+  {"id":"fpl_fixtures_2023_24","provider":"vaastav_fpl","season":"2023-24","kind":"fixtures","url":"https://raw.githubusercontent.com/vaastav/Fantasy-Premier-League/master/data/2023-24/fixtures.csv","path":"data/raw/fpl/2023-24-fixtures.csv"},
+  {"id":"fpl_teams_2023_24","provider":"vaastav_fpl","season":"2023-24","kind":"teams","url":"https://raw.githubusercontent.com/vaastav/Fantasy-Premier-League/master/data/2023-24/teams.csv","path":"data/raw/fpl/2023-24-teams.csv"},
+  {"id":"fpl_fixtures_2024_25","provider":"vaastav_fpl","season":"2024-25","kind":"fixtures","url":"https://raw.githubusercontent.com/vaastav/Fantasy-Premier-League/master/data/2024-25/fixtures.csv","path":"data/raw/fpl/2024-25-fixtures.csv"},
+  {"id":"fpl_teams_2024_25","provider":"vaastav_fpl","season":"2024-25","kind":"teams","url":"https://raw.githubusercontent.com/vaastav/Fantasy-Premier-League/master/data/2024-25/teams.csv","path":"data/raw/fpl/2024-25-teams.csv"}
+]

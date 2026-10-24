@@ -1,0 +1,2 @@
+# Preserve exact file bytes: audit manifests record SHA-256 including line endings.
+* -text

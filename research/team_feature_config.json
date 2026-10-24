@@ -1,0 +1,20 @@
+{
+  "version": "team_A_v1_day_batched",
+  "history_policy": "strictly_previous_local_calendar_days_only",
+  "availability_assumption": "prior_match_result_available_by_next_local_midnight",
+  "availability_status": "reconstructed_assumption_not_verified_publication",
+  "timezone": "Europe/London",
+  "elo_initial": 1500.0,
+  "elo_promoted_prior": 1400.0,
+  "elo_home_advantage": 65.0,
+  "elo_k": 20.0,
+  "elo_season_retention": 0.75,
+  "elo_parameters_status": "prespecified_unfitted_defaults_not_optimized",
+  "new_entrant_policy": "reset_form_and_elo_when_not_in_observed_previous_PL_season",
+  "rolling_across_consecutive_PL_seasons": true,
+  "h2h_window": 5,
+  "same_day_policy": "predict_all_matches_then_update_all_results",
+  "include_current_match_stats": false,
+  "include_bookmaker_odds": false,
+  "include_official_rank": false
+}

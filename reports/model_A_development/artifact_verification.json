@@ -1,0 +1,8 @@
+{
+  "input_and_training_code_hashes_match": true,
+  "saved_models_reproduce_validation_probabilities": true,
+  "saved_probabilities_reproduce_metrics_and_confusion_matrices": true,
+  "only_validation_season_in_prediction_export": true,
+  "maximum_probability_reload_difference": 1.1102230246251565e-16,
+  "test_predictions_or_metrics_generated": false
+}

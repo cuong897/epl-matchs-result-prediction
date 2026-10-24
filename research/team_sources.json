@@ -1,0 +1,110 @@
+[
+  {
+    "id": "fd_2013_14",
+    "provider": "football_data_co_uk",
+    "season": "2013-14",
+    "kind": "matches",
+    "role": "warmup",
+    "url": "https://www.football-data.co.uk/mmz4281/1314/E0.csv",
+    "path": "data/raw/football_data/2013-14.csv"
+  },
+  {
+    "id": "fd_2014_15",
+    "provider": "football_data_co_uk",
+    "season": "2014-15",
+    "kind": "matches",
+    "role": "warmup",
+    "url": "https://www.football-data.co.uk/mmz4281/1415/E0.csv",
+    "path": "data/raw/football_data/2014-15.csv"
+  },
+  {
+    "id": "fd_2015_16",
+    "provider": "football_data_co_uk",
+    "season": "2015-16",
+    "kind": "matches",
+    "role": "model_period",
+    "url": "https://www.football-data.co.uk/mmz4281/1516/E0.csv",
+    "path": "data/raw/football_data/2015-16.csv"
+  },
+  {
+    "id": "fd_2016_17",
+    "provider": "football_data_co_uk",
+    "season": "2016-17",
+    "kind": "matches",
+    "role": "model_period",
+    "url": "https://www.football-data.co.uk/mmz4281/1617/E0.csv",
+    "path": "data/raw/football_data/2016-17.csv"
+  },
+  {
+    "id": "fd_2017_18",
+    "provider": "football_data_co_uk",
+    "season": "2017-18",
+    "kind": "matches",
+    "role": "model_period",
+    "url": "https://www.football-data.co.uk/mmz4281/1718/E0.csv",
+    "path": "data/raw/football_data/2017-18.csv"
+  },
+  {
+    "id": "fd_2018_19",
+    "provider": "football_data_co_uk",
+    "season": "2018-19",
+    "kind": "matches",
+    "role": "model_period",
+    "url": "https://www.football-data.co.uk/mmz4281/1819/E0.csv",
+    "path": "data/raw/football_data/2018-19.csv"
+  },
+  {
+    "id": "fd_2019_20",
+    "provider": "football_data_co_uk",
+    "season": "2019-20",
+    "kind": "matches",
+    "role": "model_period",
+    "url": "https://www.football-data.co.uk/mmz4281/1920/E0.csv",
+    "path": "data/raw/football_data/2019-20.csv"
+  },
+  {
+    "id": "fd_2020_21",
+    "provider": "football_data_co_uk",
+    "season": "2020-21",
+    "kind": "matches",
+    "role": "model_period",
+    "url": "https://www.football-data.co.uk/mmz4281/2021/E0.csv",
+    "path": "data/raw/football_data/2020-21.csv"
+  },
+  {
+    "id": "fd_2021_22",
+    "provider": "football_data_co_uk",
+    "season": "2021-22",
+    "kind": "matches",
+    "role": "model_period",
+    "url": "https://www.football-data.co.uk/mmz4281/2122/E0.csv",
+    "path": "data/raw/football_data/2021-22.csv"
+  },
+  {
+    "id": "fd_2022_23",
+    "provider": "football_data_co_uk",
+    "season": "2022-23",
+    "kind": "matches",
+    "role": "model_period",
+    "url": "https://www.football-data.co.uk/mmz4281/2223/E0.csv",
+    "path": "data/raw/football_data/2022-23.csv"
+  },
+  {
+    "id": "fd_2023_24",
+    "provider": "football_data_co_uk",
+    "season": "2023-24",
+    "kind": "matches",
+    "role": "model_period",
+    "url": "https://www.football-data.co.uk/mmz4281/2324/E0.csv",
+    "path": "data/raw/football_data/2023-24.csv"
+  },
+  {
+    "id": "fd_2024_25",
+    "provider": "football_data_co_uk",
+    "season": "2024-25",
+    "kind": "matches",
+    "role": "model_period",
+    "url": "https://www.football-data.co.uk/mmz4281/2425/E0.csv",
+    "path": "data/raw/football_data/2024-25.csv"
+  }
+]

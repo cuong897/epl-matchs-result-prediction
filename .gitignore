@@ -1,0 +1,7 @@
+data/raw/
+data/curated/
+__pycache__/
+.pytest_cache/
+.venv/
+models/
+.deps/

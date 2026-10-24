@@ -1,0 +1,24 @@
+{
+  "status": "passed",
+  "real_data_checks": [
+    "training_and_warmup_features_equal_full_history_prefix",
+    "mutating_every_test_outcome_does_not_change_pretest_features",
+    "exported_features_match_current_code_rebuild",
+    "registered_split_counts_and_feature_allowlist_match"
+  ],
+  "rows": 4560,
+  "features": 40,
+  "test_outcomes_modified_only_in_memory": true,
+  "raw_data_modified": false,
+  "models_fitted": 0,
+  "output_sha256": {
+    "feature_lineage_A.csv": "6c247e821909489af4954b46df66c5b42efbcf101994cb5ab5cdca182fcaf643",
+    "features_A_test.csv": "1fa3c4f0048603bd4e394f336e56dfe2dbd91a14eb0d8337000c58ac7b517c8c",
+    "features_A_train.csv": "58e8cb61259351d141c3d1172dd6858f568117a80eb8d31892eb59a5448342df",
+    "features_A_validation.csv": "7226327c644036648dfaff37f649c04f4d7b57263fbe7ac8fbe8246cc187e43d",
+    "features_A_warmup.csv": "6d3effb74e0dc2495f42d01eeb0331cb76696aea674e4ea53a48e6ecef1d85e5",
+    "match_outcomes.csv": "d909637d3408c7e9022f0c56ebea53c7fce5c132f3b981a42845d571a27c4e2c",
+    "matches.csv": "17b34cdec679bb3496ce4d6143773d89f14987069bfd8432e7a413815ccb1b51",
+    "split_manifest.csv": "c6002d7267d5cf41e6db461267658bf537d1e8f8d596116559068b62e38d1cb0"
+  }
+}

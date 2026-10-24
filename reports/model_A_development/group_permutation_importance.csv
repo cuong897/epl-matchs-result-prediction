@@ -1,0 +1,8 @@
+group,features,mean_increase_log_loss,repeat_std,repeats
+elo,"['home_elo', 'away_elo', 'elo_diff']",0.1814225623665432,0.019874273143475743,10
+recent_form,"['home_form5_ppg', 'home_form5_gf', 'home_form5_ga', 'home_form10_ppg', 'home_form10_gf', 'home_form10_ga', 'home_history_n10', 'home_missing_history', 'away_form5_ppg', 'away_form5_gf', 'away_form5_ga', 'away_form10_ppg', 'away_form10_gf', 'away_form10_ga', 'away_history_n10', 'away_missing_history']",0.006709452538594262,0.0032696772200645173,10
+venue_form,"['home_venue5_ppg', 'home_venue_n5', 'away_venue5_ppg', 'away_venue_n5']",-0.00084736982021405,0.0018303066368671316,10
+season_progress,"['home_season_matches', 'home_season_points', 'home_season_ppg', 'home_season_gd_per_game', 'away_season_matches', 'away_season_points', 'away_season_ppg', 'away_season_gd_per_game']",0.003562894348273582,0.004047794964387793,10
+rest,"['home_days_since_last_pl', 'away_days_since_last_pl', 'rest_days_diff']",0.0021589802879558584,0.003124685977317053,10
+promotion,"['home_newly_promoted', 'home_prior_season_membership_known', 'away_newly_promoted', 'away_prior_season_membership_known']",0.0004128516694041795,0.0032871427506749144,10
+h2h,"['h2h_home_ppg5', 'h2h_n5']",-0.00250348070280062,0.0016416827461646808,10
