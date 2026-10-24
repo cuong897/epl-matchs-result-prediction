@@ -1,0 +1,41 @@
+{
+  "run_id": "final_test_v1",
+  "registration_scope": "after development feature exploration, before calibration fitting and any test prediction/scoring",
+  "test_season": "2024-25",
+  "test_matches": 380,
+  "label_order": ["H", "D", "A"],
+  "primary_metric": "multiclass_log_loss",
+  "brier_definition": "mean(sum over classes squared probability errors), range 0 to 2",
+  "calibration": {
+    "method": "temperature on log probabilities",
+    "fit_season": "2023-24",
+    "temperature_bounds": [0.5, 5.0],
+    "probability_floor": 1e-15,
+    "optimizer": "bounded scalar minimization in inverse temperature; compare with identity and endpoints",
+    "xatol": 1e-10,
+    "calibrate_frequency_baselines": false,
+    "validation_after_fit_is": "in_sample_diagnostic_not_generalization_estimate"
+  },
+  "report_variants": ["raw", "temperature"],
+  "primary_variant_for_feature_comparisons": "temperature",
+  "primary_practical_reference_chosen_before_test": "full__elo",
+  "reference_reason": "lowest raw development validation Log Loss among fitted estimators; selection is a development decision, not test evidence",
+  "primary_feature_comparisons": [
+    {"family": "logistic", "model_arm": "A_plus_P", "reference_arm": "A_common"},
+    {"family": "random_forest", "model_arm": "A_plus_P", "reference_arm": "A_common"},
+    {"family": "xgboost", "model_arm": "A_plus_P", "reference_arm": "A_common"},
+    {"family": "logistic", "model_arm": "A_plus_P_plus_F", "reference_arm": "A_plus_P"},
+    {"family": "random_forest", "model_arm": "A_plus_P_plus_F", "reference_arm": "A_plus_P"},
+    {"family": "xgboost", "model_arm": "A_plus_P_plus_F", "reference_arm": "A_plus_P"}
+  ],
+  "secondary_feature_comparisons": "same six contrasts with raw probabilities",
+  "paired_bootstrap": {"replicates": 2000, "seed": 42, "block_weeks": [1, 2, 4], "primary_block_weeks": 2, "primary_family_size": 6, "family_alpha": 0.05, "intervals": "marginal 95% and Bonferroni-style percentile 99.1667% for six temperature contrasts; bootstrap coverage approximate"},
+  "reliability_bins_per_class": 5,
+  "test_prediction_policy": "sequential snapshots using strictly previous local dates; no estimator or calibrator refit in test",
+  "player_state": "season reset, same P/F formulas as development",
+  "test_cohort": "same 380 matches for all registered arms, no performance-based exclusions",
+  "final_model_selection": "report all registered results; do not choose raw vs calibrated or tune models using test",
+  "feature_exploration_closed": true,
+  "announced_XI_claim": false,
+  "availability_claim": "retrospective reconstruction; next-local-midnight assumption, source publication time not verified"
+}

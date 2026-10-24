@@ -1,0 +1,1624 @@
+[
+  {
+    "id": "full__elo",
+    "cohort": "full",
+    "family": "elo",
+    "arm": "A_full",
+    "type": "estimator",
+    "source_run": "A_dev_v1",
+    "source_model": "elo_threeway",
+    "columns": [
+      "elo_diff"
+    ],
+    "validation_predictions_path": "reports\\model_A_development\\validation_predictions.csv",
+    "validation_predictions_sha256": "7f71d6e4a488b460091bb664973760df3fddf47873d8874c136fbf1091076440",
+    "expected_validation_metrics": {
+      "n": 380,
+      "accuracy": 0.5710526315789474,
+      "macro_f1": 0.4180573854486898,
+      "per_class": {
+        "H": {
+          "precision": 0.5941422594142259,
+          "recall": 0.8114285714285714,
+          "f1": 0.6859903381642513,
+          "support": 175
+        },
+        "D": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 82
+        },
+        "A": {
+          "precision": 0.5319148936170213,
+          "recall": 0.6097560975609756,
+          "f1": 0.5681818181818182,
+          "support": 123
+        }
+      },
+      "confusion_matrix_rows_true_cols_pred_HDA": [
+        [
+          142,
+          0,
+          33
+        ],
+        [
+          49,
+          0,
+          33
+        ],
+        [
+          48,
+          0,
+          75
+        ]
+      ],
+      "predicted_label_counts": {
+        "H": 239,
+        "D": 0,
+        "A": 141
+      },
+      "log_loss": 0.9284820926515411,
+      "brier_sum": 0.5473248178272235
+    },
+    "calibrate": true,
+    "model_path": "models\\A_dev_v1\\elo_threeway.joblib",
+    "model_sha256": "8ecf523e81187d16227aaf783c0c26ed705e611ce005db5710e7d3faa2069756"
+  },
+  {
+    "id": "full__logistic",
+    "cohort": "full",
+    "family": "logistic",
+    "arm": "A_full",
+    "type": "estimator",
+    "source_run": "A_dev_v1",
+    "source_model": "logistic_A",
+    "columns": [
+      "home_form5_ppg",
+      "home_form5_gf",
+      "home_form5_ga",
+      "home_form10_ppg",
+      "home_form10_gf",
+      "home_form10_ga",
+      "home_history_n10",
+      "home_venue5_ppg",
+      "home_venue_n5",
+      "home_season_matches",
+      "home_season_points",
+      "home_season_ppg",
+      "home_season_gd_per_game",
+      "home_days_since_last_pl",
+      "home_newly_promoted",
+      "home_prior_season_membership_known",
+      "home_elo",
+      "home_missing_history",
+      "away_form5_ppg",
+      "away_form5_gf",
+      "away_form5_ga",
+      "away_form10_ppg",
+      "away_form10_gf",
+      "away_form10_ga",
+      "away_history_n10",
+      "away_venue5_ppg",
+      "away_venue_n5",
+      "away_season_matches",
+      "away_season_points",
+      "away_season_ppg",
+      "away_season_gd_per_game",
+      "away_days_since_last_pl",
+      "away_newly_promoted",
+      "away_prior_season_membership_known",
+      "away_elo",
+      "away_missing_history",
+      "elo_diff",
+      "rest_days_diff",
+      "h2h_home_ppg5",
+      "h2h_n5"
+    ],
+    "validation_predictions_path": "reports\\model_A_development\\validation_predictions.csv",
+    "validation_predictions_sha256": "7f71d6e4a488b460091bb664973760df3fddf47873d8874c136fbf1091076440",
+    "expected_validation_metrics": {
+      "n": 380,
+      "accuracy": 0.5684210526315789,
+      "macro_f1": 0.4181743421052631,
+      "per_class": {
+        "H": {
+          "precision": 0.588477366255144,
+          "recall": 0.8171428571428572,
+          "f1": 0.6842105263157895,
+          "support": 175
+        },
+        "D": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 82
+        },
+        "A": {
+          "precision": 0.5488721804511278,
+          "recall": 0.5934959349593496,
+          "f1": 0.5703125,
+          "support": 123
+        }
+      },
+      "confusion_matrix_rows_true_cols_pred_HDA": [
+        [
+          143,
+          2,
+          30
+        ],
+        [
+          52,
+          0,
+          30
+        ],
+        [
+          48,
+          2,
+          73
+        ]
+      ],
+      "predicted_label_counts": {
+        "H": 243,
+        "D": 4,
+        "A": 133
+      },
+      "log_loss": 0.9416621252553987,
+      "brier_sum": 0.5551986935660939
+    },
+    "calibrate": true,
+    "model_path": "models\\A_dev_v1\\logistic_A.joblib",
+    "model_sha256": "9cf9e00864b83ffc9117542c563533c9d3b329212e860d3805407dbd69761745"
+  },
+  {
+    "id": "full__random_forest",
+    "cohort": "full",
+    "family": "random_forest",
+    "arm": "A_full",
+    "type": "estimator",
+    "source_run": "A_trees_v1",
+    "source_model": "random_forest",
+    "columns": [
+      "home_form5_ppg",
+      "home_form5_gf",
+      "home_form5_ga",
+      "home_form10_ppg",
+      "home_form10_gf",
+      "home_form10_ga",
+      "home_history_n10",
+      "home_venue5_ppg",
+      "home_venue_n5",
+      "home_season_matches",
+      "home_season_points",
+      "home_season_ppg",
+      "home_season_gd_per_game",
+      "home_days_since_last_pl",
+      "home_newly_promoted",
+      "home_prior_season_membership_known",
+      "home_elo",
+      "home_missing_history",
+      "away_form5_ppg",
+      "away_form5_gf",
+      "away_form5_ga",
+      "away_form10_ppg",
+      "away_form10_gf",
+      "away_form10_ga",
+      "away_history_n10",
+      "away_venue5_ppg",
+      "away_venue_n5",
+      "away_season_matches",
+      "away_season_points",
+      "away_season_ppg",
+      "away_season_gd_per_game",
+      "away_days_since_last_pl",
+      "away_newly_promoted",
+      "away_prior_season_membership_known",
+      "away_elo",
+      "away_missing_history",
+      "elo_diff",
+      "rest_days_diff",
+      "h2h_home_ppg5",
+      "h2h_n5"
+    ],
+    "validation_predictions_path": "reports\\A_trees_v1\\validation_predictions.csv",
+    "validation_predictions_sha256": "cc040f74a5076f9e368e2528c4491ad6f2d2075486587962182b6ea7c0729130",
+    "expected_validation_metrics": {
+      "n": 380,
+      "accuracy": 0.5789473684210527,
+      "macro_f1": 0.4223045367320725,
+      "per_class": {
+        "H": {
+          "precision": 0.5873015873015873,
+          "recall": 0.8457142857142858,
+          "f1": 0.6932084309133489,
+          "support": 175
+        },
+        "D": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 82
+        },
+        "A": {
+          "precision": 0.5625,
+          "recall": 0.5853658536585366,
+          "f1": 0.5737051792828686,
+          "support": 123
+        }
+      },
+      "confusion_matrix_rows_true_cols_pred_HDA": [
+        [
+          148,
+          0,
+          27
+        ],
+        [
+          53,
+          0,
+          29
+        ],
+        [
+          51,
+          0,
+          72
+        ]
+      ],
+      "predicted_label_counts": {
+        "H": 252,
+        "D": 0,
+        "A": 128
+      },
+      "log_loss": 0.9298564742369078,
+      "brier_sum": 0.5467273611145802
+    },
+    "calibrate": true,
+    "model_path": "models\\A_trees_v1\\random_forest.joblib",
+    "model_sha256": "ea4359073940c8f517b502d0ea9c76c8c17e00f25021e95f07fbea1fa8779b3f"
+  },
+  {
+    "id": "full__xgboost",
+    "cohort": "full",
+    "family": "xgboost",
+    "arm": "A_full",
+    "type": "estimator",
+    "source_run": "A_trees_v1",
+    "source_model": "xgboost",
+    "columns": [
+      "home_form5_ppg",
+      "home_form5_gf",
+      "home_form5_ga",
+      "home_form10_ppg",
+      "home_form10_gf",
+      "home_form10_ga",
+      "home_history_n10",
+      "home_venue5_ppg",
+      "home_venue_n5",
+      "home_season_matches",
+      "home_season_points",
+      "home_season_ppg",
+      "home_season_gd_per_game",
+      "home_days_since_last_pl",
+      "home_newly_promoted",
+      "home_prior_season_membership_known",
+      "home_elo",
+      "home_missing_history",
+      "away_form5_ppg",
+      "away_form5_gf",
+      "away_form5_ga",
+      "away_form10_ppg",
+      "away_form10_gf",
+      "away_form10_ga",
+      "away_history_n10",
+      "away_venue5_ppg",
+      "away_venue_n5",
+      "away_season_matches",
+      "away_season_points",
+      "away_season_ppg",
+      "away_season_gd_per_game",
+      "away_days_since_last_pl",
+      "away_newly_promoted",
+      "away_prior_season_membership_known",
+      "away_elo",
+      "away_missing_history",
+      "elo_diff",
+      "rest_days_diff",
+      "h2h_home_ppg5",
+      "h2h_n5"
+    ],
+    "validation_predictions_path": "reports\\A_trees_v1\\validation_predictions.csv",
+    "validation_predictions_sha256": "cc040f74a5076f9e368e2528c4491ad6f2d2075486587962182b6ea7c0729130",
+    "expected_validation_metrics": {
+      "n": 380,
+      "accuracy": 0.5789473684210527,
+      "macro_f1": 0.4231686414785007,
+      "per_class": {
+        "H": {
+          "precision": 0.5856573705179283,
+          "recall": 0.84,
+          "f1": 0.6901408450704225,
+          "support": 175
+        },
+        "D": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 82
+        },
+        "A": {
+          "precision": 0.5658914728682171,
+          "recall": 0.5934959349593496,
+          "f1": 0.5793650793650794,
+          "support": 123
+        }
+      },
+      "confusion_matrix_rows_true_cols_pred_HDA": [
+        [
+          147,
+          0,
+          28
+        ],
+        [
+          54,
+          0,
+          28
+        ],
+        [
+          50,
+          0,
+          73
+        ]
+      ],
+      "predicted_label_counts": {
+        "H": 251,
+        "D": 0,
+        "A": 129
+      },
+      "log_loss": 0.9388183118962005,
+      "brier_sum": 0.5519334765554789
+    },
+    "calibrate": true,
+    "model_path": "models\\A_trees_v1\\xgboost.joblib",
+    "model_sha256": "f3cc230c758b5e063e0d3dd06c88ed621fc0ccc6715c120285666a4c6e26729a"
+  },
+  {
+    "id": "full__frequency",
+    "cohort": "full",
+    "family": "frequency",
+    "arm": "A_full",
+    "type": "frequency",
+    "source_run": "A_dev_v1",
+    "source_model": "frequency",
+    "columns": [],
+    "validation_predictions_path": "reports\\model_A_development\\validation_predictions.csv",
+    "validation_predictions_sha256": "7f71d6e4a488b460091bb664973760df3fddf47873d8874c136fbf1091076440",
+    "expected_validation_metrics": {
+      "n": 380,
+      "accuracy": 0.4605263157894737,
+      "macro_f1": 0.21021021021021022,
+      "per_class": {
+        "H": {
+          "precision": 0.4605263157894737,
+          "recall": 1.0,
+          "f1": 0.6306306306306306,
+          "support": 175
+        },
+        "D": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 82
+        },
+        "A": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 123
+        }
+      },
+      "confusion_matrix_rows_true_cols_pred_HDA": [
+        [
+          175,
+          0,
+          0
+        ],
+        [
+          82,
+          0,
+          0
+        ],
+        [
+          123,
+          0,
+          0
+        ]
+      ],
+      "predicted_label_counts": {
+        "H": 380,
+        "D": 0,
+        "A": 0
+      },
+      "log_loss": 1.054054159969336,
+      "brier_sum": 0.6371048627591865
+    },
+    "calibrate": false,
+    "probabilities": [
+      0.4475846204403549,
+      0.2339796253697009,
+      0.3184357541899441
+    ]
+  },
+  {
+    "id": "common__elo",
+    "cohort": "common",
+    "family": "elo",
+    "arm": "A_common",
+    "type": "estimator",
+    "source_run": "AP_dev_v1",
+    "source_model": "elo_common",
+    "columns": [
+      "elo_diff"
+    ],
+    "validation_predictions_path": "reports\\AP_dev_v1\\validation_predictions.csv",
+    "validation_predictions_sha256": "102e1840457e3abcbfaa4d443d980750ed4abb880abbbdf87153d8a934f32579",
+    "expected_validation_metrics": {
+      "n": 380,
+      "accuracy": 0.5736842105263158,
+      "macro_f1": 0.4227097718999733,
+      "per_class": {
+        "H": {
+          "precision": 0.6061946902654868,
+          "recall": 0.7828571428571428,
+          "f1": 0.683291770573566,
+          "support": 175
+        },
+        "D": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 82
+        },
+        "A": {
+          "precision": 0.525974025974026,
+          "recall": 0.6585365853658537,
+          "f1": 0.5848375451263538,
+          "support": 123
+        }
+      },
+      "confusion_matrix_rows_true_cols_pred_HDA": [
+        [
+          137,
+          0,
+          38
+        ],
+        [
+          47,
+          0,
+          35
+        ],
+        [
+          42,
+          0,
+          81
+        ]
+      ],
+      "predicted_label_counts": {
+        "H": 226,
+        "D": 0,
+        "A": 154
+      },
+      "log_loss": 0.9313329798915866,
+      "brier_sum": 0.5489572109202608
+    },
+    "calibrate": true,
+    "model_path": "models\\AP_dev_v1\\elo_common.joblib",
+    "model_sha256": "565a1e468e4adbab442c62a1aa16bcce95c2d37214a0f14d3ac40c752894df35"
+  },
+  {
+    "id": "common__frequency",
+    "cohort": "common",
+    "family": "frequency",
+    "arm": "A_common",
+    "type": "frequency",
+    "source_run": "AP_dev_v1",
+    "source_model": "frequency_common",
+    "columns": [],
+    "validation_predictions_path": "reports\\AP_dev_v1\\validation_predictions.csv",
+    "validation_predictions_sha256": "102e1840457e3abcbfaa4d443d980750ed4abb880abbbdf87153d8a934f32579",
+    "expected_validation_metrics": {
+      "n": 380,
+      "accuracy": 0.4605263157894737,
+      "macro_f1": 0.21021021021021022,
+      "per_class": {
+        "H": {
+          "precision": 0.4605263157894737,
+          "recall": 1.0,
+          "f1": 0.6306306306306306,
+          "support": 175
+        },
+        "D": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 82
+        },
+        "A": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 123
+        }
+      },
+      "confusion_matrix_rows_true_cols_pred_HDA": [
+        [
+          175,
+          0,
+          0
+        ],
+        [
+          82,
+          0,
+          0
+        ],
+        [
+          123,
+          0,
+          0
+        ]
+      ],
+      "predicted_label_counts": {
+        "H": 380,
+        "D": 0,
+        "A": 0
+      },
+      "log_loss": 1.0544029725406086,
+      "brier_sum": 0.6374941727620702
+    },
+    "calibrate": false,
+    "probabilities": [
+      0.4359816152330926,
+      0.2304661851608667,
+      0.3335521996060407
+    ]
+  },
+  {
+    "id": "common__logistic__A_common",
+    "cohort": "common",
+    "family": "logistic",
+    "arm": "A_common",
+    "type": "estimator",
+    "source_run": "AP_dev_v1",
+    "source_model": "logistic__A_common",
+    "columns": [
+      "home_form5_ppg",
+      "home_form5_gf",
+      "home_form5_ga",
+      "home_form10_ppg",
+      "home_form10_gf",
+      "home_form10_ga",
+      "home_history_n10",
+      "home_venue5_ppg",
+      "home_venue_n5",
+      "home_season_matches",
+      "home_season_points",
+      "home_season_ppg",
+      "home_season_gd_per_game",
+      "home_days_since_last_pl",
+      "home_newly_promoted",
+      "home_prior_season_membership_known",
+      "home_elo",
+      "home_missing_history",
+      "away_form5_ppg",
+      "away_form5_gf",
+      "away_form5_ga",
+      "away_form10_ppg",
+      "away_form10_gf",
+      "away_form10_ga",
+      "away_history_n10",
+      "away_venue5_ppg",
+      "away_venue_n5",
+      "away_season_matches",
+      "away_season_points",
+      "away_season_ppg",
+      "away_season_gd_per_game",
+      "away_days_since_last_pl",
+      "away_newly_promoted",
+      "away_prior_season_membership_known",
+      "away_elo",
+      "away_missing_history",
+      "elo_diff",
+      "rest_days_diff",
+      "h2h_home_ppg5",
+      "h2h_n5"
+    ],
+    "validation_predictions_path": "reports\\AP_dev_v1\\validation_predictions.csv",
+    "validation_predictions_sha256": "102e1840457e3abcbfaa4d443d980750ed4abb880abbbdf87153d8a934f32579",
+    "expected_validation_metrics": {
+      "n": 380,
+      "accuracy": 0.5631578947368421,
+      "macro_f1": 0.4142553062093292,
+      "per_class": {
+        "H": {
+          "precision": 0.5974025974025974,
+          "recall": 0.7885714285714286,
+          "f1": 0.6798029556650246,
+          "support": 175
+        },
+        "D": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 82
+        },
+        "A": {
+          "precision": 0.5170068027210885,
+          "recall": 0.6178861788617886,
+          "f1": 0.562962962962963,
+          "support": 123
+        }
+      },
+      "confusion_matrix_rows_true_cols_pred_HDA": [
+        [
+          138,
+          0,
+          37
+        ],
+        [
+          48,
+          0,
+          34
+        ],
+        [
+          45,
+          2,
+          76
+        ]
+      ],
+      "predicted_label_counts": {
+        "H": 231,
+        "D": 2,
+        "A": 147
+      },
+      "log_loss": 0.9424640743292029,
+      "brier_sum": 0.5546056945116303
+    },
+    "calibrate": true,
+    "model_path": "models\\AP_dev_v1\\logistic__A_common.joblib",
+    "model_sha256": "1247a7ec558885ff80065841f121811d9db581b3a2181c6ba3062d26988c0cdd"
+  },
+  {
+    "id": "common__logistic__A_plus_P",
+    "cohort": "common",
+    "family": "logistic",
+    "arm": "A_plus_P",
+    "type": "estimator",
+    "source_run": "AP_dev_v1",
+    "source_model": "logistic__A_plus_P",
+    "columns": [
+      "home_form5_ppg",
+      "home_form5_gf",
+      "home_form5_ga",
+      "home_form10_ppg",
+      "home_form10_gf",
+      "home_form10_ga",
+      "home_history_n10",
+      "home_venue5_ppg",
+      "home_venue_n5",
+      "home_season_matches",
+      "home_season_points",
+      "home_season_ppg",
+      "home_season_gd_per_game",
+      "home_days_since_last_pl",
+      "home_newly_promoted",
+      "home_prior_season_membership_known",
+      "home_elo",
+      "home_missing_history",
+      "away_form5_ppg",
+      "away_form5_gf",
+      "away_form5_ga",
+      "away_form10_ppg",
+      "away_form10_gf",
+      "away_form10_ga",
+      "away_history_n10",
+      "away_venue5_ppg",
+      "away_venue_n5",
+      "away_season_matches",
+      "away_season_points",
+      "away_season_ppg",
+      "away_season_gd_per_game",
+      "away_days_since_last_pl",
+      "away_newly_promoted",
+      "away_prior_season_membership_known",
+      "away_elo",
+      "away_missing_history",
+      "elo_diff",
+      "rest_days_diff",
+      "h2h_home_ppg5",
+      "h2h_n5",
+      "home_p_history_n5",
+      "home_p_participants_n5",
+      "home_p_minutes_hhi5",
+      "home_p_top11_minutes_share5",
+      "home_p_last_returning_minutes_share5",
+      "home_p_mean_minutes_overlap5",
+      "away_p_history_n5",
+      "away_p_participants_n5",
+      "away_p_minutes_hhi5",
+      "away_p_top11_minutes_share5",
+      "away_p_last_returning_minutes_share5",
+      "away_p_mean_minutes_overlap5"
+    ],
+    "validation_predictions_path": "reports\\AP_dev_v1\\validation_predictions.csv",
+    "validation_predictions_sha256": "102e1840457e3abcbfaa4d443d980750ed4abb880abbbdf87153d8a934f32579",
+    "expected_validation_metrics": {
+      "n": 380,
+      "accuracy": 0.5710526315789474,
+      "macro_f1": 0.4263860466687661,
+      "per_class": {
+        "H": {
+          "precision": 0.582995951417004,
+          "recall": 0.8228571428571428,
+          "f1": 0.6824644549763034,
+          "support": 175
+        },
+        "D": {
+          "precision": 0.2,
+          "recall": 0.012195121951219513,
+          "f1": 0.022988505747126436,
+          "support": 82
+        },
+        "A": {
+          "precision": 0.5625,
+          "recall": 0.5853658536585366,
+          "f1": 0.5737051792828686,
+          "support": 123
+        }
+      },
+      "confusion_matrix_rows_true_cols_pred_HDA": [
+        [
+          144,
+          2,
+          29
+        ],
+        [
+          54,
+          1,
+          27
+        ],
+        [
+          49,
+          2,
+          72
+        ]
+      ],
+      "predicted_label_counts": {
+        "H": 247,
+        "D": 5,
+        "A": 128
+      },
+      "log_loss": 0.9444883370594105,
+      "brier_sum": 0.5558057668871904
+    },
+    "calibrate": true,
+    "model_path": "models\\AP_dev_v1\\logistic__A_plus_P.joblib",
+    "model_sha256": "d4ab9b4fe47d06a74139e51c5cf5a6cb2ea0fdb51e3a5056ee005d1fe72396bb"
+  },
+  {
+    "id": "common__logistic__A_plus_P_plus_F",
+    "cohort": "common",
+    "family": "logistic",
+    "arm": "A_plus_P_plus_F",
+    "type": "estimator",
+    "source_run": "APF_dev_v1",
+    "source_model": "logistic__A_plus_P_plus_F",
+    "columns": [
+      "home_form5_ppg",
+      "home_form5_gf",
+      "home_form5_ga",
+      "home_form10_ppg",
+      "home_form10_gf",
+      "home_form10_ga",
+      "home_history_n10",
+      "home_venue5_ppg",
+      "home_venue_n5",
+      "home_season_matches",
+      "home_season_points",
+      "home_season_ppg",
+      "home_season_gd_per_game",
+      "home_days_since_last_pl",
+      "home_newly_promoted",
+      "home_prior_season_membership_known",
+      "home_elo",
+      "home_missing_history",
+      "away_form5_ppg",
+      "away_form5_gf",
+      "away_form5_ga",
+      "away_form10_ppg",
+      "away_form10_gf",
+      "away_form10_ga",
+      "away_history_n10",
+      "away_venue5_ppg",
+      "away_venue_n5",
+      "away_season_matches",
+      "away_season_points",
+      "away_season_ppg",
+      "away_season_gd_per_game",
+      "away_days_since_last_pl",
+      "away_newly_promoted",
+      "away_prior_season_membership_known",
+      "away_elo",
+      "away_missing_history",
+      "elo_diff",
+      "rest_days_diff",
+      "h2h_home_ppg5",
+      "h2h_n5",
+      "home_p_history_n5",
+      "home_p_participants_n5",
+      "home_p_minutes_hhi5",
+      "home_p_top11_minutes_share5",
+      "home_p_last_returning_minutes_share5",
+      "home_p_mean_minutes_overlap5",
+      "away_p_history_n5",
+      "away_p_participants_n5",
+      "away_p_minutes_hhi5",
+      "away_p_top11_minutes_share5",
+      "away_p_last_returning_minutes_share5",
+      "away_p_mean_minutes_overlap5",
+      "home_f_recent_group_goal90_s180_5",
+      "home_f_recent_group_assist90_s180_5",
+      "home_f_contribution_hhi5",
+      "home_f_recent_group_contribution_share5",
+      "away_f_recent_group_goal90_s180_5",
+      "away_f_recent_group_assist90_s180_5",
+      "away_f_contribution_hhi5",
+      "away_f_recent_group_contribution_share5"
+    ],
+    "validation_predictions_path": "reports\\APF_dev_v1\\validation_predictions.csv",
+    "validation_predictions_sha256": "29335b4c354ad31985728d16ffb1a4ccb760e765a23a2ff7cc8cb420e731dcc0",
+    "expected_validation_metrics": {
+      "n": 380,
+      "accuracy": 0.5684210526315789,
+      "macro_f1": 0.4246435141152469,
+      "per_class": {
+        "H": {
+          "precision": 0.58,
+          "recall": 0.8285714285714286,
+          "f1": 0.6823529411764706,
+          "support": 175
+        },
+        "D": {
+          "precision": 0.14285714285714285,
+          "recall": 0.012195121951219513,
+          "f1": 0.02247191011235955,
+          "support": 82
+        },
+        "A": {
+          "precision": 0.5691056910569106,
+          "recall": 0.5691056910569106,
+          "f1": 0.5691056910569106,
+          "support": 123
+        }
+      },
+      "confusion_matrix_rows_true_cols_pred_HDA": [
+        [
+          145,
+          4,
+          26
+        ],
+        [
+          54,
+          1,
+          27
+        ],
+        [
+          51,
+          2,
+          70
+        ]
+      ],
+      "predicted_label_counts": {
+        "H": 250,
+        "D": 7,
+        "A": 123
+      },
+      "log_loss": 0.9534734438642162,
+      "brier_sum": 0.5610715905613163
+    },
+    "calibrate": true,
+    "model_path": "models\\APF_dev_v1\\logistic__A_plus_P_plus_F.joblib",
+    "model_sha256": "d2723da9ac263f9351758bfeb17ce27e14555a580b6b7741baf47f42fc414016"
+  },
+  {
+    "id": "common__random_forest__A_common",
+    "cohort": "common",
+    "family": "random_forest",
+    "arm": "A_common",
+    "type": "estimator",
+    "source_run": "AP_dev_v1",
+    "source_model": "random_forest__A_common",
+    "columns": [
+      "home_form5_ppg",
+      "home_form5_gf",
+      "home_form5_ga",
+      "home_form10_ppg",
+      "home_form10_gf",
+      "home_form10_ga",
+      "home_history_n10",
+      "home_venue5_ppg",
+      "home_venue_n5",
+      "home_season_matches",
+      "home_season_points",
+      "home_season_ppg",
+      "home_season_gd_per_game",
+      "home_days_since_last_pl",
+      "home_newly_promoted",
+      "home_prior_season_membership_known",
+      "home_elo",
+      "home_missing_history",
+      "away_form5_ppg",
+      "away_form5_gf",
+      "away_form5_ga",
+      "away_form10_ppg",
+      "away_form10_gf",
+      "away_form10_ga",
+      "away_history_n10",
+      "away_venue5_ppg",
+      "away_venue_n5",
+      "away_season_matches",
+      "away_season_points",
+      "away_season_ppg",
+      "away_season_gd_per_game",
+      "away_days_since_last_pl",
+      "away_newly_promoted",
+      "away_prior_season_membership_known",
+      "away_elo",
+      "away_missing_history",
+      "elo_diff",
+      "rest_days_diff",
+      "h2h_home_ppg5",
+      "h2h_n5"
+    ],
+    "validation_predictions_path": "reports\\AP_dev_v1\\validation_predictions.csv",
+    "validation_predictions_sha256": "102e1840457e3abcbfaa4d443d980750ed4abb880abbbdf87153d8a934f32579",
+    "expected_validation_metrics": {
+      "n": 380,
+      "accuracy": 0.5605263157894737,
+      "macro_f1": 0.41349109887752916,
+      "per_class": {
+        "H": {
+          "precision": 0.6027397260273972,
+          "recall": 0.7542857142857143,
+          "f1": 0.6700507614213198,
+          "support": 175
+        },
+        "D": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 82
+        },
+        "A": {
+          "precision": 0.5031055900621118,
+          "recall": 0.6585365853658537,
+          "f1": 0.5704225352112676,
+          "support": 123
+        }
+      },
+      "confusion_matrix_rows_true_cols_pred_HDA": [
+        [
+          132,
+          0,
+          43
+        ],
+        [
+          45,
+          0,
+          37
+        ],
+        [
+          42,
+          0,
+          81
+        ]
+      ],
+      "predicted_label_counts": {
+        "H": 219,
+        "D": 0,
+        "A": 161
+      },
+      "log_loss": 0.9390625793907091,
+      "brier_sum": 0.553796489863214
+    },
+    "calibrate": true,
+    "model_path": "models\\AP_dev_v1\\random_forest__A_common.joblib",
+    "model_sha256": "ba84f1e9218f50b9a67499c6d16c894773f05d4012b98576974440dccdbdf103"
+  },
+  {
+    "id": "common__random_forest__A_plus_P",
+    "cohort": "common",
+    "family": "random_forest",
+    "arm": "A_plus_P",
+    "type": "estimator",
+    "source_run": "AP_dev_v1",
+    "source_model": "random_forest__A_plus_P",
+    "columns": [
+      "home_form5_ppg",
+      "home_form5_gf",
+      "home_form5_ga",
+      "home_form10_ppg",
+      "home_form10_gf",
+      "home_form10_ga",
+      "home_history_n10",
+      "home_venue5_ppg",
+      "home_venue_n5",
+      "home_season_matches",
+      "home_season_points",
+      "home_season_ppg",
+      "home_season_gd_per_game",
+      "home_days_since_last_pl",
+      "home_newly_promoted",
+      "home_prior_season_membership_known",
+      "home_elo",
+      "home_missing_history",
+      "away_form5_ppg",
+      "away_form5_gf",
+      "away_form5_ga",
+      "away_form10_ppg",
+      "away_form10_gf",
+      "away_form10_ga",
+      "away_history_n10",
+      "away_venue5_ppg",
+      "away_venue_n5",
+      "away_season_matches",
+      "away_season_points",
+      "away_season_ppg",
+      "away_season_gd_per_game",
+      "away_days_since_last_pl",
+      "away_newly_promoted",
+      "away_prior_season_membership_known",
+      "away_elo",
+      "away_missing_history",
+      "elo_diff",
+      "rest_days_diff",
+      "h2h_home_ppg5",
+      "h2h_n5",
+      "home_p_history_n5",
+      "home_p_participants_n5",
+      "home_p_minutes_hhi5",
+      "home_p_top11_minutes_share5",
+      "home_p_last_returning_minutes_share5",
+      "home_p_mean_minutes_overlap5",
+      "away_p_history_n5",
+      "away_p_participants_n5",
+      "away_p_minutes_hhi5",
+      "away_p_top11_minutes_share5",
+      "away_p_last_returning_minutes_share5",
+      "away_p_mean_minutes_overlap5"
+    ],
+    "validation_predictions_path": "reports\\AP_dev_v1\\validation_predictions.csv",
+    "validation_predictions_sha256": "102e1840457e3abcbfaa4d443d980750ed4abb880abbbdf87153d8a934f32579",
+    "expected_validation_metrics": {
+      "n": 380,
+      "accuracy": 0.5605263157894737,
+      "macro_f1": 0.4140350877192982,
+      "per_class": {
+        "H": {
+          "precision": 0.6009174311926605,
+          "recall": 0.7485714285714286,
+          "f1": 0.6666666666666666,
+          "support": 175
+        },
+        "D": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 82
+        },
+        "A": {
+          "precision": 0.5061728395061729,
+          "recall": 0.6666666666666666,
+          "f1": 0.5754385964912281,
+          "support": 123
+        }
+      },
+      "confusion_matrix_rows_true_cols_pred_HDA": [
+        [
+          131,
+          0,
+          44
+        ],
+        [
+          46,
+          0,
+          36
+        ],
+        [
+          41,
+          0,
+          82
+        ]
+      ],
+      "predicted_label_counts": {
+        "H": 218,
+        "D": 0,
+        "A": 162
+      },
+      "log_loss": 0.9405390225747973,
+      "brier_sum": 0.5546871406844316
+    },
+    "calibrate": true,
+    "model_path": "models\\AP_dev_v1\\random_forest__A_plus_P.joblib",
+    "model_sha256": "a605f774ab2b40bb8bf308df903d2ab0382fbeb96049dd3fc5afd052638d62e6"
+  },
+  {
+    "id": "common__random_forest__A_plus_P_plus_F",
+    "cohort": "common",
+    "family": "random_forest",
+    "arm": "A_plus_P_plus_F",
+    "type": "estimator",
+    "source_run": "APF_dev_v1",
+    "source_model": "random_forest__A_plus_P_plus_F",
+    "columns": [
+      "home_form5_ppg",
+      "home_form5_gf",
+      "home_form5_ga",
+      "home_form10_ppg",
+      "home_form10_gf",
+      "home_form10_ga",
+      "home_history_n10",
+      "home_venue5_ppg",
+      "home_venue_n5",
+      "home_season_matches",
+      "home_season_points",
+      "home_season_ppg",
+      "home_season_gd_per_game",
+      "home_days_since_last_pl",
+      "home_newly_promoted",
+      "home_prior_season_membership_known",
+      "home_elo",
+      "home_missing_history",
+      "away_form5_ppg",
+      "away_form5_gf",
+      "away_form5_ga",
+      "away_form10_ppg",
+      "away_form10_gf",
+      "away_form10_ga",
+      "away_history_n10",
+      "away_venue5_ppg",
+      "away_venue_n5",
+      "away_season_matches",
+      "away_season_points",
+      "away_season_ppg",
+      "away_season_gd_per_game",
+      "away_days_since_last_pl",
+      "away_newly_promoted",
+      "away_prior_season_membership_known",
+      "away_elo",
+      "away_missing_history",
+      "elo_diff",
+      "rest_days_diff",
+      "h2h_home_ppg5",
+      "h2h_n5",
+      "home_p_history_n5",
+      "home_p_participants_n5",
+      "home_p_minutes_hhi5",
+      "home_p_top11_minutes_share5",
+      "home_p_last_returning_minutes_share5",
+      "home_p_mean_minutes_overlap5",
+      "away_p_history_n5",
+      "away_p_participants_n5",
+      "away_p_minutes_hhi5",
+      "away_p_top11_minutes_share5",
+      "away_p_last_returning_minutes_share5",
+      "away_p_mean_minutes_overlap5",
+      "home_f_recent_group_goal90_s180_5",
+      "home_f_recent_group_assist90_s180_5",
+      "home_f_contribution_hhi5",
+      "home_f_recent_group_contribution_share5",
+      "away_f_recent_group_goal90_s180_5",
+      "away_f_recent_group_assist90_s180_5",
+      "away_f_contribution_hhi5",
+      "away_f_recent_group_contribution_share5"
+    ],
+    "validation_predictions_path": "reports\\APF_dev_v1\\validation_predictions.csv",
+    "validation_predictions_sha256": "29335b4c354ad31985728d16ffb1a4ccb760e765a23a2ff7cc8cb420e731dcc0",
+    "expected_validation_metrics": {
+      "n": 380,
+      "accuracy": 0.5631578947368421,
+      "macro_f1": 0.41563771237138075,
+      "per_class": {
+        "H": {
+          "precision": 0.5964125560538116,
+          "recall": 0.76,
+          "f1": 0.6683417085427136,
+          "support": 175
+        },
+        "D": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 82
+        },
+        "A": {
+          "precision": 0.5159235668789809,
+          "recall": 0.6585365853658537,
+          "f1": 0.5785714285714286,
+          "support": 123
+        }
+      },
+      "confusion_matrix_rows_true_cols_pred_HDA": [
+        [
+          133,
+          0,
+          42
+        ],
+        [
+          48,
+          0,
+          34
+        ],
+        [
+          42,
+          0,
+          81
+        ]
+      ],
+      "predicted_label_counts": {
+        "H": 223,
+        "D": 0,
+        "A": 157
+      },
+      "log_loss": 0.9397953376875741,
+      "brier_sum": 0.5544288109501108
+    },
+    "calibrate": true,
+    "model_path": "models\\APF_dev_v1\\random_forest__A_plus_P_plus_F.joblib",
+    "model_sha256": "368114e2dc2892778bca60ec000242affe18fbf8a4bba7a443771d82aa15d6cd"
+  },
+  {
+    "id": "common__xgboost__A_common",
+    "cohort": "common",
+    "family": "xgboost",
+    "arm": "A_common",
+    "type": "estimator",
+    "source_run": "AP_dev_v1",
+    "source_model": "xgboost__A_common",
+    "columns": [
+      "home_form5_ppg",
+      "home_form5_gf",
+      "home_form5_ga",
+      "home_form10_ppg",
+      "home_form10_gf",
+      "home_form10_ga",
+      "home_history_n10",
+      "home_venue5_ppg",
+      "home_venue_n5",
+      "home_season_matches",
+      "home_season_points",
+      "home_season_ppg",
+      "home_season_gd_per_game",
+      "home_days_since_last_pl",
+      "home_newly_promoted",
+      "home_prior_season_membership_known",
+      "home_elo",
+      "home_missing_history",
+      "away_form5_ppg",
+      "away_form5_gf",
+      "away_form5_ga",
+      "away_form10_ppg",
+      "away_form10_gf",
+      "away_form10_ga",
+      "away_history_n10",
+      "away_venue5_ppg",
+      "away_venue_n5",
+      "away_season_matches",
+      "away_season_points",
+      "away_season_ppg",
+      "away_season_gd_per_game",
+      "away_days_since_last_pl",
+      "away_newly_promoted",
+      "away_prior_season_membership_known",
+      "away_elo",
+      "away_missing_history",
+      "elo_diff",
+      "rest_days_diff",
+      "h2h_home_ppg5",
+      "h2h_n5"
+    ],
+    "validation_predictions_path": "reports\\AP_dev_v1\\validation_predictions.csv",
+    "validation_predictions_sha256": "102e1840457e3abcbfaa4d443d980750ed4abb880abbbdf87153d8a934f32579",
+    "expected_validation_metrics": {
+      "n": 380,
+      "accuracy": 0.5657894736842105,
+      "macro_f1": 0.4164488017429194,
+      "per_class": {
+        "H": {
+          "precision": 0.5879828326180258,
+          "recall": 0.7828571428571428,
+          "f1": 0.6715686274509803,
+          "support": 175
+        },
+        "D": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 82
+        },
+        "A": {
+          "precision": 0.5306122448979592,
+          "recall": 0.6341463414634146,
+          "f1": 0.5777777777777777,
+          "support": 123
+        }
+      },
+      "confusion_matrix_rows_true_cols_pred_HDA": [
+        [
+          137,
+          0,
+          38
+        ],
+        [
+          51,
+          0,
+          31
+        ],
+        [
+          45,
+          0,
+          78
+        ]
+      ],
+      "predicted_label_counts": {
+        "H": 233,
+        "D": 0,
+        "A": 147
+      },
+      "log_loss": 0.9454074908317415,
+      "brier_sum": 0.557396534085023
+    },
+    "calibrate": true,
+    "model_path": "models\\AP_dev_v1\\xgboost__A_common.joblib",
+    "model_sha256": "e893bd68e454b1ccbce20eefb18051547382528163005f6758d8a33d2b502f16"
+  },
+  {
+    "id": "common__xgboost__A_plus_P",
+    "cohort": "common",
+    "family": "xgboost",
+    "arm": "A_plus_P",
+    "type": "estimator",
+    "source_run": "AP_dev_v1",
+    "source_model": "xgboost__A_plus_P",
+    "columns": [
+      "home_form5_ppg",
+      "home_form5_gf",
+      "home_form5_ga",
+      "home_form10_ppg",
+      "home_form10_gf",
+      "home_form10_ga",
+      "home_history_n10",
+      "home_venue5_ppg",
+      "home_venue_n5",
+      "home_season_matches",
+      "home_season_points",
+      "home_season_ppg",
+      "home_season_gd_per_game",
+      "home_days_since_last_pl",
+      "home_newly_promoted",
+      "home_prior_season_membership_known",
+      "home_elo",
+      "home_missing_history",
+      "away_form5_ppg",
+      "away_form5_gf",
+      "away_form5_ga",
+      "away_form10_ppg",
+      "away_form10_gf",
+      "away_form10_ga",
+      "away_history_n10",
+      "away_venue5_ppg",
+      "away_venue_n5",
+      "away_season_matches",
+      "away_season_points",
+      "away_season_ppg",
+      "away_season_gd_per_game",
+      "away_days_since_last_pl",
+      "away_newly_promoted",
+      "away_prior_season_membership_known",
+      "away_elo",
+      "away_missing_history",
+      "elo_diff",
+      "rest_days_diff",
+      "h2h_home_ppg5",
+      "h2h_n5",
+      "home_p_history_n5",
+      "home_p_participants_n5",
+      "home_p_minutes_hhi5",
+      "home_p_top11_minutes_share5",
+      "home_p_last_returning_minutes_share5",
+      "home_p_mean_minutes_overlap5",
+      "away_p_history_n5",
+      "away_p_participants_n5",
+      "away_p_minutes_hhi5",
+      "away_p_top11_minutes_share5",
+      "away_p_last_returning_minutes_share5",
+      "away_p_mean_minutes_overlap5"
+    ],
+    "validation_predictions_path": "reports\\AP_dev_v1\\validation_predictions.csv",
+    "validation_predictions_sha256": "102e1840457e3abcbfaa4d443d980750ed4abb880abbbdf87153d8a934f32579",
+    "expected_validation_metrics": {
+      "n": 380,
+      "accuracy": 0.5815789473684211,
+      "macro_f1": 0.42810339428103394,
+      "per_class": {
+        "H": {
+          "precision": 0.611353711790393,
+          "recall": 0.8,
+          "f1": 0.693069306930693,
+          "support": 175
+        },
+        "D": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 82
+        },
+        "A": {
+          "precision": 0.5364238410596026,
+          "recall": 0.6585365853658537,
+          "f1": 0.5912408759124088,
+          "support": 123
+        }
+      },
+      "confusion_matrix_rows_true_cols_pred_HDA": [
+        [
+          140,
+          0,
+          35
+        ],
+        [
+          47,
+          0,
+          35
+        ],
+        [
+          42,
+          0,
+          81
+        ]
+      ],
+      "predicted_label_counts": {
+        "H": 229,
+        "D": 0,
+        "A": 151
+      },
+      "log_loss": 0.9448283395338115,
+      "brier_sum": 0.5567851950847922
+    },
+    "calibrate": true,
+    "model_path": "models\\AP_dev_v1\\xgboost__A_plus_P.joblib",
+    "model_sha256": "293f3c8eb48704e5797e3cdd40f0712b3d6d03243629792baafab70f43efbb7f"
+  },
+  {
+    "id": "common__xgboost__A_plus_P_plus_F",
+    "cohort": "common",
+    "family": "xgboost",
+    "arm": "A_plus_P_plus_F",
+    "type": "estimator",
+    "source_run": "APF_dev_v1",
+    "source_model": "xgboost__A_plus_P_plus_F",
+    "columns": [
+      "home_form5_ppg",
+      "home_form5_gf",
+      "home_form5_ga",
+      "home_form10_ppg",
+      "home_form10_gf",
+      "home_form10_ga",
+      "home_history_n10",
+      "home_venue5_ppg",
+      "home_venue_n5",
+      "home_season_matches",
+      "home_season_points",
+      "home_season_ppg",
+      "home_season_gd_per_game",
+      "home_days_since_last_pl",
+      "home_newly_promoted",
+      "home_prior_season_membership_known",
+      "home_elo",
+      "home_missing_history",
+      "away_form5_ppg",
+      "away_form5_gf",
+      "away_form5_ga",
+      "away_form10_ppg",
+      "away_form10_gf",
+      "away_form10_ga",
+      "away_history_n10",
+      "away_venue5_ppg",
+      "away_venue_n5",
+      "away_season_matches",
+      "away_season_points",
+      "away_season_ppg",
+      "away_season_gd_per_game",
+      "away_days_since_last_pl",
+      "away_newly_promoted",
+      "away_prior_season_membership_known",
+      "away_elo",
+      "away_missing_history",
+      "elo_diff",
+      "rest_days_diff",
+      "h2h_home_ppg5",
+      "h2h_n5",
+      "home_p_history_n5",
+      "home_p_participants_n5",
+      "home_p_minutes_hhi5",
+      "home_p_top11_minutes_share5",
+      "home_p_last_returning_minutes_share5",
+      "home_p_mean_minutes_overlap5",
+      "away_p_history_n5",
+      "away_p_participants_n5",
+      "away_p_minutes_hhi5",
+      "away_p_top11_minutes_share5",
+      "away_p_last_returning_minutes_share5",
+      "away_p_mean_minutes_overlap5",
+      "home_f_recent_group_goal90_s180_5",
+      "home_f_recent_group_assist90_s180_5",
+      "home_f_contribution_hhi5",
+      "home_f_recent_group_contribution_share5",
+      "away_f_recent_group_goal90_s180_5",
+      "away_f_recent_group_assist90_s180_5",
+      "away_f_contribution_hhi5",
+      "away_f_recent_group_contribution_share5"
+    ],
+    "validation_predictions_path": "reports\\APF_dev_v1\\validation_predictions.csv",
+    "validation_predictions_sha256": "29335b4c354ad31985728d16ffb1a4ccb760e765a23a2ff7cc8cb420e731dcc0",
+    "expected_validation_metrics": {
+      "n": 380,
+      "accuracy": 0.5605263157894737,
+      "macro_f1": 0.41241597112564854,
+      "per_class": {
+        "H": {
+          "precision": 0.5921052631578947,
+          "recall": 0.7714285714285715,
+          "f1": 0.6699751861042184,
+          "support": 175
+        },
+        "D": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 82
+        },
+        "A": {
+          "precision": 0.5131578947368421,
+          "recall": 0.6341463414634146,
+          "f1": 0.5672727272727273,
+          "support": 123
+        }
+      },
+      "confusion_matrix_rows_true_cols_pred_HDA": [
+        [
+          135,
+          0,
+          40
+        ],
+        [
+          48,
+          0,
+          34
+        ],
+        [
+          45,
+          0,
+          78
+        ]
+      ],
+      "predicted_label_counts": {
+        "H": 228,
+        "D": 0,
+        "A": 152
+      },
+      "log_loss": 0.9446820316622893,
+      "brier_sum": 0.5565443519318248
+    },
+    "calibrate": true,
+    "model_path": "models\\APF_dev_v1\\xgboost__A_plus_P_plus_F.joblib",
+    "model_sha256": "22b4841ca5039dd28c201a033eda15ae648e5f66be7856b71d2cb0d52fb29a1d"
+  }
+]
