@@ -1,8 +1,26 @@
 # Premier League — dự đoán xác suất H/D/A
 
-Trạng thái ngày 24/10/2026: **đã hoàn thành vòng test cuối Premier League 2024–2025**, sau khi khóa mô hình, calibration, feature và mã scoring bằng checksum. Đã đánh giá đủ 380 trận, 30 đầu ra xác suất từ 14 estimator và hai baseline tần suất; không refit hoặc tune bằng test.
+Trạng thái ngày 24/10/2026: **đã hoàn thành thực nghiệm và bộ bàn giao**, gồm báo cáo Word 11 trang, notebook đã thực thi và demo offline. Vòng test đã khóa đánh giá đủ 380 trận mùa 2024–2025, 30 đầu ra xác suất từ 14 estimator và hai baseline tần suất; không refit hoặc tune bằng test. Phạm vi khoa học vẫn có giới hạn về publication time và XI chính thức như báo cáo.
 
-Kết quả tham chiếu Elo A_full đã chọn trước test: Accuracy 54,74%; Log Loss raw 0,98141, temperature 0,98606; Brier raw 0,58654, temperature 0,58993. Temperature làm Log Loss test tăng ở cả 14 mô hình. Chưa có bằng chứng chắc chắn P/F cải thiện trong các contrast chính; xem diễn giải và giới hạn bên dưới. Bước tiếp theo là báo cáo học thuật, notebook tái lập và demo, không chỉnh mô hình từ test.
+Kết quả tham chiếu Elo A_full đã chọn trước test: Accuracy 54,74%; Log Loss raw 0,98141, temperature 0,98606; Brier raw 0,58654, temperature 0,58993. Temperature làm Log Loss test tăng ở cả 14 mô hình. Chưa có bằng chứng chắc chắn P/F cải thiện trong các contrast chính; xem diễn giải và giới hạn bên dưới. Giữ nguyên kết quả và mô hình khi trình bày.
+
+## Mở bộ bàn giao
+
+- [Báo cáo học thuật Word 11 trang](reports/delivery/academic_report.vi.docx) và [bản Markdown](reports/delivery/academic_report.vi.md).
+- [Notebook tái tính metric đã chạy thành công](notebooks/results_reproduction.ipynb): 10 ô mã, 30 đầu ra, không fit lại.
+- [Demo mở trực tiếp trên máy](demo/index.html): chọn đội/ngày/trận/mô hình, xem raw/temperature và tùy chọn hiện kết quả thật; không cần mạng hoặc Streamlit.
+- [Hướng dẫn các mức tái lập](docs/reproducibility.vi.md) và [gợi ý trình bày bảo vệ](docs/presentation-guide.vi.md).
+- [Kiểm chứng bàn giao](reports/delivery/delivery_verification.json): model/code/data đã khóa giữ nguyên, notebook không lỗi, demo qua kiểm tra desktop/mobile, báo cáo đã xem đủ 11 trang.
+
+Chạy lại kiểm chứng phần bàn giao:
+
+```powershell
+python -m pip install -r requirements-notebook.txt
+python scripts/execute_results_notebook.py
+python scripts/verify_delivery.py
+```
+
+Notebook chỉ cần các kết quả đã lưu trong repo. Kiểm chứng đầy đủ từ model/joblib cần workspace gốc có artifacts bị loại khỏi Git. Bộ test hiện tại có 85 tests đạt, gồm 81 test nghiên cứu và bốn test artifact bàn giao. Quy trình QA Word đã dùng một phiên Word ẩn mới và Poppler sau khi renderer mặc định báo thiếu LibreOffice; ảnh/PDF kiểm tra nội bộ nằm trong .qa, không phải deliverable chính.
 
 - Ngân sách dữ liệu: chỉ nguồn miễn phí.
 - Mục tiêu: dự đoán từng trận tại khoảng 60 phút trước giờ bóng lăn.
@@ -60,7 +78,7 @@ python -m unittest discover -s tests -q
 python scripts/report_final_test.py
 ```
 
-81 unit tests đã đạt. Report kiểm tra checksum, nạp lại mô hình và tái tạo 11.400 xác suất, metric và confusion matrices; không fit lại. run_final_test.py từ chối ghi đè vòng đã có. final_lock.json được commit trước scoring. Các lệnh xây dữ liệu/huấn luyện bên dưới mô tả các giai đoạn trước: không thay đổi artifact đã khóa rồi gọi đó là cùng run cuối.
+81 unit tests nghiên cứu đã đạt trước test; tổng hiện tại 85 khi thêm kiểm tra bàn giao. Report kiểm tra checksum, nạp lại mô hình và tái tạo 11.400 xác suất, metric và confusion matrices; không fit lại. run_final_test.py từ chối ghi đè vòng đã có. final_lock.json được commit trước scoring. Các lệnh xây dữ liệu/huấn luyện bên dưới mô tả các giai đoạn trước: không thay đổi artifact đã khóa rồi gọi đó là cùng run cuối.
 
 ## Chạy lại development mô hình
 

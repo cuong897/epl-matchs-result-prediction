@@ -1,5 +1,5 @@
 {
-  "status": "final_test_complete_academic_report_notebook_demo_next",
+  "status": "delivery_ready_with_documented_research_scope_limits",
   "research_date_local": "2026-10-24",
   "timezone": "Asia/Saigon",
   "data_budget": "free_only",
@@ -432,7 +432,7 @@
     "no_post_validation_feature_window_or_grid_expansion": true,
     "calibration_fitted": true,
     "final_test_manifest_registered": true,
-    "next_step": "academic report and reproducibility notebook/demo; no post-test tuning"
+    "next_step": "use delivery for review/presentation; any future modeling study needs a new evaluation period"
   },
   "F_performance_experiment": {
     "run": "APF_dev_v1",
@@ -476,5 +476,23 @@
     "calibration_worse_log_loss_estimators": 14,
     "primary_feature_contrasts_with_Bonferroni_style_block2_interval_excluding_zero": 0,
     "research_limit": "proxy player features only, announced XI / market value hypothesis not established"
+  },
+  "delivery": {
+    "academic_report_docx": "reports/delivery/academic_report.vi.docx",
+    "academic_report_markdown": "reports/delivery/academic_report.vi.md",
+    "report_pages": 11,
+    "report_visual_QA": "reports/delivery/report_qa.json",
+    "notebook": "notebooks/results_reproduction.ipynb",
+    "notebook_executed_code_cells": 10,
+    "demo": "demo/index.html",
+    "demo_type": "offline_replay_of_frozen_historical_predictions",
+    "demo_browser_checks": "reports/delivery/demo_verification.json",
+    "reproducibility_guide": "docs/reproducibility.vi.md",
+    "presentation_guide": "docs/presentation-guide.vi.md",
+    "verification": "reports/delivery/delivery_verification.json",
+    "current_tests_passed": 85,
+    "original_research_tests_before_final_scoring": 81,
+    "original_locked_model_data_and_scoring_code_unchanged": true,
+    "scope_limit": "P/F are historical proxies; verified announced XI and market values not established"
   }
 }

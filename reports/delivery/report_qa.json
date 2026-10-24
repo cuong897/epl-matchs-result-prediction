@@ -1,0 +1,30 @@
+{
+  "docx_sha256": "106d43480ab73a4a8d49cf56b4a3b41be49d5d3f888b4e851a175e5e80220d34",
+  "pages": 11,
+  "all_pages_visually_reviewed": true,
+  "reviewed_page_numbers": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11
+  ],
+  "renderer": "Microsoft Word hidden new instance ExportAsFixedFormat, bundled Poppler PNG",
+  "primary_renderer_status": "render_docx.py attempted; LibreOffice unavailable in this Windows runtime",
+  "checks": [
+    "no clipping or overlap",
+    "tables remain readable",
+    "native equations render with bounds and indices",
+    "no title border",
+    "Vietnamese glyphs display correctly",
+    "no empty pages"
+  ],
+  "page_images_internal_QA_only": true,
+  "report_model_results_unchanged": true
+}

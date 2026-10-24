@@ -1,0 +1,18 @@
+{
+  "read_only_delivery": true,
+  "matches": 380,
+  "probability_records": 11400,
+  "executed_notebook_cells": 10,
+  "notebook_errors": 0,
+  "demo_desktop_and_mobile_passed": true,
+  "demo_external_requests": 0,
+  "report_pages": 11,
+  "editable_math_equations": 3,
+  "report_all_pages_visually_reviewed": true,
+  "original_scoring_code_unchanged": true,
+  "all_original_locked_files_present": true,
+  "missing_original_locked_files": [],
+  "present_original_locked_files_unchanged": true,
+  "no_model_fit_or_test_tuning": true,
+  "delivery_manifest_sha256": "57dcd753846714b016649be31d7b9cd4c4333b5c20726f72ddeecd48df63d3ea"
+}
