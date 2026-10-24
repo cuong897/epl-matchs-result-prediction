@@ -17,8 +17,9 @@ Trạng thái ngày 24/10/2026: **đã so sánh baseline, Logistic Regression, R
 - [So sánh Random Forest/XGBoost và phân tích lỗi](reports/A_trees_v1/report.vi.md).
 - [Log tiến trình lượt cây đã chạy](reports/A_trees_v1/console_excerpt.txt).
 - [Cấu hình, thời điểm bắt đầu và hash lượt cây](reports/A_trees_v1/run_manifest.json).
+- [Audit lịch sử cầu thủ và phạm vi A/P](reports/player_history/report.vi.md).
 
-Bước kế tiếp: audit lịch sử cầu thủ trong các mùa training để xác định cohort A/P và đặc trưng proxy từ quá khứ; giữ model metrics test cho vòng cuối. B/C vẫn có điều kiện; FPL starts là nhãn đá chính sau trận, chưa phải announced XI tại T−60.
+Đã audit dữ liệu cầu thủ 2016–2024 và chuẩn hóa 128.543 dòng/1.900 trận từ 2019–2024. Phát hiện và loại 59 placeholder trận hoãn; đánh dấu starts/xG/xA không dùng được ở 136 trận đầu mùa 2022–2023. Bước kế tiếp: tạo đặc trưng P từ lịch sử sử dụng cầu thủ và fit lại A_common trên cùng cohort 2019–2023. B/C vẫn có điều kiện; FPL starts chưa phải announced XI tại T−60.
 
 Validation hiện tại: Elo có Log Loss 0,9285; Random Forest 0,9299; XGBoost 0,9388; Logistic A 0,9417; tần suất lịch sử 1,0541. RF/XGBoost đạt Accuracy 57,89% nhưng chưa vượt Elo về Log Loss; recall lớp hòa vẫn bằng 0. Đây là kết quả development, chưa phải kết luận cuối của đề tài.
 
@@ -75,6 +76,8 @@ Downloader đọc catalog cố định (pilot_sources hoặc team_sources), bỏ
 - `test_team_features.py`: 14 kiểm thử feature và thời gian.
 - `test_modeling.py`: 12 kiểm thử về thứ tự nhãn, metric, preprocessing, chronological folds và bootstrap.
 - `test_tree_modeling.py`: 4 kiểm thử mapping nhãn, float32, preprocessing và tính đầy đủ các fold; tổng 39 unit tests đã đạt.
+- `test_player_history.py` và `test_download_optional.py`: thêm 10 kiểm thử lịch sử cầu thủ và phản hồi nguồn; tổng hiện tại 49 unit tests đã đạt.
+- `audit_player_history.py` và `verify_player_history.py`: xử lý placeholder có tài liệu, phát hiện fixture-wide zeros, chuẩn hóa đội tại trận và kiểm chứng lịch sử development; không đọc thống kê cầu thủ test.
 - `train_model_A_trees.py`: lưu manifest trước fit, chọn cấu hình bằng CV training, đánh giá validation và permutation importance.
 - `report_model_A_trees.py`: xác minh mô hình đã lưu và XGBoost native, so sánh cùng cohort, dựng báo cáo và biểu đồ.
 - `modeling.py` và `train_model_A.py`: baseline xác suất và Logistic Regression; chọn C qua ba fold trong training, fit preprocessing riêng từng fold.

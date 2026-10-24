@@ -1,0 +1,12 @@
+{
+  "rows": 128543,
+  "matches": 1900,
+  "unique_player_match_keys": true,
+  "all_100_team_seasons_have_38_matches": true,
+  "invalid_advanced_fixture_count": 136,
+  "invalid_advanced_values_are_null": true,
+  "curated_hash_matches": true,
+  "source_code_and_correction_hashes_match": true,
+  "test_season_absent": true,
+  "mandatory_performance_fields_complete": true
+}

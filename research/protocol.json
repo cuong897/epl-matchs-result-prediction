@@ -1,5 +1,5 @@
 {
-  "status": "A_baselines_LR_RF_XGB_development_complete_test_not_evaluated",
+  "status": "player_history_audited_P_features_next_test_not_evaluated",
   "research_date_local": "2026-10-24",
   "timezone": "Asia/Saigon",
   "data_budget": "free_only",
@@ -239,5 +239,63 @@
     "commit_completed_milestones": true,
     "co_authored_by_trailer": false,
     "raw_curated_models_local_dependencies_ignored": true
+  },
+  "player_history_audit": {
+    "report": "reports/player_history/report.vi.md",
+    "machine_readable": "reports/player_history/audit.json",
+    "verification": "reports/player_history/artifact_verification.json",
+    "raw_seasons_examined": [
+      "2016-17",
+      "2017-18",
+      "2018-19",
+      "2019-20",
+      "2020-21",
+      "2021-22",
+      "2022-23",
+      "2023-24"
+    ],
+    "normalized_seasons": [
+      "2019-20",
+      "2020-21",
+      "2021-22",
+      "2022-23",
+      "2023-24"
+    ],
+    "curated_rows": 128543,
+    "matches": 1900,
+    "placeholder_rows_removed": 59,
+    "unusable_advanced_stat_fixtures_2022_23": 136,
+    "announced_XI_verified": false,
+    "cross_season_player_identity_resolved": false,
+    "P_features_built": false,
+    "P_models_trained": false
+  },
+  "P_common_cohort_plan": {
+    "train_seasons": [
+      "2019-20",
+      "2020-21",
+      "2021-22",
+      "2022-23"
+    ],
+    "validation_seasons": [
+      "2023-24"
+    ],
+    "train_rows": 1520,
+    "validation_rows": 380,
+    "must_refit_A_on_identical_cohort": true,
+    "A_feature_history_before_2019": "same snapshots retained in both arms",
+    "player_state_reset_each_season": true,
+    "starting_XI_claim": false,
+    "exclude_from_initial_P": [
+      "current_match_player_fields",
+      "starts",
+      "expected_goals",
+      "expected_assists",
+      "FPL_value",
+      "injuries",
+      "market_value",
+      "age"
+    ],
+    "next_step": "register exact lagged personnel usage features and temporal tests before P model metrics"
   }
 }
