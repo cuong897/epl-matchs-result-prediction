@@ -1,0 +1,19 @@
+{
+  "config_input_and_code_hashes_match": true,
+  "prior_baseline_results_unchanged": true,
+  "same_380_validation_matches_all_models": true,
+  "reloaded_bundle_and_estimators_match_saved_predictions": true,
+  "native_xgboost_matches_pipeline": true,
+  "all_exported_metrics_and_confusion_matrices_reproduced": true,
+  "maximum_reload_errors": {
+    "random_forest": 1.6653345369377348e-16,
+    "xgboost": 9.71445146547012e-17
+  },
+  "test_predictions_generated": false,
+  "artifact_sha256": {
+    "models\\A_trees_v1\\bundle.joblib": "719aeb9592a8ebdb87a2c5c78ea9c52831f6d9d8e2cdff1ddb2e22f0aec62206",
+    "models\\A_trees_v1\\random_forest.joblib": "ea4359073940c8f517b502d0ea9c76c8c17e00f25021e95f07fbea1fa8779b3f",
+    "models\\A_trees_v1\\xgboost.joblib": "f3cc230c758b5e063e0d3dd06c88ed621fc0ccc6715c120285666a4c6e26729a",
+    "models\\A_trees_v1\\xgboost_native.ubj": "47ca591f1981a204274223edc16d411a9d20169e25de82ad637364c1a1cfdf25"
+  }
+}

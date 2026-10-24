@@ -1,0 +1,121 @@
+{
+  "run_id": "A_trees_v1",
+  "started_at_utc": "2026-10-24T03:46:09.915509+00:00",
+  "config": {
+    "run_id": "A_trees_v1",
+    "registration_scope": "before tree model runs; baseline/LR validation results already observed",
+    "feature_version": "team_A_v1_day_batched",
+    "selection_metric": "mean_walk_forward_log_loss",
+    "walk_forward_validation_seasons": [
+      "2020-21",
+      "2021-22",
+      "2022-23"
+    ],
+    "final_validation_season": "2023-24",
+    "test_evaluation_enabled": false,
+    "random_seed": 42,
+    "n_jobs": 2,
+    "preprocessing": "training_fold_median_with_missing_indicators_no_scaling",
+    "posthoc_calibration_fit": false,
+    "early_stopping": false,
+    "class_weight": null,
+    "random_forest_fixed": {
+      "n_estimators": 300,
+      "max_features": 0.7,
+      "bootstrap": true,
+      "criterion": "gini"
+    },
+    "random_forest_candidates": [
+      {
+        "max_depth": 4,
+        "min_samples_leaf": 10
+      },
+      {
+        "max_depth": 4,
+        "min_samples_leaf": 30
+      },
+      {
+        "max_depth": 8,
+        "min_samples_leaf": 10
+      },
+      {
+        "max_depth": 8,
+        "min_samples_leaf": 30
+      }
+    ],
+    "xgboost_fixed": {
+      "objective": "multi:softprob",
+      "num_class": 3,
+      "tree_method": "hist",
+      "device": "cpu",
+      "learning_rate": 0.03,
+      "min_child_weight": 10,
+      "reg_lambda": 5.0,
+      "reg_alpha": 0.1,
+      "subsample": 0.8,
+      "colsample_bytree": 0.8,
+      "eval_metric": "mlogloss"
+    },
+    "xgboost_candidates": [
+      {
+        "max_depth": 2,
+        "n_estimators": 100
+      },
+      {
+        "max_depth": 2,
+        "n_estimators": 250
+      },
+      {
+        "max_depth": 3,
+        "n_estimators": 100
+      },
+      {
+        "max_depth": 3,
+        "n_estimators": 250
+      }
+    ],
+    "tie_break": "earlier candidate in declared order",
+    "previous_run": "reports/model_A_development/results.json",
+    "paired_bootstrap_replicates": 2000,
+    "paired_bootstrap_block_weeks": [
+      1,
+      2,
+      4
+    ],
+    "paired_comparisons": [
+      "random_forest-minus-elo_threeway",
+      "random_forest-minus-logistic_A",
+      "xgboost-minus-elo_threeway",
+      "xgboost-minus-logistic_A"
+    ],
+    "group_permutation_repeats": 10,
+    "group_permutation_scope": "within_validation_calendar_month",
+    "reliability_bins_per_class": 5
+  },
+  "config_sha256": "004f6256d9769cd74574d4acbe64ae00be326d33f9460e5b9ab573755162b1cb",
+  "input_sha256": {
+    "data\\curated\\features_A_train.csv": "58e8cb61259351d141c3d1172dd6858f568117a80eb8d31892eb59a5448342df",
+    "data\\curated\\features_A_validation.csv": "7226327c644036648dfaff37f649c04f4d7b57263fbe7ac8fbe8246cc187e43d",
+    "data\\curated\\matches.csv": "17b34cdec679bb3496ce4d6143773d89f14987069bfd8432e7a413815ccb1b51",
+    "data\\curated\\match_outcomes.csv": "d909637d3408c7e9022f0c56ebea53c7fce5c132f3b981a42845d571a27c4e2c",
+    "research\\model_A_development_config.json": "2de20ebc2bed0d64e4a569b786ffb320e579dc867dd3c97829aee56bf45504f6",
+    "research\\feature_columns_A.json": "ca7a1b4e296a7351e9343e1ee273290b65dbd5017645f04349a48d54dbf7d0de",
+    "research\\team_feature_config.json": "b0ba7671317ae9380486b7e27858bd74dfe20376ee24fb2f486fcad7b0e7a725"
+  },
+  "previous_results_sha256": "9f868d7db5d12514108e55b4a38f6174f303fb2864a68d9b9d7be3c107e42bce",
+  "previous_predictions_sha256": "7f71d6e4a488b460091bb664973760df3fddf47873d8874c136fbf1091076440",
+  "code_sha256": {
+    "train_model_A_trees.py": "3fa744653c4a987555d73a78553bb63e50ced455bf5a7af706b210d2ccf7c9c1",
+    "tree_modeling.py": "b42a79618931735620c16b26a8d0e6069ccc8af98dc32b3ceb94620d9a14beca",
+    "modeling.py": "8f6438bc9a9dd36cf755bdc5993025a4468850016ff596dbf6652262e3a9cd3d",
+    "train_model_A.py": "a87bbea9b961c90ba8d923bb7f8e965128a85bbada9c029f1d0e550f26c65c68"
+  },
+  "runtime": {
+    "scikit-learn": "1.9.1",
+    "xgboost": "3.4.1",
+    "numpy": "2.4.6",
+    "pandas": "3.0.5",
+    "scipy": "1.17.1",
+    "joblib": "1.6.0"
+  }
+}

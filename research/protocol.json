@@ -1,5 +1,5 @@
 {
-  "status": "A_baseline_LR_development_complete_test_not_evaluated",
+  "status": "A_baselines_LR_RF_XGB_development_complete_test_not_evaluated",
   "research_date_local": "2026-10-24",
   "timezone": "Asia/Saigon",
   "data_budget": "free_only",
@@ -177,13 +177,35 @@
       "feature_count": 40,
       "selected_C": 0.01,
       "fit_split": "train"
+    },
+    {
+      "name": "random_forest",
+      "run": "A_trees_v1",
+      "feature_count": 40,
+      "fit_split": "train",
+      "device": "cpu",
+      "n_jobs": 2,
+      "max_depth": 4,
+      "min_samples_leaf": 30,
+      "n_estimators": 300
+    },
+    {
+      "name": "xgboost",
+      "run": "A_trees_v1",
+      "feature_count": 40,
+      "fit_split": "train",
+      "device": "cpu",
+      "n_jobs": 2,
+      "max_depth": 2,
+      "n_estimators": 100
     }
   ],
   "experimental_results": {
-    "run": "A_dev_v1",
-    "report": "reports/model_A_development/report.vi.md",
-    "machine_readable": "reports/model_A_development/results.json",
-    "artifact_verification": "reports/model_A_development/artifact_verification.json",
+    "latest_run": "A_trees_v1",
+    "report": "reports/A_trees_v1/report.vi.md",
+    "machine_readable": "reports/A_trees_v1/results.json",
+    "artifact_verification": "reports/A_trees_v1/artifact_verification.json",
+    "previous_run": "reports/model_A_development/results.json",
     "evaluation_split": "validation",
     "test_metrics_computed": false,
     "posthoc_calibration_fitted": false
@@ -195,7 +217,7 @@
     "eligible_history": "strictly before current local date",
     "result_availability": "assumed next local midnight; publication unverified",
     "preprocessing_fitted": true,
-    "tests": "35 unit tests, 4 real-data feature integration checks, 4 artifact verification groups passed",
+    "tests": "39 unit tests, 4 prior real-data feature integration checks, artifact checks for baseline/LR/RF/XGBoost passed",
     "preprocessing_fit_scope": "training portion of each temporal fold; final estimators on train 2015-16 through 2022-23 only"
   },
   "validation_usage_log": [
@@ -204,6 +226,18 @@
       "usage": "evaluate locked baselines and Logistic A, reliability, paired uncertainty, descriptive importance",
       "used_for_C_selection": false,
       "status_after_run": "observed development set; not an untouched final test"
+    },
+    {
+      "run": "A_trees_v1",
+      "usage": "evaluate RF/XGBoost selected by training CV; compare same validation cohort against frozen baseline/LR predictions",
+      "used_for_hyperparameter_selection": false,
+      "registration": "tree config registered after observing baseline/LR validation, before tree fitting",
+      "status_after_run": "observed development set; final test not evaluated"
     }
-  ]
+  ],
+  "version_control_policy": {
+    "commit_completed_milestones": true,
+    "co_authored_by_trailer": false,
+    "raw_curated_models_local_dependencies_ignored": true
+  }
 }

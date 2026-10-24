@@ -1,0 +1,16 @@
+Console output observed during the completed A_trees_v1 run (progress excerpt).
+Device: local CPU; n_jobs=2; XGBoost device=cpu, tree_method=hist.
+
+Walk-forward 2020-21: random_forest 4 candidates complete
+Walk-forward 2020-21: xgboost 4 candidates complete
+Walk-forward 2021-22: random_forest 4 candidates complete
+Walk-forward 2021-22: xgboost 4 candidates complete
+Walk-forward 2022-23: random_forest 4 candidates complete
+Walk-forward 2022-23: xgboost 4 candidates complete
+Final random_forest: candidate 1, validation scored
+Final xgboost: candidate 0, validation scored
+Diagnostics random_forest: permutation complete
+Diagnostics xgboost: permutation complete
+
+Full scores and measured runtime: results.json
+Exact parameters and package versions: run_manifest.json
