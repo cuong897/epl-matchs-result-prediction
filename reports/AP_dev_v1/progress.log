@@ -1,0 +1,75 @@
+Device: local CPU; trees n_jobs=2. Both arms use identical training and validation matches.
+Walk-forward 2020-21: logistic/A_common, 4 candidates complete (380 -> 380)
+Walk-forward 2020-21: logistic/A_plus_P, 4 candidates complete (380 -> 380)
+Walk-forward 2020-21: random_forest/A_common, 4 candidates complete (380 -> 380)
+Walk-forward 2020-21: random_forest/A_plus_P, 4 candidates complete (380 -> 380)
+Walk-forward 2020-21: xgboost/A_common, 4 candidates complete (380 -> 380)
+Walk-forward 2020-21: xgboost/A_plus_P, 4 candidates complete (380 -> 380)
+Walk-forward 2021-22: logistic/A_common, 4 candidates complete (760 -> 380)
+Walk-forward 2021-22: logistic/A_plus_P, 4 candidates complete (760 -> 380)
+Walk-forward 2021-22: random_forest/A_common, 4 candidates complete (760 -> 380)
+Walk-forward 2021-22: random_forest/A_plus_P, 4 candidates complete (760 -> 380)
+Walk-forward 2021-22: xgboost/A_common, 4 candidates complete (760 -> 380)
+Walk-forward 2021-22: xgboost/A_plus_P, 4 candidates complete (760 -> 380)
+Walk-forward 2022-23: logistic/A_common, 4 candidates complete (1140 -> 380)
+Walk-forward 2022-23: logistic/A_plus_P, 4 candidates complete (1140 -> 380)
+Walk-forward 2022-23: random_forest/A_common, 4 candidates complete (1140 -> 380)
+Walk-forward 2022-23: random_forest/A_plus_P, 4 candidates complete (1140 -> 380)
+Walk-forward 2022-23: xgboost/A_common, 4 candidates complete (1140 -> 380)
+Walk-forward 2022-23: xgboost/A_plus_P, 4 candidates complete (1140 -> 380)
+Final fit logistic__A_common: candidate 0; validation scored
+Final fit logistic__A_plus_P: candidate 0; validation scored
+Final fit random_forest__A_common: candidate 1; validation scored
+Final fit random_forest__A_plus_P: candidate 1; validation scored
+Final fit xgboost__A_common: candidate 0; validation scored
+Final fit xgboost__A_plus_P: candidate 0; validation scored
+{
+  "logistic__A_common": {
+    "accuracy": 0.5631578947368421,
+    "macro_f1": 0.4142553062093292,
+    "log_loss": 0.9424640743292029,
+    "brier_sum": 0.5546056945116303
+  },
+  "logistic__A_plus_P": {
+    "accuracy": 0.5710526315789474,
+    "macro_f1": 0.4263860466687661,
+    "log_loss": 0.9444883370594105,
+    "brier_sum": 0.5558057668871904
+  },
+  "random_forest__A_common": {
+    "accuracy": 0.5605263157894737,
+    "macro_f1": 0.41349109887752916,
+    "log_loss": 0.9390625793907091,
+    "brier_sum": 0.553796489863214
+  },
+  "random_forest__A_plus_P": {
+    "accuracy": 0.5605263157894737,
+    "macro_f1": 0.4140350877192982,
+    "log_loss": 0.9405390225747973,
+    "brier_sum": 0.5546871406844316
+  },
+  "xgboost__A_common": {
+    "accuracy": 0.5657894736842105,
+    "macro_f1": 0.4164488017429194,
+    "log_loss": 0.9454074908317415,
+    "brier_sum": 0.557396534085023
+  },
+  "xgboost__A_plus_P": {
+    "accuracy": 0.5815789473684211,
+    "macro_f1": 0.42810339428103394,
+    "log_loss": 0.9448283395338115,
+    "brier_sum": 0.5567851950847922
+  },
+  "frequency_common": {
+    "accuracy": 0.4605263157894737,
+    "macro_f1": 0.21021021021021022,
+    "log_loss": 1.0544029725406086,
+    "brier_sum": 0.6374941727620702
+  },
+  "elo_common": {
+    "accuracy": 0.5736842105263158,
+    "macro_f1": 0.4227097718999733,
+    "log_loss": 0.9313329798915866,
+    "brier_sum": 0.5489572109202608
+  }
+}

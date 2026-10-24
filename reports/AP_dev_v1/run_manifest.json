@@ -1,0 +1,228 @@
+{
+  "run_id": "AP_dev_v1",
+  "started_at_utc": "2026-10-24T04:28:56.164639+00:00",
+  "config": {
+    "run_id": "AP_dev_v1",
+    "registration_scope": "before any A_common/P model fit; prior A_full validation observed",
+    "feature_version": "P_usage_v1_day_batched",
+    "arms": [
+      "A_common",
+      "A_plus_P"
+    ],
+    "families": [
+      "logistic",
+      "random_forest",
+      "xgboost"
+    ],
+    "selection_metric": "mean_walk_forward_log_loss",
+    "walk_forward_validation_seasons": [
+      "2020-21",
+      "2021-22",
+      "2022-23"
+    ],
+    "first_training_season": "2019-20",
+    "final_validation_season": "2023-24",
+    "expected_fold_training_rows": [
+      380,
+      760,
+      1140
+    ],
+    "expected_training_rows": 1520,
+    "expected_validation_rows": 380,
+    "logistic_settings": "research/model_A_development_config.json",
+    "tree_settings": "research/model_A_tree_config.json",
+    "candidate_budget_per_family_per_arm": 4,
+    "parameter_selection": "separately retune each arm using identical candidate lists and folds",
+    "no_class_weight_or_threshold_tuning": true,
+    "test_evaluation_enabled": false,
+    "posthoc_calibration_fit": false,
+    "device": "cpu",
+    "random_seed": 42,
+    "paired_bootstrap_replicates": 2000,
+    "paired_bootstrap_block_weeks": [
+      1,
+      2,
+      4
+    ],
+    "group_permutation_repeats": 10,
+    "group_permutation_scope": "all 12 P columns together within validation calendar month",
+    "reliability_bins_per_class": 5
+  },
+  "candidates": {
+    "logistic": [
+      {
+        "C": 0.01
+      },
+      {
+        "C": 0.1
+      },
+      {
+        "C": 1.0
+      },
+      {
+        "C": 10.0
+      }
+    ],
+    "random_forest": [
+      {
+        "max_depth": 4,
+        "min_samples_leaf": 10
+      },
+      {
+        "max_depth": 4,
+        "min_samples_leaf": 30
+      },
+      {
+        "max_depth": 8,
+        "min_samples_leaf": 10
+      },
+      {
+        "max_depth": 8,
+        "min_samples_leaf": 30
+      }
+    ],
+    "xgboost": [
+      {
+        "max_depth": 2,
+        "n_estimators": 100
+      },
+      {
+        "max_depth": 2,
+        "n_estimators": 250
+      },
+      {
+        "max_depth": 3,
+        "n_estimators": 100
+      },
+      {
+        "max_depth": 3,
+        "n_estimators": 250
+      }
+    ]
+  },
+  "feature_columns": {
+    "A_common": [
+      "home_form5_ppg",
+      "home_form5_gf",
+      "home_form5_ga",
+      "home_form10_ppg",
+      "home_form10_gf",
+      "home_form10_ga",
+      "home_history_n10",
+      "home_venue5_ppg",
+      "home_venue_n5",
+      "home_season_matches",
+      "home_season_points",
+      "home_season_ppg",
+      "home_season_gd_per_game",
+      "home_days_since_last_pl",
+      "home_newly_promoted",
+      "home_prior_season_membership_known",
+      "home_elo",
+      "home_missing_history",
+      "away_form5_ppg",
+      "away_form5_gf",
+      "away_form5_ga",
+      "away_form10_ppg",
+      "away_form10_gf",
+      "away_form10_ga",
+      "away_history_n10",
+      "away_venue5_ppg",
+      "away_venue_n5",
+      "away_season_matches",
+      "away_season_points",
+      "away_season_ppg",
+      "away_season_gd_per_game",
+      "away_days_since_last_pl",
+      "away_newly_promoted",
+      "away_prior_season_membership_known",
+      "away_elo",
+      "away_missing_history",
+      "elo_diff",
+      "rest_days_diff",
+      "h2h_home_ppg5",
+      "h2h_n5"
+    ],
+    "A_plus_P": [
+      "home_form5_ppg",
+      "home_form5_gf",
+      "home_form5_ga",
+      "home_form10_ppg",
+      "home_form10_gf",
+      "home_form10_ga",
+      "home_history_n10",
+      "home_venue5_ppg",
+      "home_venue_n5",
+      "home_season_matches",
+      "home_season_points",
+      "home_season_ppg",
+      "home_season_gd_per_game",
+      "home_days_since_last_pl",
+      "home_newly_promoted",
+      "home_prior_season_membership_known",
+      "home_elo",
+      "home_missing_history",
+      "away_form5_ppg",
+      "away_form5_gf",
+      "away_form5_ga",
+      "away_form10_ppg",
+      "away_form10_gf",
+      "away_form10_ga",
+      "away_history_n10",
+      "away_venue5_ppg",
+      "away_venue_n5",
+      "away_season_matches",
+      "away_season_points",
+      "away_season_ppg",
+      "away_season_gd_per_game",
+      "away_days_since_last_pl",
+      "away_newly_promoted",
+      "away_prior_season_membership_known",
+      "away_elo",
+      "away_missing_history",
+      "elo_diff",
+      "rest_days_diff",
+      "h2h_home_ppg5",
+      "h2h_n5",
+      "home_p_history_n5",
+      "home_p_participants_n5",
+      "home_p_minutes_hhi5",
+      "home_p_top11_minutes_share5",
+      "home_p_last_returning_minutes_share5",
+      "home_p_mean_minutes_overlap5",
+      "away_p_history_n5",
+      "away_p_participants_n5",
+      "away_p_minutes_hhi5",
+      "away_p_top11_minutes_share5",
+      "away_p_last_returning_minutes_share5",
+      "away_p_mean_minutes_overlap5"
+    ]
+  },
+  "input_sha256": {
+    "research\\AP_development_config.json": "a188f8433a07d4d5e1c7e89f1a942f41a5fc9ce243ba02cccf10e04265b8f75e",
+    "research\\model_A_development_config.json": "2de20ebc2bed0d64e4a569b786ffb320e579dc867dd3c97829aee56bf45504f6",
+    "research\\model_A_tree_config.json": "004f6256d9769cd74574d4acbe64ae00be326d33f9460e5b9ab573755162b1cb",
+    "research\\feature_columns_A.json": "ca7a1b4e296a7351e9343e1ee273290b65dbd5017645f04349a48d54dbf7d0de",
+    "research\\feature_columns_P.json": "55cd174b09c5252d5fc55b199cef75a621da04d5d158a135018fa486f67e265a",
+    "reports\\player_proxy\\feature_build.json": "9017a2ca75268d489d1329e1b11ea619fe3fe648d0c720bce3230961ecee976f",
+    "data\\curated\\matches.csv": "17b34cdec679bb3496ce4d6143773d89f14987069bfd8432e7a413815ccb1b51",
+    "data\\curated\\match_outcomes.csv": "d909637d3408c7e9022f0c56ebea53c7fce5c132f3b981a42845d571a27c4e2c",
+    "data\\curated\\features_A_train.csv": "58e8cb61259351d141c3d1172dd6858f568117a80eb8d31892eb59a5448342df",
+    "data\\curated\\features_A_validation.csv": "7226327c644036648dfaff37f649c04f4d7b57263fbe7ac8fbe8246cc187e43d",
+    "data\\curated\\features_P_train.csv": "305a961efc571c8d2c96695340cf45391d6a30b60339783aa3396c171ee8a44b",
+    "data\\curated\\features_P_validation.csv": "331010f205ae4abe95853119dc1172a2f3c7fbce4df563d14692bc80ecd78d7b"
+  },
+  "code_sha256": {
+    "train_AP.py": "71a537f2d15b1a779cedb81eecb67eec0e04048f555db0230d77209567c47e41",
+    "modeling.py": "8f6438bc9a9dd36cf755bdc5993025a4468850016ff596dbf6652262e3a9cd3d",
+    "tree_modeling.py": "b42a79618931735620c16b26a8d0e6069ccc8af98dc32b3ceb94620d9a14beca",
+    "player_proxy_features.py": "868dea86885ac4790a67ffb7d2f9d3dfda0eec2b9e5dd1d1d28b9655aaadcc21"
+  },
+  "runtime": {
+    "scikit-learn": "1.9.1",
+    "xgboost": "3.4.1",
+    "numpy": "2.4.6",
+    "pandas": "3.0.5",
+    "joblib": "1.6.0"
+  }
+}

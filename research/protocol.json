@@ -1,5 +1,5 @@
 {
-  "status": "player_history_audited_P_features_next_test_not_evaluated",
+  "status": "AP_usage_development_complete_test_not_evaluated",
   "research_date_local": "2026-10-24",
   "timezone": "Asia/Saigon",
   "data_budget": "free_only",
@@ -198,14 +198,71 @@
       "n_jobs": 2,
       "max_depth": 2,
       "n_estimators": 100
+    },
+    {
+      "name": "logistic__A_common",
+      "run": "AP_dev_v1",
+      "feature_count": 40,
+      "fit_split": "train_common_2019_2023",
+      "device": "cpu",
+      "selected_candidate": 0
+    },
+    {
+      "name": "logistic__A_plus_P",
+      "run": "AP_dev_v1",
+      "feature_count": 52,
+      "fit_split": "train_common_2019_2023",
+      "device": "cpu",
+      "selected_candidate": 0
+    },
+    {
+      "name": "random_forest__A_common",
+      "run": "AP_dev_v1",
+      "feature_count": 40,
+      "fit_split": "train_common_2019_2023",
+      "device": "cpu",
+      "selected_candidate": 1
+    },
+    {
+      "name": "random_forest__A_plus_P",
+      "run": "AP_dev_v1",
+      "feature_count": 52,
+      "fit_split": "train_common_2019_2023",
+      "device": "cpu",
+      "selected_candidate": 1
+    },
+    {
+      "name": "xgboost__A_common",
+      "run": "AP_dev_v1",
+      "feature_count": 40,
+      "fit_split": "train_common_2019_2023",
+      "device": "cpu",
+      "selected_candidate": 0
+    },
+    {
+      "name": "xgboost__A_plus_P",
+      "run": "AP_dev_v1",
+      "feature_count": 52,
+      "fit_split": "train_common_2019_2023",
+      "device": "cpu",
+      "selected_candidate": 0
+    },
+    {
+      "name": "elo_common",
+      "run": "AP_dev_v1",
+      "features": [
+        "elo_diff"
+      ],
+      "fit_split": "train_common_2019_2023",
+      "device": "cpu"
     }
   ],
   "experimental_results": {
-    "latest_run": "A_trees_v1",
-    "report": "reports/A_trees_v1/report.vi.md",
-    "machine_readable": "reports/A_trees_v1/results.json",
-    "artifact_verification": "reports/A_trees_v1/artifact_verification.json",
-    "previous_run": "reports/model_A_development/results.json",
+    "latest_run": "AP_dev_v1",
+    "report": "reports/AP_dev_v1/report.vi.md",
+    "machine_readable": "reports/AP_dev_v1/results.json",
+    "artifact_verification": "reports/AP_dev_v1/artifact_verification.json",
+    "previous_A_full_run": "reports/A_trees_v1/results.json",
     "evaluation_split": "validation",
     "test_metrics_computed": false,
     "posthoc_calibration_fitted": false
@@ -232,6 +289,13 @@
       "usage": "evaluate RF/XGBoost selected by training CV; compare same validation cohort against frozen baseline/LR predictions",
       "used_for_hyperparameter_selection": false,
       "registration": "tree config registered after observing baseline/LR validation, before tree fitting",
+      "status_after_run": "observed development set; final test not evaluated"
+    },
+    {
+      "run": "AP_dev_v1",
+      "usage": "paired comparison A_common vs A_plus_P on identical validation matches, uncertainty and descriptive P permutation",
+      "used_for_hyperparameter_selection": false,
+      "registration": "P definitions and model config committed before paired training; earlier A_full validation already observed",
       "status_after_run": "observed development set; final test not evaluated"
     }
   ],
@@ -267,8 +331,8 @@
     "unusable_advanced_stat_fixtures_2022_23": 136,
     "announced_XI_verified": false,
     "cross_season_player_identity_resolved": false,
-    "P_features_built": false,
-    "P_models_trained": false
+    "P_features_built": true,
+    "P_models_trained": true
   },
   "P_common_cohort_plan": {
     "train_seasons": [
@@ -296,6 +360,26 @@
       "market_value",
       "age"
     ],
-    "next_step": "register exact lagged personnel usage features and temporal tests before P model metrics"
+    "next_step": "register limited individual performance proxy experiment before any additional model scoring; preserve test lock"
+  },
+  "P_usage_experiment": {
+    "run": "AP_dev_v1",
+    "feature_config": "research/player_proxy_config.json",
+    "model_config": "research/AP_development_config.json",
+    "report": "reports/AP_dev_v1/report.vi.md",
+    "feature_report": "reports/player_proxy/feature_build.json",
+    "artifact_verification": "reports/AP_dev_v1/artifact_verification.json",
+    "feature_counts": {
+      "A_common": 40,
+      "A_plus_P": 52
+    },
+    "training_rows": 1520,
+    "validation_rows": 380,
+    "unit_tests_passed": 61,
+    "real_data_temporal_checks_passed": 4,
+    "parameter_selection": "training CV only, identical four candidate lists per family per arm",
+    "test_evaluated": false,
+    "announced_XI_claim": false,
+    "interpretation": "no clear Log Loss improvement from this personnel usage proxy on development validation"
   }
 }

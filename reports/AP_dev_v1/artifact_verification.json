@@ -1,0 +1,23 @@
+{
+  "input_code_hashes_match": true,
+  "identical_training_validation_cohort": true,
+  "A_common_is_identical_subset_of_AP_features": true,
+  "all_72_training_fold_scores_present": true,
+  "selected_candidates_reproduce_from_training_CV": true,
+  "saved_bundle_individual_models_and_native_XGBoost_agree": true,
+  "all_validation_metrics_and_class_metrics_reproduced": true,
+  "maximum_reload_probability_error": 2.220446049250313e-16,
+  "test_evaluated": false,
+  "artifact_sha256": {
+    "bundle.joblib": "415e2373c27466335ea4c531276cf7ca74d414a7c96ba5a07f9cf10cdbe6a1fa",
+    "elo_common.joblib": "565a1e468e4adbab442c62a1aa16bcce95c2d37214a0f14d3ac40c752894df35",
+    "logistic__A_common.joblib": "1247a7ec558885ff80065841f121811d9db581b3a2181c6ba3062d26988c0cdd",
+    "logistic__A_plus_P.joblib": "d4ab9b4fe47d06a74139e51c5cf5a6cb2ea0fdb51e3a5056ee005d1fe72396bb",
+    "random_forest__A_common.joblib": "ba84f1e9218f50b9a67499c6d16c894773f05d4012b98576974440dccdbdf103",
+    "random_forest__A_plus_P.joblib": "a605f774ab2b40bb8bf308df903d2ab0382fbeb96049dd3fc5afd052638d62e6",
+    "xgboost__A_common.joblib": "e893bd68e454b1ccbce20eefb18051547382528163005f6758d8a33d2b502f16",
+    "xgboost__A_common.ubj": "2edf48f0a2cc9f201afe931f958b4994afaae5b92d1d366a7c3c82b4fca6ad13",
+    "xgboost__A_plus_P.joblib": "293f3c8eb48704e5797e3cdd40f0712b3d6d03243629792baafab70f43efbb7f",
+    "xgboost__A_plus_P.ubj": "7ab17d9a515a7085201d00404a6d0486f5dfc139ea1d459330ebae7ec4adfe79"
+  }
+}
